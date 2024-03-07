@@ -8,7 +8,7 @@ api_hash = '2a1ef85eff1fe10eb27560df055b1746'
 bot_token = '6379620803:AAEaLOHQM6Zeo3niZFDDDjS4NnkH1S2NqqM'  #'your_bot_token'
 
 #function to extract trade from ai crypto channel
-def extract_signal_data(text):
+def  extract_signal_data_from_ai_crypto(text):
     if ('🟩' in str(text)) or ('🟥' in str(text)):
             ticker = re.findall(r'\#\w+', text)    #get ticker
             tradeData['ticker'] = ticker[0][1:]    #add ticker to dict
@@ -61,7 +61,7 @@ with TelegramClient('test', api_id, api_hash) as client:
         # print('-'*50)
         tradeData = {}
         raw_message = message.text
-        extract_signal_data(raw_message)
+        #extract_signal_data_from_ai_crypto(raw_message)
         
 
 
