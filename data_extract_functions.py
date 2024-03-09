@@ -48,20 +48,45 @@ def  extract_signal_data_from_ai_crypto(text):
             print('--'*30)
             #break
         #break
+            
+def extract_signal_data_from_sentinel(text):
+    test_msg = "['Binance Futures, ByBit USDT, KuCoin Futures, OKX Futures', '#ENS/USDT Closed at stoploss after reaching take profit ⚠']"
+    pattern = r"\b" + re.escape("futures") + r"\b"
+    #pattern = re.compile(r'(?i)(?=.*\bprofit\b)(?=.*\bfutures\b)')
+    match = re.search(pattern, text, re.IGNORECASE)
+    #match = pattern.search(message.text)
+    #print(match)
+    if(not match):
+        #tradeData = {}
+        ticker = re.findall(r'\#\w+', text)    #get ticker
+        ticker = str(ticker[0][1:]+'USDT')
+        print(ticker)
+        tradeData['ticker'] = ticker    #add ticker to dict
+        lines = text.splitlines()
+        # for line in lines:
+        #     print(line)
+        #     #print(message.text)
+        #     
+        #print(lines)
+        tradeData['side'] = lines[1]
+        tradeData['leverage'] = lines[2].split()[1][:-1]
+        tradeData['entry'] = lines[5:7]
+        tradeData['targets'] = lines[9:16]
+        tradeData['stop'] = lines[-1]
     
 
 
-with TelegramClient('test', api_id, api_hash) as client:
-    chat_entity = client.get_input_entity('t.me/+6Lg31Rwf1UtlYWFk')
-    # get the messages for today and iterate over them
-    for message in client.iter_messages(chat_entity, offset_date=datetime.date.today(), reverse=True):
-        #dictionary where all scraped data will be stored
-        # print(type(message.text))
-        # print(message.text)
-        # print('-'*50)
-        tradeData = {}
-        raw_message = message.text
-        #extract_signal_data_from_ai_crypto(raw_message)
+# with TelegramClient('test', api_id, api_hash) as client:
+#     chat_entity = client.get_input_entity('t.me/+6Lg31Rwf1UtlYWFk')
+#     # get the messages for today and iterate over them
+#     for message in client.iter_messages(chat_entity, offset_date=datetime.date.today(), reverse=True):
+#         #dictionary where all scraped data will be stored
+#         # print(type(message.text))
+#         # print(message.text)
+#         # print('-'*50)
+#         tradeData = {}
+#         raw_message = message.text
+#         #extract_signal_data_from_ai_crypto(raw_message)
         
 
 
