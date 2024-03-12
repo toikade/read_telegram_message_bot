@@ -3,7 +3,7 @@ from decouple import config
 from binance.client import Client
 
 
-# Replace with your Binance API key and secret
+# Binance API key and secret
 api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
 api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
 
