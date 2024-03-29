@@ -1,0 +1,134 @@
+2024-03-20 13:06:19 - Key pressed: a
+2024-03-20 13:06:24 - Special key pressed: Key.cmd
+2024-03-20 13:06:24 - Key pressed: d
+2024-03-20 13:08:01 - Key pressed: 2
+2024-03-20 13:08:01 - Key pressed: 3
+2024-03-20 13:08:02 - Key pressed: 0
+2024-03-20 13:08:03 - Key pressed: 4
+2024-03-20 13:08:04 - Key pressed: 8
+2024-03-20 13:08:04 - Key pressed: 1
+2024-03-20 13:08:07 - Special key pressed: Key.enter
+2024-03-20 13:09:17 - Key pressed: t
+2024-03-20 13:09:18 - Special key pressed: Key.backspace
+2024-03-20 13:09:19 - Special key pressed: Key.caps_lock
+2024-03-20 13:09:19 - Key pressed: t
+2024-03-20 13:09:20 - Key pressed: a
+2024-03-20 13:09:20 - Key pressed: m
+2024-03-20 13:09:20 - Key pressed: e
+2024-03-20 13:09:21 - Key pressed: h
+2024-03-20 13:09:21 - Special key pressed: Key.space
+2024-03-20 13:09:22 - Key pressed: f
+2024-03-20 13:09:22 - Key pressed: r
+2024-03-20 13:09:22 - Key pressed: s
+2024-03-20 13:09:23 - Key pressed: n
+2024-03-20 13:09:24 - Special key pressed: Key.backspace
+2024-03-20 13:09:24 - Special key pressed: Key.backspace
+2024-03-20 13:09:24 - Key pressed: a
+2024-03-20 13:09:25 - Key pressed: n
+2024-03-20 13:09:25 - Key pressed: c
+2024-03-20 13:09:25 - Key pressed: s
+2024-03-20 13:09:26 - Special key pressed: Key.backspace
+2024-03-20 13:09:27 - Key pressed: i
+2024-03-20 13:09:27 - Key pressed: s
+2024-03-20 13:09:29 - Key pressed: t
+2024-03-20 13:09:30 - Key pressed: a
+2024-03-20 13:09:31 - Key pressed: m
+2024-03-20 13:09:38 - Key pressed: e
+2024-03-20 13:09:38 - Key pressed: h
+2024-03-20 13:09:41 - Key pressed: 8
+2024-03-20 13:09:41 - Key pressed: 7
+2024-03-20 13:09:43 - Key pressed: t
+2024-03-20 13:09:43 - Key pressed: a
+2024-03-20 13:09:44 - Key pressed: m
+2024-03-20 13:09:44 - Key pressed: e
+2024-03-20 13:09:44 - Key pressed: h
+2024-03-20 13:09:45 - Key pressed: 8
+2024-03-20 13:09:45 - Key pressed: 7
+2024-03-20 13:14:53 - Special key pressed: Key.alt_l
+2024-03-20 13:14:53 - Special key pressed: Key.tab
+2024-03-20 13:15:00 - Key pressed: n
+2024-03-20 13:15:00 - Key pressed: d
+2024-03-20 13:15:00 - Key pressed: e
+2024-03-20 13:15:01 - Key pressed: h
+2024-03-20 13:15:01 - Special key pressed: Key.space
+2024-03-20 13:15:02 - Key pressed: t
+2024-03-20 13:15:02 - Key pressed: o
+2024-03-20 13:15:02 - Key pressed: i
+2024-03-20 13:15:02 - Key pressed: k
+2024-03-20 13:15:02 - Key pressed: a
+2024-03-20 13:15:02 - Key pressed: d
+2024-03-20 13:15:03 - Key pressed: e
+2024-03-20 13:15:03 - Special key pressed: Key.tab
+2024-03-20 13:15:04 - Key pressed: m
+2024-03-20 13:15:04 - Key pressed: y
+2024-03-20 13:15:05 - Key pressed: p
+2024-03-20 13:15:05 - Key pressed: a
+2024-03-20 13:15:05 - Key pressed: 3
+2024-03-20 13:15:05 - Key pressed: 3
+2024-03-20 13:15:06 - Special key pressed: Key.enter
+2024-03-20 13:15:07 - Special key pressed: Key.enter
+2024-03-20 13:16:22 - Key pressed: n
+2024-03-20 13:16:22 - Key pressed: d
+2024-03-20 13:16:22 - Key pressed: e
+2024-03-20 13:16:23 - Key pressed: h
+2024-03-20 13:16:23 - Special key pressed: Key.space
+2024-03-20 13:16:24 - Key pressed: t
+2024-03-20 13:16:24 - Key pressed: o
+2024-03-20 13:16:24 - Key pressed: i
+2024-03-20 13:16:24 - Key pressed: k
+2024-03-20 13:16:24 - Key pressed: a
+2024-03-20 13:16:24 - Key pressed: d
+2024-03-20 13:16:25 - Key pressed: e
+2024-03-20 13:16:25 - Special key pressed: Key.caps_lock
+2024-03-20 13:16:26 - Special key pressed: Key.tab
+2024-03-20 13:16:27 - Key pressed: m
+2024-03-20 13:16:27 - Key pressed: y
+2024-03-20 13:16:27 - Key pressed: p
+2024-03-20 13:16:28 - Key pressed: a
+2024-03-20 13:16:28 - Key pressed: 3
+2024-03-20 13:16:28 - Key pressed: 3
+2024-03-20 13:16:29 - Special key pressed: Key.enter
+2024-03-20 13:16:29 - Special key pressed: Key.enter
+2024-03-20 13:16:36 - Key pressed: n
+2024-03-20 13:16:36 - Key pressed: d
+2024-03-20 13:16:36 - Key pressed: e
+2024-03-20 13:16:36 - Key pressed: g
+2024-03-20 13:16:36 - Special key pressed: Key.backspace
+2024-03-20 13:16:37 - Key pressed: h
+2024-03-20 13:16:38 - Special key pressed: Key.backspace
+2024-03-20 13:16:38 - Special key pressed: Key.backspace
+2024-03-20 13:16:38 - Special key pressed: Key.backspace
+2024-03-20 13:16:38 - Special key pressed: Key.backspace
+2024-03-20 13:16:38 - Special key pressed: Key.backspace
+2024-03-20 13:16:38 - Special key pressed: Key.caps_lock
+2024-03-20 13:16:39 - Key pressed: m
+2024-03-20 13:16:39 - Key pressed: y
+2024-03-20 13:16:40 - Key pressed: p
+2024-03-20 13:16:40 - Special key pressed: Key.backspace
+2024-03-20 13:16:40 - Special key pressed: Key.backspace
+2024-03-20 13:16:41 - Special key pressed: Key.backspace
+2024-03-20 13:16:41 - Special key pressed: Key.backspace
+2024-03-20 13:16:41 - Key pressed: n
+2024-03-20 13:16:41 - Key pressed: d
+2024-03-20 13:16:41 - Key pressed: e
+2024-03-20 13:16:42 - Key pressed: h
+2024-03-20 13:16:42 - Special key pressed: Key.space
+2024-03-20 13:16:42 - Key pressed: t
+2024-03-20 13:16:42 - Key pressed: o
+2024-03-20 13:16:43 - Key pressed: i
+2024-03-20 13:16:43 - Key pressed: k
+2024-03-20 13:16:43 - Key pressed: a
+2024-03-20 13:16:43 - Key pressed: d
+2024-03-20 13:16:43 - Key pressed: e
+2024-03-20 13:16:44 - Special key pressed: Key.tab
+2024-03-20 13:16:44 - Key pressed: m
+2024-03-20 13:16:45 - Key pressed: y
+2024-03-20 13:16:45 - Key pressed: p
+2024-03-20 13:16:45 - Key pressed: a
+2024-03-20 13:16:45 - Key pressed: 3
+2024-03-20 13:16:46 - Key pressed: 3
+2024-03-20 13:16:46 - Special key pressed: Key.enter
+2024-03-20 13:16:47 - Special key pressed: Key.enter
+2024-03-20 13:16:48 - Special key pressed: Key.enter
+2024-03-20 14:11:13 - Special key pressed: Key.ctrl_l
+2024-03-20 14:11:14 - Key pressed: 

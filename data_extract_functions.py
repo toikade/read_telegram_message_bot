@@ -2,12 +2,16 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body
 
 api_id = '21243794'
 api_hash = '2a1ef85eff1fe10eb27560df055b1746'
 bot_token = '6379620803:AAEaLOHQM6Zeo3niZFDDDjS4NnkH1S2NqqM'  #'your_bot_token'
 
 #function to extract trade from ai crypto channel
+
+#dict to hold extracted data
+tradeData = {}
 def  extract_signal_data_from_ai_crypto(text):
     if ('🟩' in str(text)) or ('🟥' in str(text)):
             ticker = re.findall(r'\#\w+', text)    #get ticker
@@ -15,8 +19,8 @@ def  extract_signal_data_from_ai_crypto(text):
             lever = re.findall(r'\bx\w+', text)     #get leverage
             tradeData['leverage'] = lever[0][1:]   #add leverage to dict
             #print(message)
-            print(message.sender_id)
-            print(message.date, ':', text)
+            #print(message.sender_id)
+            #print(message.date, ':', text)
             print(ticker)
             print(lever)
             for line in text.splitlines():
@@ -50,29 +54,45 @@ def  extract_signal_data_from_ai_crypto(text):
         #break
             
 def extract_signal_data_from_sentinel(text):
-    test_msg = "['Binance Futures, ByBit USDT, KuCoin Futures, OKX Futures', '#ENS/USDT Closed at stoploss after reaching take profit ⚠']"
-    pattern = r"\b" + re.escape("futures") + r"\b"
-    #pattern = re.compile(r'(?i)(?=.*\bprofit\b)(?=.*\bfutures\b)')
-    match = re.search(pattern, text, re.IGNORECASE)
-    #match = pattern.search(message.text)
-    #print(match)
-    if(not match):
-        #tradeData = {}
-        ticker = re.findall(r'\#\w+', text)    #get ticker
-        ticker = str(ticker[0][1:]+'USDT')
-        print(ticker)
-        tradeData['ticker'] = ticker    #add ticker to dict
-        lines = text.splitlines()
-        # for line in lines:
-        #     print(line)
-        #     #print(message.text)
-        #     
-        #print(lines)
-        tradeData['side'] = lines[1]
-        tradeData['leverage'] = lines[2].split()[1][:-1]
-        tradeData['entry'] = lines[5:7]
-        tradeData['targets'] = lines[9:16]
-        tradeData['stop'] = lines[-1]
+    # Remove leading and trailing whitespace characters
+    cleaned_block = text.strip()
+    # Skip empty blocks
+    if cleaned_block:
+        #check the block contains trading data
+        data_block = check_lines_with_numbers(cleaned_block)
+        #print(data_block)
+        if data_block:
+            #initialize data dict
+            tradeData = {}
+            error_counter = 0
+            try:
+                ticker = re.findall(r'\#\w+', data_block)    #get ticker
+                ticker = str(ticker[0][1:]+'USDT')
+                print(ticker)
+                tradeData['ticker'] = ticker    #add ticker to dict
+                lines = data_block.splitlines()       #split lines wrt to \n
+                #lines = [i for i in lines if i != '']   # filter to remove empty items
+    
+                #print(lines)
+                entry_and_target = get_next_line_items(lines)
+                #get side from lines
+                tradeData['side'] = [i for i in lines if i.lower()=='long' or i.lower()=='short'][0]
+                #get leverage from lines
+                tradeData['leverage'] = [get_number_from_str(line) for line in lines if 'Leverage' in line][0]
+                #get entry from entry_and_target which returns list
+                tradeData['entry'] = entry_and_target[0]
+                #get targets from entry_and_target from list index 1
+                tradeData['targets'] = entry_and_target[1]
+                #get stop assuming its always last value in lines
+                tradeData['stop'] = lines[-1]
+
+            except:
+                pass
+            print(tradeData)
+            # sanitize the data and modify values so they are consistent and coherent
+            sanitized_data = modify_extracted_data_body(tradeData)
+            print(sanitized_data)
+            return sanitized_data
     
 
 

@@ -30,6 +30,7 @@ with TelegramClient('test', api_id, api_hash) as client:
             #     print(raw_message)
             #     print(tradeData)
             if channel_id == 1953834653:    #sentinel_crypto_channel
+                extract_from_sentinel(raw_message)
                 print(raw_message)
             elif channel_id == 1598733237:    #gillans_crypto
                 print(raw_message)

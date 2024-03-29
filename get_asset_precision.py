@@ -16,7 +16,10 @@ def get_asset_precision(symbol):
         # Find the symbol details
         for symbol_info in exchange_info['symbols']:
             if symbol_info['symbol'] == symbol:
-                return symbol_info['filters'][0]['tickSize']
+                #return symbol_info['filters'][0]['tickSize']
+                print('ticksize',symbol_info['filters'][0]['tickSize'])
+                print('priceprecision',symbol_info['pricePrecision'])
+                print(symbol_info)
 
         print(f"Symbol {symbol} not found.")
         return None
@@ -26,7 +29,7 @@ def get_asset_precision(symbol):
         return None
 
 if __name__ == "__main__":
-    symbol = '1000PEPEUSDT'
+    symbol = '1INCHUSDT'
 
     precision = get_asset_precision(symbol)
     if precision is not None:
