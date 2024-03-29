@@ -19,10 +19,11 @@ def get_asset_precision(symbol):
                 #return symbol_info['filters'][0]['tickSize']
                 print('ticksize',symbol_info['filters'][0]['tickSize'])
                 print('priceprecision',symbol_info['pricePrecision'])
+                print('quantityprecision',symbol_info['quantityPrecision'])
                 print(symbol_info)
 
         print(f"Symbol {symbol} not found.")
-        return None
+        return symbol_info
 
     except Exception as e:
         print(f"Error: {e}")
