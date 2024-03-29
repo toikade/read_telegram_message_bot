@@ -34,26 +34,92 @@ def get_symbol_market_value(symbol):
 #     print('market_value', float(market_value))
 #     return divideBytwoPrice
 
-#a function to determine the number of leading zeros in a decimal
+# a function to get info about an asset such as precisions for price and quantity
+def get_asset_precision(symbol):
+    try:
+        # Get exchange information
+        exchange_info = client.futures_exchange_info()
+
+        # Find the symbol details
+        for symbol_info in exchange_info['symbols']:
+            if symbol_info['symbol'] == symbol:
+                #return symbol_info['filters'][0]['tickSize']
+                print('ticksize',symbol_info['filters'][0]['tickSize'])
+                print('priceprecision',symbol_info['pricePrecision'])
+                print('quantityprecision',symbol_info['quantityPrecision'])
+                print(symbol_info)
+
+        print(f"Symbol {symbol} not found.")
+        return symbol_info
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# a function to transform a number by padding it with leading zeroes
 def transform_number(number, leading_zeros_count):
+    # start with a number e.g  '123'
     number = str(number)
+    #if there is no leading_zero
     if leading_zeros_count == 0:
+        #add just 1 zero before the number
         transformed_number = '0' + '.' + number
     else:
+        #add zero and the number of leading zeros
         transformed_number = '0' + '.' + ('0'*leading_zeros_count) + number
-
     return transformed_number
 
+# a function to set price with asset precision
+def set_asset_precision(price_precision, num):
+    price_precision = price_precision
+    num_str = str(float(num))
+    #number of dp after the .
+    dp_length = len(num_str.split('.'))[1]
+    #if number of dp lt price_precision
+    if dp_length < price_precision:
+        #calculate how places are left to fill
+        places_to_fill_number = price_precision - dp_length
+        #fill the spaces with zeroes
+        num_str = num_str + '0'*places_to_fill_number
+    #if number of dp is gt price_precision
+    elif dp_length > price_precision:
+        #a variable to hold index for dot
+        dot_index = 0
+        #iterate inorder to get index of . from which to start counting
+        for idx, i in enumerate(num_str):
+            #if you find the dot
+            if i == '.':
+                dot_index = idx
+                break
+            #calculate the number of decimals to consider and truncate
+        dp_number_to_consider = dot_index + price_precision
+        num_str = num_str[:dp_number_to_consider]
+    #if the number respects the price precision
+    else:
+        pass
+    return num_str
+
+
+    
+
+#a function to determine the number of leading zeros in a decimal number
 def leading_zero_counter(number):
+    # start with str of number e.g '0.00123'
     strin = str(number)
     dot_index = 0
     zero_count = 0
+    #iterate through number
     for idx, i in enumerate(strin):
+        #if you meet dot
         if strin[idx] == '.':
+            #get the index of dot
             dot_index = idx
+        #if you continue and index is gt index of dot
         if idx > dot_index:
+            #if the char(i) is ne 0 means there is no more leading 0
             if i != '0':
                 break
+            #else if you find a 0 increase zero_counter by 1
             zero_count += 1
 
     return zero_count
@@ -124,6 +190,7 @@ def modify_extracted_data_body(data):
     #if ticker live market value is less than 1
     #ticker_market_value = get_symbol_market_value(data_body['ticker'])
     ticker_market_value = get_symbol_market_value(data['ticker'])    # placeholder test value
+    price_precision = get_asset_precision(data['ticker'])['pricePrecision']
     print('ticker_value',ticker_market_value)
     ticker_market_value_on_2 = float(ticker_market_value)/2
     #count the number of leading zeros(function) in value
