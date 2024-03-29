@@ -44,10 +44,11 @@ def get_asset_precision(symbol):
         for symbol_info in exchange_info['symbols']:
             if symbol_info['symbol'] == symbol:
                 #return symbol_info['filters'][0]['tickSize']
-                print('ticksize',symbol_info['filters'][0]['tickSize'])
-                print('priceprecision',symbol_info['pricePrecision'])
-                print('quantityprecision',symbol_info['quantityPrecision'])
-                print(symbol_info)
+                #print('ticksize',symbol_info['filters'][0]['tickSize'])
+                #print('priceprecision',symbol_info['pricePrecision'])
+                #print('quantityprecision',symbol_info['quantityPrecision'])
+                #print(symbol_info)
+                return symbol_info
 
         print(f"Symbol {symbol} not found.")
         return symbol_info
@@ -74,7 +75,7 @@ def set_asset_precision(price_precision, num):
     price_precision = price_precision
     num_str = str(float(num))
     #number of dp after the .
-    dp_length = len(num_str.split('.'))[1]
+    dp_length = len(num_str.split('.')[1])
     #if number of dp lt price_precision
     if dp_length < price_precision:
         #calculate how places are left to fill
@@ -100,7 +101,13 @@ def set_asset_precision(price_precision, num):
     return num_str
 
 
-    
+#a function to calculate asset precision
+def calc_asset_precision(data):
+    price_precision = get_asset_precision(data['ticker'])['pricePrecision']
+    for item in ['entry', 'targets']:
+        data[item] = [set_asset_precision(price_precision, i) for i in data[item]] 
+    data['stop'] = set_asset_precision(price_precision, data['stop'])
+    return data
 
 #a function to determine the number of leading zeros in a decimal number
 def leading_zero_counter(number):
@@ -190,7 +197,6 @@ def modify_extracted_data_body(data):
     #if ticker live market value is less than 1
     #ticker_market_value = get_symbol_market_value(data_body['ticker'])
     ticker_market_value = get_symbol_market_value(data['ticker'])    # placeholder test value
-    price_precision = get_asset_precision(data['ticker'])['pricePrecision']
     print('ticker_value',ticker_market_value)
     ticker_market_value_on_2 = float(ticker_market_value)/2
     #count the number of leading zeros(function) in value
@@ -278,6 +284,9 @@ data_body_1 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry':
 
 data_body_2 = {'ticker': 'AVAXUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['57', '54.5'], 'targets': ['59', '62', '63', '65', '66', '67', '70', '75'], 'stop': '50'}
 
+data_body_3 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['0.540', '0.62'], 'targets': ['0.632', '0.6340', '0.640', '0.652', '0.676'], 'stop': '0.4935'}
+
+print(calc_asset_precision(data_body_3))
 
 #a function to get the number by which to divide the numbers in the data body
 def get_divisor(market_value_div_by_2):

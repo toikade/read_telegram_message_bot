@@ -2,7 +2,7 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, calc_asset_precision
 
 api_id = '21243794'
 api_hash = '2a1ef85eff1fe10eb27560df055b1746'
@@ -91,7 +91,9 @@ def extract_signal_data_from_sentinel(text):
             print(tradeData)
             # sanitize the data and modify values so they are consistent and coherent
             sanitized_data = modify_extracted_data_body(tradeData)
+            price_precised_data = calc_asset_precision(sanitized_data)
             print(sanitized_data)
+            print(price_precised_data)
             return sanitized_data
     
 
