@@ -34,7 +34,7 @@ def get_symbol_market_value(symbol):
 #     print('market_value', float(market_value))
 #     return divideBytwoPrice
 
-#a finction to determine the number of leading zeros in a decimal
+#a function to determine the number of leading zeros in a decimal
 def transform_number(number, leading_zeros_count):
     number = str(number)
     if leading_zeros_count == 0:

@@ -2,6 +2,7 @@
 from decouple import config
 from binance.client import Client
 import time
+from get_asset_precision import get_asset_precision
 
 
 # Binance API key and secret
@@ -72,10 +73,11 @@ if __name__ == "__main__":
     limit_order_response = []
     # symbol = 'BTCUSDT'
     # side = 'BUY'
+    asset_quantity_precision = get_asset_precision(data_body['ticker'])['quantityPrecision']
     notional = 150 # 0.001 BTC
     entry_price = data_body['entry'][0]  # Entry price
     # leverage = 100  # Leverage level
-    quantity = float("{:0.0{}f}".format(notional/float(entry_price), 0))
+    quantity = float("{:0.0{}f}".format(notional/float(entry_price), asset_quantity_precision))
     # print(notional/int(entry_price))
     print('QUANT', quantity)
     
