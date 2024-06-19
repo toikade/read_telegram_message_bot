@@ -1,10 +1,11 @@
 from decouple import config
 from binance.client import Client
+import re, unicodedata
 
 # Initialize Binance client
-api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
-api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
-client = Client(api_key, api_secret, testnet=True)
+# api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+# api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
+# client = Client(api_key, api_secret, testnet=True)
 
 def count_decimal_places(number):
     return len(str(number).split('.')[1])
@@ -102,12 +103,12 @@ def set_asset_precision(price_precision, num):
 
 
 #a function to calculate asset precision
-def calc_asset_precision(data):
-    price_precision = get_asset_precision(data['ticker'])['pricePrecision']
-    for item in ['entry', 'targets']:
-        data[item] = [set_asset_precision(price_precision, i) for i in data[item]] 
-    data['stop'] = set_asset_precision(price_precision, data['stop'])
-    return data
+# def calc_asset_precision(data):
+#     price_precision = get_asset_precision(data['ticker'])['pricePrecision']
+#     for item in ['entry', 'targets']:
+#         data[item] = [set_asset_precision(price_precision, i) for i in data[item]] 
+#     data['stop'] = set_asset_precision(price_precision, data['stop'])
+#     return data
 
 #a function to determine the number of leading zeros in a decimal number
 def leading_zero_counter(number):
@@ -153,6 +154,24 @@ def check_lines_with_numbers(text):
         else:
             return 0
         
+
+def filter_text_with_numbers(text):
+    lines_with_numbers = 0
+    for line in text.split('\n'):
+        # Check if the line contains numbers (or decimals)
+        # Drop line if tronscan.org in it
+        word_list = ['tronscan','bln', 'cornix', 'top 5', 'trending', 'booking', 'liquidated', 'cup & handle', 'dead cat','accumulating', 'capitalization','accumulation','double bottom', 'three white soldiers']
+        for word in word_list:
+            if  word in line.lower():
+                return False
+        if(len(line)>=100):
+            return False
+        if any(char.isdigit() or char == '.' for char in line):
+            lines_with_numbers += 1
+            if lines_with_numbers >= 6:
+                return text  # Filter out the text if there are numbers on at least six lines
+    return False
+        
 #get_number_from_str eg ('Leverage 20x')    
 def get_number_from_str(text):
     num = ''
@@ -191,6 +210,73 @@ def get_next_line_items(text):
             
     
     return return_arr
+
+
+def block_contains_usd_or_usdt(text):
+    # Check each line for 'USD' or 'USDT' (case insensitive)
+    for idx, line in enumerate(text.splitlines()):
+        #Get USD or USDT as a block(good for SUSHI/USDT and #DUSK/USDT cases)
+        if re.search(r'(usdt|usd)', line, re.IGNORECASE):
+            return line
+    
+        elif idx<5:
+            symbols = get_binance_futures_asset_list_from_file()
+            for symbol in symbols:
+                if symbol in line:
+                    return symbol+'USDT'
+    return None
+
+
+def extract_entry_values_from_harrisons_data_block(text):
+    # Normalize text to convert confusing unicode chars to alphabet
+    text = unicodedata.normalize('NFKD', text)
+    # Split the text into lines
+    lines = text.splitlines()
+    results = []
+    target_line_index = -1
+
+    # Find the line containing 'entr' as part of any word
+    for i, line in enumerate(lines):
+        if re.search(r'\b.*entr.*\b', line, re.IGNORECASE):
+            target_line_index = i
+            # Extract numbers from the line with 'entr'
+            numbers = re.findall(r'\b\d+(?:\.\d+)?\b', line)
+            if numbers:
+                results.extend(numbers)
+                break
+    
+    # If no numbers are found on the 'entr' line, check the following two non-blank lines
+    if not results and target_line_index != -1:
+        non_blank_line_count = 0
+        for j in range(target_line_index + 1, len(lines)):
+            if non_blank_line_count >= 2:
+                break
+            if lines[j].strip():  # Check if the line is not blank
+                non_blank_line_count += 1
+                # Extract numbers ignoring enumerations like '1)' or '1-'
+                numbers = re.findall(r'\b\d+(?:\.\d+)?\b', re.sub(r'^\s*\d+[\)\-]\s*', '', lines[j]))
+                if numbers:
+                    results.extend(numbers)
+                if len(results) >= 2:
+                    break
+
+    # If still no numbers are found, search for 'buy' line
+    if not results:
+        for line in lines:
+            if re.search(r'buy', line, re.IGNORECASE):
+                # Extract numbers from the line with 'buy'
+                numbers = re.findall(r'\b\d+(?:\.\d+)?\b', line)
+                if numbers:
+                    results.extend(numbers)
+                if len(results) >= 2:
+                    break
+
+    # If no numbers are found, return 'market'
+    if not results:
+        return 'market'
+
+    # Return up to two groups of numbers
+    return results[:2]
 
 #a function to modify(sanitize) data in data_body
 def modify_extracted_data_body(data):
@@ -267,6 +353,7 @@ def modify_extracted_data_body(data):
                             data[item][idx] = str(transformed_elm/10)
         print(data)
         return data
+    
             
 
 
@@ -286,7 +373,7 @@ data_body_2 = {'ticker': 'AVAXUSDT', 'side': 'LONG', 'leverage': '20', 'entry': 
 
 data_body_3 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['0.540', '0.62'], 'targets': ['0.632', '0.6340', '0.640', '0.652', '0.676'], 'stop': '0.4935'}
 
-print(calc_asset_precision(data_body_3))
+#print(calc_asset_precision(data_body_3))
 
 #a function to get the number by which to divide the numbers in the data body
 def get_divisor(market_value_div_by_2):
@@ -325,3 +412,38 @@ def get_divisor(market_value_div_by_2):
 
 #number_to_trade = modify_extracted_data_body(data_body)
 #print('number to trade', number_to_trade)
+def get_binance_futures_asset_list():
+    exchange_info = client.futures_exchange_info()
+    # Extract all symbols ending with 'USDT' or 'USDC'
+    symbols_usdt_usdc = [symbol['symbol'] for symbol in exchange_info['symbols'] if symbol['symbol'].endswith(('USDT', 'USDC'))]
+
+    # Strip away 'USDT' or 'USDC' from the symbols
+    stripped_symbols = [symbol.replace('USDT', '').replace('USDC', '') for symbol in symbols_usdt_usdc]
+
+    return stripped_symbols
+    
+# with open('binance_futures_asset_list.txt', 'a',  encoding='utf-8') as file:
+#     for i in binance_futures_asset_list():
+#         if i != '':
+#             file.write(f'{i}\n')
+
+def get_binance_futures_asset_list_from_file():
+    with open('binance_futures_asset_list.txt', 'r', encoding='utf-8') as file:
+        # Read the entire content of the file
+        file_content = file.read()
+
+        # Split the content into blocks using '==' as the delimiter
+        asset_list = file_content.split('\n')
+        #remove trailing empty element
+        del asset_list[len(asset_list)-1]
+        return asset_list
+    
+#print(get_binance_futures_asset_list_from_file())
+# with open('harrisonfutures.txt', 'r', encoding='utf-8') as file:
+#     # Read the entire content of the file
+#     file_content = file.read()
+#     lines = file_content.splitlines()
+#     for line in lines:
+#         if 'Cornix' in line:
+#             print(line)
+#             print('+'*30)

@@ -18,5 +18,4 @@ with TelegramClient('test', api_id, api_hash) as client:
         print('--' * 30)
 
     # Run the client until disconnected
-    print('Listening for new messages...')
     client.run_until_disconnected()
