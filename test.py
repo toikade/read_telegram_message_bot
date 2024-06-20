@@ -113,44 +113,40 @@ Period: 2 Hours 0 Minutes ⏰
 #     return results
 
 def extract_numbers_after_targ(text):
+     # Define the pattern to match numbering formats
+    numbering_pattern = re.compile(r'^\s*(?:\b\d+\)|\d+\-|\btarget\s+\d+\s*\-|target\s+\d+\:|take-profit\s+\d+\:|tp\s+\d+\-)\s*', flags=re.IGNORECASE)
+    number_pattern = re.compile(r'(\d+(?:\.\d+)?)')
+
+    numbers = []
     lines = text.splitlines()
-    results = []
-    consecutive_numbers = []
+    consecutive_lines = []
     consecutive_count = 0
 
-    # Define the pattern for valid enumerations and numbers
-    pattern = re.compile(r'^\s*(\d+[\)\-]\s*|(?:target|tp)\s*\d+\s*[\-\)]?\s*)?(\d+(?:\.\d+)?)(?!%)\b', re.IGNORECASE)
-
     for line in lines:
-        if line.strip() == '':
-            # Stop if a blank line is encountered after at least three consecutive lines with numbers
-            if consecutive_count >= 3:
-                break
-            else:
-                consecutive_numbers = []
-                consecutive_count = 0
-                continue
-
-        # Find all numbers in the line, ignoring those in parentheses
-        match = pattern.findall(re.sub(r'\(.*?\)', '', line))
-        if match:
-            # Get the first group of numbers found on the line
-            number = match[0][1]
-            # Strip any leading or trailing non-alphanumeric characters from the number
-            cleaned_number = re.sub(r'^\W+|\W+$', '', number)
-            consecutive_numbers.append(cleaned_number)
+        # Remove numbering from the line
+        line_without_numbering = re.sub(numbering_pattern, '', line)
+        
+        # Extract numbers from the line, ignoring those in parentheses
+        matches = re.findall(number_pattern, re.sub(r'\([^)]*\)', '', line_without_numbering))
+        
+        if matches:
+            consecutive_lines.append(line)
+            numbers.extend(matches)
             consecutive_count += 1
         else:
-            # Reset if a line without numbers is encountered
+            # Reset if fewer than 3 consecutive lines with numbers are found
             if consecutive_count >= 3:
                 break
-            consecutive_numbers = []
+            numbers = []
+            consecutive_lines = []
             consecutive_count = 0
 
+    # Only return numbers if there are at least 3 consecutive lines
     if consecutive_count >= 3:
-        results.extend(consecutive_numbers)
+        return numbers
+    else:
+        return []
 
-    return results
 
 # def extract_numbers(text):
 #     # Split the text into lines
@@ -223,22 +219,22 @@ def extract_numbers_after_targ(text):
 
 # Example usage
 text = """
-⚠️PUMP SIGNALS⚠️
+#ATOM/USDT 
 
-VIP CALL 
+Signal Type: Long
+Leverage: 20x-50x
 
-CYBERUSDT
-LONG
-Leverage : Cross 20x
+Entry Zone: 10.869 
+Averaging (DCA): 10.146, 9.610
 
-Entry : 6.99 - 6.2
-StopLoss : 5.42
+Targets:
+11.307
+11.746
+12.623
+13.499
+14.376
 
-Target 1 - 8
-Target 2 - 12
-Target 3 - 15
-
-#PUMP
+StopLoss: 9.115
 """
 result = extract_numbers_after_targ(text)
 print(result)  
