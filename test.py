@@ -113,53 +113,42 @@ Period: 2 Hours 0 Minutes ⏰
 #     return results
 
 def extract_numbers_after_targ(text):
-    # Split the text into lines
     lines = text.splitlines()
     results = []
-    target_line_index = -1
+    consecutive_numbers = []
+    consecutive_count = 0
 
-    # Find the line containing 'targ' without 'entr' or 'buy' and no numbers on the same line
-    for i, line in enumerate(lines):
-        if re.search(r'targ', line, re.IGNORECASE) and not re.search(r'entr|buy', line, re.IGNORECASE) and not re.search(r'\d', line):
-            target_line_index = i
-            break
+    # Define the pattern for valid enumerations and numbers
+    pattern = re.compile(r'^\s*(\d+[\)\-]\s*|(?:target|tp)\s*\d+\s*[\-\)]?\s*)?(\d+(?:\.\d+)?)(?!%)\b', re.IGNORECASE)
 
-    # If a target line is found, process subsequent lines to extract numbers
-    if target_line_index != -1:
-        found_numbers = False
-        for j in range(target_line_index + 1, len(lines)):
-            if lines[j].strip() == '':  # Skip blank lines after 'targ'
-                if found_numbers:  # Stop if a blank line is found after numbers
-                    break
-                continue
-            # Extract numbers ignoring enumerations like '1)', '1 -', or 'target 1'
-            # We only consider the first group of numbers found on the same line
-            match = re.search(r'\b\d+(?:\.\d+)?(?!\%)\b', re.sub(r'^\s*(\d+[\)\-]\s*|target\s*\d+\s*)', '', lines[j], flags=re.IGNORECASE))
-            if match:
-                # Get the first group of numbers found on the line
-                first_number = match.group(0)
-                # Strip any leading or trailing non-alphanumeric characters from the number
-                cleaned_number = re.sub(r'^\W+|\W+$', '', first_number)
-                results.append(cleaned_number)
-                found_numbers = True
-
-    # If no numbers are found after 'targ', look for groups of numbers on three or more consecutive lines
-    if not results:
-        consecutive_numbers = []
-        for j in range(len(lines)):
-            line = lines[j].strip()
-            if line and not re.search(r'\d', line):  # Skip lines with numbers or blank lines
-                consecutive_numbers.append(line)
-                if len(consecutive_numbers) >= 3:
-                    break
+    for line in lines:
+        if line.strip() == '':
+            # Stop if a blank line is encountered after at least three consecutive lines with numbers
+            if consecutive_count >= 3:
+                break
             else:
-                consecutive_numbers = []  # Reset if a line with numbers or blank line is encountered
-        # Extract numbers from the consecutive lines
-        for line in consecutive_numbers:
-            numbers = re.findall(r'\b\d+(?:\.\d+)?(?!\%)\b', line)
-            if numbers:
-                results.extend(numbers)  # Extend the results with numbers from the consecutive lines
-                break  # Stop after finding numbers on consecutive lines
+                consecutive_numbers = []
+                consecutive_count = 0
+                continue
+
+        # Find all numbers in the line, ignoring those in parentheses
+        match = pattern.findall(re.sub(r'\(.*?\)', '', line))
+        if match:
+            # Get the first group of numbers found on the line
+            number = match[0][1]
+            # Strip any leading or trailing non-alphanumeric characters from the number
+            cleaned_number = re.sub(r'^\W+|\W+$', '', number)
+            consecutive_numbers.append(cleaned_number)
+            consecutive_count += 1
+        else:
+            # Reset if a line without numbers is encountered
+            if consecutive_count >= 3:
+                break
+            consecutive_numbers = []
+            consecutive_count = 0
+
+    if consecutive_count >= 3:
+        results.extend(consecutive_numbers)
 
     return results
 
@@ -234,24 +223,22 @@ def extract_numbers_after_targ(text):
 
 # Example usage
 text = """
-#LINK/USDT 
+⚠️PUMP SIGNALS⚠️
 
-Exchanges: Binance Futures, ByBit USD
+VIP CALL 
 
-Signal Type: LONG
-Leverage: Cross 20X
+CYBERUSDT
+LONG
+Leverage : Cross 20x
 
-Amount: 5.0%
+Entry : 6.99 - 6.2
+StopLoss : 5.42
 
-Entry Targets: 16.60
+Target 1 - 8
+Target 2 - 12
+Target 3 - 15
 
-Take Profit Targets:
-
-1) 17.30 (75%) 
-2) 19.00 (25%) 
-
-
-Stop Targets: 16.00
+#PUMP
 """
 result = extract_numbers_after_targ(text)
 print(result)  
