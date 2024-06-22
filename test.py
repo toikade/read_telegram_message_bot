@@ -113,39 +113,44 @@ Period: 2 Hours 0 Minutes ⏰
 #     return results
 
 def extract_numbers_after_targ(text):
-     # Define the pattern to match numbering formats
-    numbering_pattern = re.compile(r'^\s*(?:\b\d+\)|\d+\-|\btarget\s+\d+\s*\-|target\s+\d+\:|take-profit\s+\d+\:|tp\s+\d+\-)\s*', flags=re.IGNORECASE)
-    number_pattern = re.compile(r'(\d+(?:\.\d+)?)')
-
-    numbers = []
     lines = text.splitlines()
-    consecutive_lines = []
-    consecutive_count = 0
+    results = []
+    number_pattern = re.compile(r'\d+(\.\d+)?')
+    
+    for i, line in enumerate(lines):
+        # Check if line contains 'stop' (case insensitive) and 'stolen' (case insensitive)
+        # Also check if line contains 'SL' (case insensitive) followed by space or non-alphanumeric character
+        if (re.search(r'stop', line, re.IGNORECASE) and re.search(r'stolen', line, re.IGNORECASE)) or re.search(r'SL[\s\W]', line, re.IGNORECASE):
+            # Ignore brackets and their contents
+            line = re.sub(r'\([^)]*\)', '', line)
+            
+            # Find numbers in the current line
+            numbers = number_pattern.findall(line)
+            
+            if not numbers:
+                # Look for numbers in the next lines if current line has none
+                for next_line in lines[i+1:]:
+                    numbers = number_pattern.findall(next_line)
+                    if numbers:
+                        line = next_line
+                        break
+            
+            if numbers:
+                if '%' in line:
+                    # Return the group of numbers found between '%' and a space or non-alphanumeric character and concatenate with '%'
+                    percent_numbers = re.findall(r'%\s*(\d+(\.\d+)?)', line)
+                    if percent_numbers:
+                        result = f"{percent_numbers[0][0]}%"
+                    else:
+                        result = numbers[0]
+                else:
+                    # Return the first group of numbers found on that line
+                    result = numbers[0]
+                
+                results.append(result)
+    
+    return results
 
-    for line in lines:
-        # Remove numbering from the line
-        line_without_numbering = re.sub(numbering_pattern, '', line)
-        
-        # Extract numbers from the line, ignoring those in parentheses
-        matches = re.findall(number_pattern, re.sub(r'\([^)]*\)', '', line_without_numbering))
-        
-        if matches:
-            consecutive_lines.append(line)
-            numbers.extend(matches)
-            consecutive_count += 1
-        else:
-            # Reset if fewer than 3 consecutive lines with numbers are found
-            if consecutive_count >= 3:
-                break
-            numbers = []
-            consecutive_lines = []
-            consecutive_count = 0
-
-    # Only return numbers if there are at least 3 consecutive lines
-    if consecutive_count >= 3:
-        return numbers
-    else:
-        return []
 
 
 # def extract_numbers(text):
@@ -219,22 +224,23 @@ def extract_numbers_after_targ(text):
 
 # Example usage
 text = """
-#ATOM/USDT 
+1INCH/USDT 
+ LONG📈
+Leverage : 15X 
 
-Signal Type: Long
-Leverage: 20x-50x
+Entry Price : 0.4010$- 0.3925$
 
-Entry Zone: 10.869 
-Averaging (DCA): 10.146, 9.610
+Take-Profit Targets :
 
-Targets:
-11.307
-11.746
-12.623
-13.499
-14.376
+1) 0.4090$
+2) 0.4160$
+3) 0.4215$
+4) 0.4260$
+5) 0.4300$
 
-StopLoss: 9.115
+ SL- 0.3820$
+
+USE ONLY 8% FUNDS
 """
 result = extract_numbers_after_targ(text)
 print(result)  

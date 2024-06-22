@@ -278,6 +278,57 @@ def extract_entry_values_from_harrisons_data_block(text):
     # Return up to two groups of numbers
     return results[:2]
 
+def extract_target_values_from_harrisons_data_block(text):
+    # Define the pattern to match numbering formats
+    numbering_pattern = re.compile(r'^\s*(?:\d+\)|\d+-|target\s+\d+\s*-|target\s+\d+:|take-profit\s+\d+:|tp\s+\d+-)', flags=re.IGNORECASE)
+    number_pattern = re.compile(r'\d+(?:\.\d+)?')
+    ignore_pattern = re.compile(r'(entr|lever)', flags=re.IGNORECASE)
+
+    def get_numbers_from_lines(lines, min_consecutive):
+        numbers = []
+        consecutive_lines = []
+        consecutive_count = 0
+        
+        for line in lines:
+            # Skip lines containing 'entr' or 'lever'
+            if re.search(ignore_pattern, line):
+                continue
+            
+            # Strip '*' characters from the line
+            line = line.replace('*', '')
+            
+            # Remove numbering from the line
+            line_without_numbering = re.sub(numbering_pattern, '', line)
+            
+            # Extract numbers from the line
+            matches = re.findall(number_pattern, re.sub(r'\([^)]*\)', '', line_without_numbering))
+            
+            if matches:
+                consecutive_lines.append(line)
+                numbers.extend(matches)
+                consecutive_count += 1
+            else:
+                # Reset if fewer than required consecutive lines with numbers are found
+                if consecutive_count >= min_consecutive:
+                    break
+                numbers = []
+                consecutive_lines = []
+                consecutive_count = 0
+        
+        return numbers if consecutive_count >= min_consecutive else []
+
+    # Split the text into lines
+    lines = text.splitlines()
+    
+    # Try to get numbers from at least 3 consecutive lines first
+    numbers = get_numbers_from_lines(lines, 3)
+    
+    if not numbers:
+        # Try to get numbers from at least 2 consecutive lines as a fallback
+        numbers = get_numbers_from_lines(lines, 2)
+    
+    return numbers
+
 #a function to modify(sanitize) data in data_body
 def modify_extracted_data_body(data):
     #if ticker live market value is less than 1

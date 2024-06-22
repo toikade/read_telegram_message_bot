@@ -2,7 +2,7 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, block_contains_usd_or_usdt, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, block_contains_usd_or_usdt, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block
 from test import extract_numbers_after_targ
 
 
@@ -118,8 +118,11 @@ def extract_signal_data_from_harrisons(text):
 
     #========================================================== 
     # Extract TARGET prices
-    tradeData['targets'] = extract_numbers_after_targ(text)
-    #==========================================================         
+    #tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
+    #========================================================== 
+      # Extract STOP LOSS
+    tradeData['stop'] = extract_numbers_after_targ(text)
+    #==========================================================        
     # # Extract SIDE (LONG/SHORT)
     # side_match = re.search(r'(LONG|SHORT)', text, re.IGNORECASE)
     # if side_match:
@@ -135,11 +138,7 @@ def extract_signal_data_from_harrisons(text):
     # if target_match:
     #     tradeData['targets'] = target_match
 
-    # # Extract stop loss
-    # stop_loss_match = re.search(r'StopLoss: ([\d.]+)', text)
-    # if stop_loss_match:
-    #     tradeData['stop'] = stop_loss_match.group(1)
-
+   
     return tradeData
 
 # with TelegramClient('test', api_id, api_hash) as client:
