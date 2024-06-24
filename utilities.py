@@ -226,6 +226,14 @@ def block_contains_usd_or_usdt(text):
                     return symbol+'USDT'
     return None
 
+#get the change value from a percentage
+def get_value_change_amount_from_percentage(percentage, entryValue):
+    entryValue = float(entryValue)
+    percentage = float(percentage)
+    decreaseAmount = entryValue*(percentage/100)
+    afterDecreaseValue = entryValue - decreaseAmount
+    return str(afterDecreaseValue)
+
 
 def extract_entry_values_from_harrisons_data_block(text):
     # Normalize text to convert confusing unicode chars to alphabet
@@ -328,6 +336,64 @@ def extract_target_values_from_harrisons_data_block(text):
         numbers = get_numbers_from_lines(lines, 2)
     
     return numbers
+
+#extract the stoploss value from harrisons data block
+def extract_stop_value_from_harrisons_data_block(text):
+    #normalize text against characters that resemble alphabet but are not
+    text = unicodedata.normalize('NFKD', text)
+   # Split the text into lines
+    lines = text.split('\n')
+    
+    # Compile regex pattern for relevant keywords
+    keywords_pattern = re.compile(r'(?i)(stop|stolen|SL[\s\W])')
+    
+    # Store relevant lines
+    relevant_lines = []
+    relevant_line_idx = 1000000 #initiate holder for relevant_line index when it is found
+    stoploss_words = ['DCA', 'HOLD']
+
+    for idx, line in enumerate(lines):
+        if keywords_pattern.search(line): # Check if the line has relevant word
+            if re.search(r'\d', line): #is there a number on the relevant line
+                relevant_lines.append(line)
+            elif 'hold' in line.lower() or 'dca' in line.lower(): #if stop loss says HOLD and DCA
+                relevant_lines.append('10%') #return 10 for a default of 10%
+            else: #found nothing on the relevant line
+                relevant_line_idx = idx
+        if (idx > relevant_line_idx) and re.search(r'\d', line): #if index >relevant line idx and a number on that line
+            relevant_lines.append(line)
+            break
+
+     # Process the relevant lines
+    processed_lines = []
+    for line in relevant_lines:
+        # Ignore brackets and their contents
+        line = re.sub(r'\([^)]*\)', '', line)
+        
+        # Ignore line numbering like "1)"
+        line = re.sub(r'^\d+\)\s*', '', line)
+        
+        # Check if '%' is in the line
+        if '%' in line:
+            match = re.search(r'(\d+(\.\d+)?)\s*%', line)
+            if match:
+                # Check if there is a decimal point
+                number = match.group(1)
+                if '.' in number:
+                    # Get the part after the decimal point e.g 5.10
+                    decimal_part = number.split('.')[1]
+                    processed_lines.append(decimal_part + '%')
+                else:
+                    processed_lines.append(number + '%')
+        elif '5-10' in line:
+            processed_lines.append('10%')
+        else:
+            # Find the first group of numbers
+            match = re.search(r'(\d+(\.\d+)?)', line)
+            if match:
+                processed_lines.append(match.group(1))
+    
+    return processed_lines  
 
 #a function to modify(sanitize) data in data_body
 def modify_extracted_data_body(data):

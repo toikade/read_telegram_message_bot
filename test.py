@@ -112,45 +112,61 @@ Period: 2 Hours 0 Minutes ⏰
 
 #     return results
 
-def extract_numbers_after_targ(text):
-    lines = text.splitlines()
-    results = []
-    number_pattern = re.compile(r'\d+(\.\d+)?')
+def process_lines(text):
+    text = unicodedata.normalize('NFKD', text)
+   # Split the text into lines
+    lines = text.split('\n')
     
-    for i, line in enumerate(lines):
-        # Check if line contains 'stop' (case insensitive) and 'stolen' (case insensitive)
-        # Also check if line contains 'SL' (case insensitive) followed by space or non-alphanumeric character
-        if (re.search(r'stop', line, re.IGNORECASE) and re.search(r'stolen', line, re.IGNORECASE)) or re.search(r'SL[\s\W]', line, re.IGNORECASE):
-            # Ignore brackets and their contents
-            line = re.sub(r'\([^)]*\)', '', line)
-            
-            # Find numbers in the current line
-            numbers = number_pattern.findall(line)
-            
-            if not numbers:
-                # Look for numbers in the next lines if current line has none
-                for next_line in lines[i+1:]:
-                    numbers = number_pattern.findall(next_line)
-                    if numbers:
-                        line = next_line
-                        break
-            
-            if numbers:
-                if '%' in line:
-                    # Return the group of numbers found between '%' and a space or non-alphanumeric character and concatenate with '%'
-                    percent_numbers = re.findall(r'%\s*(\d+(\.\d+)?)', line)
-                    if percent_numbers:
-                        result = f"{percent_numbers[0][0]}%"
-                    else:
-                        result = numbers[0]
-                else:
-                    # Return the first group of numbers found on that line
-                    result = numbers[0]
-                
-                results.append(result)
+    # Compile regex pattern for relevant keywords
+    keywords_pattern = re.compile(r'(?i)(stop|stolen|SL[\s\W])')
     
-    return results
+    # Store relevant lines
+    relevant_lines = []
+    relevant_line_idx = 1000000 #initiate holder for relevant_line index when it is found
 
+    for idx, line in enumerate(lines):
+        #print('BEFORE', idx, line)
+        if keywords_pattern.search(line): # Check if the line has relevant word
+            if re.search(r'\d', line): #is there a number on the relevant line
+                relevant_lines.append(line)
+                print('RELINE',idx, line)
+            else:
+                relevant_line_idx = idx
+        if (idx > relevant_line_idx) and re.search(r'\d', line): #if index >relevant line idx and a number on that line
+            relevant_lines.append(line)
+            print('LINEAFT',idx, line)
+            break
+
+     # Process the relevant lines
+    processed_lines = []
+    for line in relevant_lines:
+        # Ignore brackets and their contents
+        line = re.sub(r'\([^)]*\)', '', line)
+        
+        # Ignore line numbering like "1)"
+        line = re.sub(r'^\d+\)\s*', '', line)
+        
+        # Check if '%' is in the line
+        if '%' in line:
+            match = re.search(r'(\d+(\.\d+)?)\s*%', line)
+            if match:
+                # Check if there is a decimal point
+                number = match.group(1)
+                if '.' in number:
+                    # Get the part after the decimal point
+                    decimal_part = number.split('.')[1]
+                    processed_lines.append(decimal_part + '%')
+                else:
+                    processed_lines.append(number + '%')
+        elif '5-10' in line:
+            processed_lines.append('10%')
+        else:
+            # Find the first group of numbers
+            match = re.search(r'(\d+(\.\d+)?)', line)
+            if match:
+                processed_lines.append(match.group(1))
+    
+    return processed_lines    
 
 
 # def extract_numbers(text):
@@ -224,23 +240,23 @@ def extract_numbers_after_targ(text):
 
 # Example usage
 text = """
-1INCH/USDT 
- LONG📈
-Leverage : 15X 
+𝗣𝘂𝗺𝗽 𝗖𝗼𝗶𝗻 : ⚡️⚡️#BIGTIME/USDT⚡️⚡️
 
-Entry Price : 0.4010$- 0.3925$
+⭐️ 𝗘𝗡𝗧𝗥𝗬  : 0.40 _ 0.35
 
-Take-Profit Targets :
+𝗟𝗲𝘃𝗲𝗿𝗮𝗴𝗲 : (100X_200X)
 
-1) 0.4090$
-2) 0.4160$
-3) 0.4215$
-4) 0.4260$
-5) 0.4300$
+🎯 𝗧𝗔𝗥𝗚𝗘𝗧𝘀 :
 
- SL- 0.3820$
+1) 0.45
+2) 0.50
+3) 0.58
+4) 0.65
+5) 0.80++
 
-USE ONLY 8% FUNDS
+𝗦𝗧𝗢𝗣 𝗟𝗢𝗦𝗦 : 0.30
+
+𝗠𝗮𝗿𝗴𝗶𝗻 : 𝗢𝗻𝗹𝘆 ( 𝟱_𝟭𝟬%)
 """
-result = extract_numbers_after_targ(text)
+result = process_lines(text)
 print(result)  

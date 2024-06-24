@@ -2,8 +2,8 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, block_contains_usd_or_usdt, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block
-from test import extract_numbers_after_targ
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, block_contains_usd_or_usdt, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage 
+#from test import extract_number
 
 
 api_id = '21243794'
@@ -114,14 +114,35 @@ def extract_signal_data_from_harrisons(text):
     # print(ticker)
     #========================================================== 
     # Extract ENTRY prices 
-    # tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
+    tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
+    print('ENTRY', tradeData['entries'])
 
     #========================================================== 
     # Extract TARGET prices
     #tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
     #========================================================== 
       # Extract STOP LOSS
-    tradeData['stop'] = extract_numbers_after_targ(text)
+    stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
+    print('extractedSTOP', stop_value)
+    entry_value = tradeData['entries'][-1]
+    
+    try:
+        if '%' in stop_value:
+            newChangeValue = 0
+            match = re.search(r'(\d+(\.\d+)?)\s*%', stop_value) #filter out the %
+            if match:
+                percentage_number = match.group(1)
+                print('PERC', percentage_number)
+            newChangeValue = get_value_change_amount_from_percentage(percentage_number, entry_value)
+            tradeData['stop'] = ['NEWSTOP', percentage_number, newChangeValue]
+            print('NEWSTOP', percentage_number, newChangeValue)
+        else:
+            tradeData['stop'] = stop_value
+    except TypeError as e:
+        print(e)
+        pass
+    
+    print('finalSTOP', tradeData['stop'])
     #==========================================================        
     # # Extract SIDE (LONG/SHORT)
     # side_match = re.search(r'(LONG|SHORT)', text, re.IGNORECASE)
