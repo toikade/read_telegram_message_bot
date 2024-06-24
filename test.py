@@ -1,8 +1,9 @@
 #from test2 import sentinel_data_get_from_file
 #from utilities import check_lines_with_numbers
 from utilities import block_contains_usd_or_usdt
-import re
-import unicodedata
+import re,unicodedata, ftfy
+from unidecode import unidecode
+
 
 
 # Example usage
@@ -113,29 +114,57 @@ Period: 2 Hours 0 Minutes ⏰
 #     return results
 
 def process_lines(text):
-    #mormalize text to remove characters that resemble alphabet but are not
-    text = unicodedata.normalize('NFKD', text)
+    specific_replacements = {
+    '\u0445': 'x',  # Cyrillic 'х' to Latin 'x'
+    # Add more specific replacements if needed
+    }
+    
+    def normalize_text(text):
+        #normalize text to remove characters that resemble alphabet but are not
+        text = unicodedata.normalize('NFKD', text)
+        # Use ftfy to fix text encoding issues
+        text = ftfy.fix_text(text)
+        for char, replacement in specific_replacements.items():
+            text = text.replace(char, replacement)
+        # Use unidecode for broader transliteration
+        text = unidecode(text)
+        return text
+
+    text = normalize_text(text)
     # Split the text into lines
     lines = text.split('\n')
     
     # Compile the regex pattern to match one or more digits followed by 'x' (case insensitive)
-    pattern = re.compile(r'(\d+)x', re.IGNORECASE)
+    pattern = re.compile(r'(\d+(\.\d+)?)x', re.IGNORECASE)
     
     # List to store the smallest matching number per line
     smallest_matching_numbers = []
     
+    matches = pattern.findall(text)
+
+    # Extract only the integer parts of the numbers from the matches
+    numbers = [str(int(float(match[0]))) for match in matches]
+    #if numbers is empty i.e no value found to return, return 1
+    if not len(numbers): #empty array
+        numbers.append('1')
+    else:
+        numbers = [str(min(map(int, numbers)))]
+    return numbers
+
+
     # Iterate over each line and check for the pattern
-    for idx, line in enumerate(lines):
-        matches = pattern.findall(line)
-        if matches:
-            # Convert matches to integers and find the smallest one
-            smallest_number = min(map(int, matches))
-            smallest_matching_numbers.append(smallest_number)
-            break
-        if idx >=len(lines)-1:
-            smallest_matching_numbers.append('1')
+    # for idx, line in enumerate(lines):
+    #     matches = pattern.findall(line)
+    #     if matches:
+    #         return matches
+    #         # Convert matches to integers and find the smallest one
+    #         smallest_number = min(map(int, matches))
+    #         smallest_matching_numbers.append(smallest_number)
+    #         break
+    #     if idx >=len(lines)-1:
+    #         smallest_matching_numbers.append('1')
     
-    return smallest_matching_numbers
+    # return smallest_matching_numbers
 
 
 # def extract_numbers(text):
@@ -209,23 +238,21 @@ def process_lines(text):
 
 # Example usage
 text = """
-⚡️⚡️#EOS/USDT⚡️⚡️
+#STX/USDT 
+Exchanges: Binance Futures
+Signal Type: Long
+Leverage: Cross 25.0х_30x
+Entry Targets: 1.0281
+Take Profit Targets:
+1) 1.04
+2) 1.05
+3) 1.06
+4) 1.08
+5) 1.09
 
-Signal Type: Short
-Leverage: Cross 75X_25X
 
-Entry Range: 0.8960
-
-Take-Profit Targets:
-1) 0.88256
-2) 0.87360
-3) 0.86464
-4) 0.85120
-5) 0.84224
-6) 0.82880
-
-Stoploss: 
-5-10%
+Stop Targets:
+-70%
 """
 result = process_lines(text)
 print(result)  

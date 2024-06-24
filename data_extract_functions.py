@@ -114,46 +114,46 @@ def extract_signal_data_from_harrisons(text):
     # print(ticker)
     #========================================================== 
     # Extract ENTRY prices 
-    tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
-    print('ENTRY', tradeData['entries'])
+    # tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
+    # print('ENTRY', tradeData['entries'])
 
     #========================================================== 
     # Extract TARGET prices
     #tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
     #========================================================== 
       # Extract STOP LOSS
-    stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
-    print('extractedSTOP', stop_value)
-    entry_value = tradeData['entries'][-1]
+    # stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
+    # print('extractedSTOP', stop_value)
+    # entry_value = tradeData['entries'][-1]
     
-    try:
-        if '%' in stop_value:
-            newChangeValue = 0
-            match = re.search(r'(\d+(\.\d+)?)\s*%', stop_value) #filter out the %
-            if match:
-                percentage_number = match.group(1)
-                print('PERC', percentage_number)
-            newChangeValue = get_value_change_amount_from_percentage(percentage_number, entry_value)
-            tradeData['stop'] = ['NEWSTOP', percentage_number, newChangeValue]
-            print('NEWSTOP', percentage_number, newChangeValue)
-        else:
-            tradeData['stop'] = stop_value
-    except TypeError as e:
-        print(e)
-        pass
+    # try:
+    #     if '%' in stop_value:
+    #         newChangeValue = 0
+    #         match = re.search(r'(\d+(\.\d+)?)\s*%', stop_value) #filter out the %
+    #         if match:
+    #             percentage_number = match.group(1)
+    #             print('PERC', percentage_number)
+    #         newChangeValue = get_value_change_amount_from_percentage(percentage_number, entry_value)
+    #         tradeData['stop'] = ['NEWSTOP', percentage_number, newChangeValue]
+    #         print('NEWSTOP', percentage_number, newChangeValue)
+    #     else:
+    #         tradeData['stop'] = stop_value
+    # except TypeError as e:
+    #     print(e)
+    #     pass
     
-    print('finalSTOP', tradeData['stop'])
-    #==========================================================        
+    # print('finalSTOP', tradeData['stop'])
+    #==========================================================   
+
+    # Extract leverage
+    tradeData['leverage'] = process_lines(text)
+    #==========================================================
     # # Extract SIDE (LONG/SHORT)
     # side_match = re.search(r'(LONG|SHORT)', text, re.IGNORECASE)
     # if side_match:
     #     tradeData['side'] = side_match.group(0).upper()  # Ensure consistent case in output
     #========================================================== 
-    # # Extract leverage
-    # leverage_match = re.search(r'Leverage: (\d+)x', text)
-    # if leverage_match:
-    #     tradeData['leverage'] = leverage_match.group(1)
-
+    
     # # Extract target prices
     # target_match = re.findall(r'Target:\s*\d+\)\s*([\d.]+)', text)
     # if target_match:
