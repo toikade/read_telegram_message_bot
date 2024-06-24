@@ -113,60 +113,24 @@ Period: 2 Hours 0 Minutes ⏰
 #     return results
 
 def process_lines(text):
+    #mormalize text to remove characters that resemble alphabet but are not
     text = unicodedata.normalize('NFKD', text)
-   # Split the text into lines
+    # Split the text into lines
     lines = text.split('\n')
     
-    # Compile regex pattern for relevant keywords
-    keywords_pattern = re.compile(r'(?i)(stop|stolen|SL[\s\W])')
+    # Compile the regex pattern to match one or more digits followed by 'x' (case insensitive)
+    pattern = re.compile(r'(\d+)x', re.IGNORECASE)
     
-    # Store relevant lines
-    relevant_lines = []
-    relevant_line_idx = 1000000 #initiate holder for relevant_line index when it is found
-
-    for idx, line in enumerate(lines):
-        #print('BEFORE', idx, line)
-        if keywords_pattern.search(line): # Check if the line has relevant word
-            if re.search(r'\d', line): #is there a number on the relevant line
-                relevant_lines.append(line)
-                print('RELINE',idx, line)
-            else:
-                relevant_line_idx = idx
-        if (idx > relevant_line_idx) and re.search(r'\d', line): #if index >relevant line idx and a number on that line
-            relevant_lines.append(line)
-            print('LINEAFT',idx, line)
-            break
-
-     # Process the relevant lines
-    processed_lines = []
-    for line in relevant_lines:
-        # Ignore brackets and their contents
-        line = re.sub(r'\([^)]*\)', '', line)
-        
-        # Ignore line numbering like "1)"
-        line = re.sub(r'^\d+\)\s*', '', line)
-        
-        # Check if '%' is in the line
-        if '%' in line:
-            match = re.search(r'(\d+(\.\d+)?)\s*%', line)
-            if match:
-                # Check if there is a decimal point
-                number = match.group(1)
-                if '.' in number:
-                    # Get the part after the decimal point
-                    decimal_part = number.split('.')[1]
-                    processed_lines.append(decimal_part + '%')
-                else:
-                    processed_lines.append(number + '%')
-        elif '5-10' in line:
-            processed_lines.append('10%')
-        else:
-            # Find the first group of numbers
-            match = re.search(r'(\d+(\.\d+)?)', line)
-            if match:
-                processed_lines.append(match.group(1))
+    # List to store the matching numbers
+    matching_numbers = []
     
-    return processed_lines    
+    # Iterate over each line and check for the pattern
+    for line in lines:
+        matches = pattern.findall(line)
+        if matches:
+            matching_numbers.extend(matches)
+    
+    return matching_numbers
 
 
 # def extract_numbers(text):
