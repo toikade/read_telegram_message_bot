@@ -121,16 +121,21 @@ def process_lines(text):
     # Compile the regex pattern to match one or more digits followed by 'x' (case insensitive)
     pattern = re.compile(r'(\d+)x', re.IGNORECASE)
     
-    # List to store the matching numbers
-    matching_numbers = []
+    # List to store the smallest matching number per line
+    smallest_matching_numbers = []
     
     # Iterate over each line and check for the pattern
-    for line in lines:
+    for idx, line in enumerate(lines):
         matches = pattern.findall(line)
         if matches:
-            matching_numbers.extend(matches)
+            # Convert matches to integers and find the smallest one
+            smallest_number = min(map(int, matches))
+            smallest_matching_numbers.append(smallest_number)
+            break
+        if idx >=len(lines)-1:
+            smallest_matching_numbers.append('1')
     
-    return matching_numbers
+    return smallest_matching_numbers
 
 
 # def extract_numbers(text):
@@ -204,23 +209,23 @@ def process_lines(text):
 
 # Example usage
 text = """
-𝗣𝘂𝗺𝗽 𝗖𝗼𝗶𝗻 : ⚡️⚡️#BIGTIME/USDT⚡️⚡️
+⚡️⚡️#EOS/USDT⚡️⚡️
 
-⭐️ 𝗘𝗡𝗧𝗥𝗬  : 0.40 _ 0.35
+Signal Type: Short
+Leverage: Cross 75X_25X
 
-𝗟𝗲𝘃𝗲𝗿𝗮𝗴𝗲 : (100X_200X)
+Entry Range: 0.8960
 
-🎯 𝗧𝗔𝗥𝗚𝗘𝗧𝘀 :
+Take-Profit Targets:
+1) 0.88256
+2) 0.87360
+3) 0.86464
+4) 0.85120
+5) 0.84224
+6) 0.82880
 
-1) 0.45
-2) 0.50
-3) 0.58
-4) 0.65
-5) 0.80++
-
-𝗦𝗧𝗢𝗣 𝗟𝗢𝗦𝗦 : 0.30
-
-𝗠𝗮𝗿𝗴𝗶𝗻 : 𝗢𝗻𝗹𝘆 ( 𝟱_𝟭𝟬%)
+Stoploss: 
+5-10%
 """
 result = process_lines(text)
 print(result)  
