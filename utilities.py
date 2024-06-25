@@ -1,6 +1,7 @@
 from decouple import config
 from binance.client import Client
-import re, unicodedata
+import re, unicodedata, ftfy
+from unidecode import unidecode
 
 # Initialize Binance client
 # api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
@@ -227,13 +228,30 @@ def block_contains_usd_or_usdt(text):
     return None
 
 #get the change value from a percentage
-def get_value_change_amount_from_percentage(percentage, entryValue):
+def get_value_change_amount_from_percentage(percentage, entryValue, side):
     entryValue = float(entryValue)
     percentage = float(percentage)
-    decreaseAmount = entryValue*(percentage/100)
-    afterDecreaseValue = entryValue - decreaseAmount
-    return str(afterDecreaseValue)
+    changeAmount = entryValue*(percentage/100)
+    try:
+        if side == 'LONG':
+            afterDecreaseValue = entryValue - changeAmount
+        else:
+            afterDecreaseValue = entryValue + changeAmount
+        return str(afterDecreaseValue)
+    except KeyError as ke:
+        print(ke)
 
+#extract the ticker from harrisons data block
+def extract_ticker_from_harrisons_data_block(text):
+    line = block_contains_usd_or_usdt(text)
+    line_without_usd = re.sub(r'(usdt|usd)', '', line, flags=re.IGNORECASE)
+    # Extract all alphanumeric characters from the remaining line
+    alphanumeric_chars = re.findall(r'[A-Za-z0-9]+', line_without_usd)
+   
+    asset_string = ''.join(alphanumeric_chars)
+
+    concatenated_string = asset_string + 'USDT'
+    return concatenated_string
 
 def extract_entry_values_from_harrisons_data_block(text):
     # Normalize text to convert confusing unicode chars to alphabet
@@ -335,6 +353,45 @@ def extract_target_values_from_harrisons_data_block(text):
         # Try to get numbers from at least 2 consecutive lines as a fallback
         numbers = get_numbers_from_lines(lines, 2)
     
+    return numbers
+
+#extract leverage value from harrisons data block
+def extract_leverage_value_from_harrisons_data_block(text):
+    specific_replacements = {
+    '\u0445': 'x',  # Cyrillic 'х' to Latin 'x'
+    # Add more specific replacements if needed
+    }
+    
+    def normalize_text(text):
+        #normalize text to remove characters that resemble alphabet but are not
+        text = unicodedata.normalize('NFKD', text)
+        # Use ftfy to fix text encoding issues
+        text = ftfy.fix_text(text)
+        for char, replacement in specific_replacements.items():
+            text = text.replace(char, replacement)
+        # Use unidecode for broader transliteration
+        text = unidecode(text)
+        return text
+
+    text = normalize_text(text)
+    # Split the text into lines
+    lines = text.split('\n')
+    
+    # Compile the regex pattern to match one or more digits followed by 'x' (case insensitive)
+    pattern = re.compile(r'(\d+(\.\d+)?)x', re.IGNORECASE)
+    
+    # List to store the smallest matching number per line
+    smallest_matching_numbers = []
+    
+    matches = pattern.findall(text)
+
+    # Extract only the integer parts of the numbers from the matches
+    numbers = [str(int(float(match[0]))) for match in matches]
+    #if numbers is empty i.e no value found to return, return 1
+    if not len(numbers): #empty array
+        numbers.append('1')
+    else:
+        numbers = [str(min(map(int, numbers)))]
     return numbers
 
 #extract the stoploss value from harrisons data block

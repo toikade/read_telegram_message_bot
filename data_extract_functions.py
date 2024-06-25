@@ -2,8 +2,8 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, block_contains_usd_or_usdt, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage 
-from test import process_lines
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block, extract_ticker_from_harrisons_data_block
+#from test import process_lines
 
 
 api_id = '21243794'
@@ -101,64 +101,60 @@ def  extract_signal_data_from_ai_crypto(text):
 def extract_signal_data_from_harrisons(text):
     tradeData = {}
     # Extract TICKER
-    # line = block_contains_usd_or_usdt(text)
-    # line_without_usd = re.sub(r'(usdt|usd)', '', line, flags=re.IGNORECASE)
-    # # Extract all alphanumeric characters from the remaining line
-    # alphanumeric_chars = re.findall(r'[A-Za-z0-9]+', line_without_usd)
-   
-    # asset_string = ''.join(alphanumeric_chars)
-
-    # concatenated_string = asset_string + 'USDT'
-    # ticker =  concatenated_string
-    # tradeData['ticker'] = ticker
-    # print(ticker)
+    
+    tradeData['ticker'] = extract_ticker_from_harrisons_data_block(text)
     #========================================================== 
     # Extract ENTRY prices 
-    # tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
-    # print('ENTRY', tradeData['entries'])
-
+    tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
+    print('ENTRY', tradeData['entries'])
     #========================================================== 
     # Extract TARGET prices
     #tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
-    #========================================================== 
-      # Extract STOP LOSS
-    # stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
-    # print('extractedSTOP', stop_value)
-    # entry_value = tradeData['entries'][-1]
+    targets = extract_target_values_from_harrisons_data_block(text)
     
-    # try:
-    #     if '%' in stop_value:
-    #         newChangeValue = 0
-    #         match = re.search(r'(\d+(\.\d+)?)\s*%', stop_value) #filter out the %
-    #         if match:
-    #             percentage_number = match.group(1)
-    #             print('PERC', percentage_number)
-    #         newChangeValue = get_value_change_amount_from_percentage(percentage_number, entry_value)
-    #         tradeData['stop'] = ['NEWSTOP', percentage_number, newChangeValue]
-    #         print('NEWSTOP', percentage_number, newChangeValue)
-    #     else:
-    #         tradeData['stop'] = stop_value
-    # except TypeError as e:
-    #     print(e)
-    #     pass
-    
-    # print('finalSTOP', tradeData['stop'])
     #==========================================================   
 
     # Extract leverage
-    tradeData['leverage'] = process_lines(text)
+    #tradeData['leverage'] = extract_leverage_value_from_harrisons_data_block(text)
     #==========================================================
-    # # Extract SIDE (LONG/SHORT)
-    # side_match = re.search(r'(LONG|SHORT)', text, re.IGNORECASE)
-    # if side_match:
-    #     tradeData['side'] = side_match.group(0).upper()  # Ensure consistent case in output
+    # Extract SIDE (LONG/SHORT)
+    entry_value = tradeData['entries'][-1] #get the last value of the entries
+    target_value = targets[-1]
+    try:
+        if (float(entry_value) - float(target_value)) >0: #if entry price is higher than stop price
+            tradeData['side'] = 'SHORT'
+        else:
+            tradeData['side'] = 'LONG'
+    except ValueError as ve:
+        print(ve)
     #========================================================== 
+    # Extract STOP LOSS
+    try:
+        stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
+        entry_value = tradeData['entries'][-1] #get the last value of the entries
+        side = tradeData['side']  #use the market side to calculate stop from [percentage]
     
-    # # Extract target prices
-    # target_match = re.findall(r'Target:\s*\d+\)\s*([\d.]+)', text)
-    # if target_match:
-    #     tradeData['targets'] = target_match
-
+    
+        if '%' in stop_value:
+            newChangeValue = 0
+            match = re.search(r'(\d+(\.\d+)?)\s*%', stop_value) #filter out the %
+            if match:
+                percentage_number = match.group(1)
+                #print('PERC', percentage_number)
+                #get the stoploss value from the percentage given
+            newChangeValue = get_value_change_amount_from_percentage(percentage_number, entry_value, side)
+            tradeData['stop'] = newChangeValue
+            #print('NEWSTOP', percentage_number, newChangeValue)
+        else:
+            tradeData['stop'] = stop_value
+    except TypeError as e:
+        print(e)
+    except ValueError as ve:
+        print(ve)
+    except KeyError as ke:
+        print(ke)
+    #print('STOP', tradeData['stop'])
+    #========================================================== 
    
     return tradeData
 
