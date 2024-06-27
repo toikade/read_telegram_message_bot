@@ -115,7 +115,7 @@ def extract_signal_data_from_harrisons(text):
     #==========================================================   
 
     # Extract leverage
-    #tradeData['leverage'] = extract_leverage_value_from_harrisons_data_block(text)
+    tradeData['leverage'] = extract_leverage_value_from_harrisons_data_block(text)
     #==========================================================
     # Extract SIDE (LONG/SHORT)
     entry_value = tradeData['entries'][-1] #get the last value of the entries
