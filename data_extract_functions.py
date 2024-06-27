@@ -105,12 +105,12 @@ def extract_signal_data_from_harrisons(text):
     tradeData['ticker'] = extract_ticker_from_harrisons_data_block(text)
     #========================================================== 
     # Extract ENTRY prices 
-    tradeData['entries'] = extract_entry_values_from_harrisons_data_block(text)
-    print('ENTRY', tradeData['entries'])
+    tradeData['entry'] = extract_entry_values_from_harrisons_data_block(text)
+    print('ENTRY', tradeData['entry'])
     #========================================================== 
     # Extract TARGET prices
-    #tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
-    targets = extract_target_values_from_harrisons_data_block(text)
+    tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
+    targets = tradeData['targets']
     
     #==========================================================   
 
@@ -118,7 +118,7 @@ def extract_signal_data_from_harrisons(text):
     tradeData['leverage'] = extract_leverage_value_from_harrisons_data_block(text)
     #==========================================================
     # Extract SIDE (LONG/SHORT)
-    entry_value = tradeData['entries'][-1] #get the last value of the entries
+    entry_value = tradeData['entry'][-1] #get the last value of the entries
     target_value = targets[-1]
     try:
         if (float(entry_value) - float(target_value)) >0: #if entry price is higher than stop price
@@ -131,7 +131,7 @@ def extract_signal_data_from_harrisons(text):
     # Extract STOP LOSS
     try:
         stop_value = extract_stop_value_from_harrisons_data_block(text)[0]
-        entry_value = tradeData['entries'][-1] #get the last value of the entries
+        entry_value = tradeData['entry'][-1] #get the last value of the entries
         side = tradeData['side']  #use the market side to calculate stop from [percentage]
     
     

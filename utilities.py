@@ -466,7 +466,7 @@ def modify_extracted_data_body(data):
         #if stopLoss has a decimal point
         if has_decimal(data['stop']):
             #return data bc all other values should be sanitized already
-            print(data) 
+            print('LONG',data) 
             return data
         #else if there is no decimal in SL, other values are not sanitized
         else:
@@ -494,7 +494,7 @@ def modify_extracted_data_body(data):
                         else:
                         #multiply by 10 to shift 1dp to right and replace with str of elm
                             data[item][idx] = str(transformed_elm*10)
-        print(data)
+        print('LONG',data)
         return data
 
     #in case side is SHORT
@@ -502,22 +502,35 @@ def modify_extracted_data_body(data):
         #if smallest target has a decimal and the number is gt 1
         if has_decimal(data['targets'][-1]) and float(data['targets'][-1]) > 1:
             #return data body
-            print(data)
+            print('SHORT1',data)
             return data
         else:
+            #set first_iteration in case the stop value has to be transformed
+            first_iteration = True
+            #transform the smallest target wrt to leading zeroes bc it should be the smallest number in the
+            #dataset and other numbers should be greater than it since its the short side and it will used
+            #on a comparative basis to compare other numbers
             data['targets'][-1] = str(transform_number(int(data['targets'][-1]), leading_zero_count))
             #store sanitized value in a variable
             comparative_smallest_target = data['targets'][-1]
             #iterate over the data items
             
             for item in ['entry', 'targets']:
+                
                 for idx, elm in enumerate(data[item]):
+                    
                     #if elm has a decimal and is greater than Smallest target(value is ok)
-                    if has_decimal(float(elm)) and float(elm) >= float(comparative_smallest_target):
+                    if has_decimal(elm) and (float(elm) >= float(comparative_smallest_target)):
+                        print('elm', elm)
                         continue
                     else:
+                        #convert stop value only once
+                        if first_iteration:
+                            data['stop'] = str(transform_number(int(data['stop']), leading_zero_count)) 
+                            first_iteration = False
                         #transform each element
                         transformed_elm = float(transform_number(int(elm), leading_zero_count))
+                        print('shtrelm', transformed_elm)
                         #if elm is gt smallest target then it is correct since this is SHORT
                         if transformed_elm >= float(comparative_smallest_target):
                         #convert transformed element to string and replace elm
@@ -525,7 +538,7 @@ def modify_extracted_data_body(data):
                         else:
                         #divide by 10 to shift 1dp to right and replace with str of elm
                             data[item][idx] = str(transformed_elm/10)
-        print(data)
+        print('SHORT2',data)
         return data
     
             
@@ -545,9 +558,9 @@ data_body_1 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry':
 
 data_body_2 = {'ticker': 'AVAXUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['57', '54.5'], 'targets': ['59', '62', '63', '65', '66', '67', '70', '75'], 'stop': '50'}
 
-data_body_3 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['0.540', '0.62'], 'targets': ['0.632', '0.6340', '0.640', '0.652', '0.676'], 'stop': '0.4935'}
+data_body_3 = {'ticker': 'OMUSDT', 'entry': ['8965', '9130'], 'targets': ['8900', '8830', '8700', '8500', '8180', '7730'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9387'}
 
-#print(calc_asset_precision(data_body_3))
+#print(modify_extracted_data_body(data_body_3))
 
 #a function to get the number by which to divide the numbers in the data body
 def get_divisor(market_value_div_by_2):
