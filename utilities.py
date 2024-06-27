@@ -237,7 +237,7 @@ def get_value_change_amount_from_percentage(percentage, entryValue, side):
             afterDecreaseValue = entryValue - changeAmount
         else:
             afterDecreaseValue = entryValue + changeAmount
-        return str(round(afterDecreaseValue, 4) #round the number to 4dp and convert to str
+        return str(round(afterDecreaseValue, 4)) #round the number to 4dp and convert to str
     except KeyError as ke:
         print(ke)
 
