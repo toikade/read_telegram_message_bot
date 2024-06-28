@@ -1,5 +1,6 @@
 from utilities import filter_text_with_numbers
 from data_extract_functions import extract_signal_data_from_harrisons
+from utilities import modify_extracted_data_body
 
 def extract_blocks(file_path):
     # Initialize an empty list to store the blocks of text
@@ -44,18 +45,22 @@ for idx, block in enumerate(blocks): #start at 1st block(blocks, start=1) #get t
     #call sentinel_data_get_from_file in order to create a json object from block (of text)
     print(block)
     json_block = extract_signal_data_from_harrisons(block)
+    json_block_copy = extract_signal_data_from_harrisons(block)
     #if block length is not 6(there are supposed to be 6 items in the dict)
     # if len(json_block) != 6:
     #      print(json_block)
     #      continue
     #else:
+    #modify the data body to respect the decimals like on the live market
+    modified_json_block = modify_extracted_data_body(json_block_copy)
     try:
             with open('jsonblocx.txt', 'a',  encoding='utf-8') as file:  # Open file in append mode
                     for line in block.splitlines():
                         file.write(f'{line}\n')
                     file.write(f'{sep1}\n')
-                    file.write(f'{json_block}\n')
+                    file.write(f'{json_block}\n')   #json_block before data modified
                     file.write(f'{sep2}\n')
+                    file.write(f'{modified_json_block}\n') #modified or normalized json block
                     count += 1
     except TypeError as e:
         print('Error', e)

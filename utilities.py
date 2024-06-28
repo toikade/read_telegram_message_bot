@@ -1,20 +1,56 @@
 from decouple import config
 from binance.client import Client
-import re, unicodedata, ftfy
+import re, unicodedata, ftfy, json
 from unidecode import unidecode
 
 # Initialize Binance client
-# api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
-# api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
-# client = Client(api_key, api_secret, testnet=True)
+api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
+client = Client(api_key, api_secret, testnet=True)
 
 def count_decimal_places(number):
     return len(str(number).split('.')[1])
 
 def get_symbol_market_value(symbol):
-    ticker = client.get_symbol_ticker(symbol=symbol)
+    ticker = client.futures_symbol_ticker(symbol=symbol)
     market_price = ticker['price']
     return market_price
+print(get_symbol_market_value('BTCUSDT'))
+
+
+def get_binance_futures_symbol_current_market_prices_to_file():
+    # a function to get the current symbol prices on the futures market and write to file
+    symbol_data = client.futures_symbol_ticker(symbols = [])
+    symbol_data = [data for idx, data in enumerate(symbol_data) if symbol_data[idx]['symbol'].endswith('USDT')]
+    
+    with open('binance_futures_symbol_price_list.json', 'a',  encoding='utf-8') as file:
+        json.dump(symbol_data, file, indent=4)
+    return symbol_data
+# print(get_binance_futures_symbol_current_market_prices_to_file())
+
+
+def get_binance_futures_current_market_price_from_file(symbol):
+    try:
+        # Open the JSON file in read mode with encoding for non-ASCII characters (optional)
+        with open('binance_futures_symbol_price_list.json', "r", encoding="utf-8") as file:
+            # Load the JSON data from the file
+            data = json.load(file)
+
+        # Iterate through the data to find the matching symbol
+        for item in data:
+            if item["symbol"] == symbol:
+                return item["price"]
+
+        # If symbol not found, return None
+        raise ValueError(f"Symbol '{symbol}' not found in data.")
+
+    except FileNotFoundError:
+        print(f"Error: File not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON data in file.")
+        return None
+#print(get_binance_futures_current_market_price_from_file('BTCUSDT'))
 
 # def get_symbol_market_value_and_divide_by_two(symbol):
 #     # Get the market value of the asset
@@ -454,92 +490,105 @@ def extract_stop_value_from_harrisons_data_block(text):
 
 #a function to modify(sanitize) data in data_body
 def modify_extracted_data_body(data):
-    #if ticker live market value is less than 1
-    #ticker_market_value = get_symbol_market_value(data_body['ticker'])
-    ticker_market_value = get_symbol_market_value(data['ticker'])    # placeholder test value
-    print('ticker_value',ticker_market_value)
-    ticker_market_value_on_2 = float(ticker_market_value)/2
-    #count the number of leading zeros(function) in value
-    leading_zero_count = leading_zero_counter(ticker_market_value_on_2)
-    #if side is LONG
-    if data['side'] == 'LONG':
-        #if stopLoss has a decimal point
-        if has_decimal(data['stop']):
-            #return data bc all other values should be sanitized already
-            print('LONG',data) 
-            return data
-        #else if there is no decimal in SL, other values are not sanitized
-        else:
-            #transform Sl by adding the leading zeros
-            data['stop'] = str(transform_number(int(data['stop']), leading_zero_count))
-            #store sanitized SL in a variable
-            comparative_stop_loss = data['stop']
-             #iterate over the data items
-            
-            for item in ['entry', 'targets']:
-                for idx, elm in enumerate(data[item]):
-                    #if elm has a decimal and is greater than SL(value is ok)
-                    
-                    if has_decimal(elm) and float(elm) >= float(comparative_stop_loss):
-                        print('compSL', comparative_stop_loss)
-                        continue
-                    else:
-                        #transform each element
-                        transformed_elm = float(transform_number(int(elm), leading_zero_count))
-                        print('trElm',transformed_elm)
-                        #if elm is gt stop loss then it is correct since this is LONG
-                        if transformed_elm >= float(comparative_stop_loss):
-                        #convert transformed element to string and replace elm
-                            data[item][idx] = str(transformed_elm)
-                        else:
-                        #multiply by 10 to shift 1dp to right and replace with str of elm
-                            data[item][idx] = str(transformed_elm*10)
-        print('LONG',data)
-        return data
+    try:
+        #if ticker live market value is less than 1
+        #ticker_market_value = get_symbol_market_value(data_body['ticker'])
+        ticker_market_value = get_binance_futures_current_market_price_from_file(data['ticker'])    # placeholder test value
+        print('ticker_value',ticker_market_value)
+        ticker_market_value_on_2 = float(ticker_market_value)/2
+        #count the number of leading zeros(function) in value
+        leading_zero_count = leading_zero_counter(ticker_market_value_on_2)
 
-    #in case side is SHORT
-    else: 
-        #if smallest target has a decimal and the number is gt 1
-        if has_decimal(data['targets'][-1]) and float(data['targets'][-1]) > 1:
-            #return data body
-            print('SHORT1',data)
-            return data
-        else:
-            #set first_iteration in case the stop value has to be transformed
-            first_iteration = True
-            #transform the smallest target wrt to leading zeroes bc it should be the smallest number in the
-            #dataset and other numbers should be greater than it since its the short side and it will used
-            #on a comparative basis to compare other numbers
-            data['targets'][-1] = str(transform_number(int(data['targets'][-1]), leading_zero_count))
-            #store sanitized value in a variable
-            comparative_smallest_target = data['targets'][-1]
-            #iterate over the data items
+        #handling high value assets like BTC, ETH
+            #if the market_value/2 is gt 1 and SL is gt 1 then the asset is ok
+        if ticker_market_value_on_2>1 and float(data['stop'])>1:
+                return data
+        
+        #if side is LONG
+        if data['side'] == 'LONG':
             
-            for item in ['entry', 'targets']:
+            #if stopLoss has a decimal point
+            if has_decimal(data['stop']):
+                #return data bc all other values should be sanitized already
+                print('LONG',data) 
+                return data
+            #else if there is no decimal in SL, other values are not sanitized
+            else:
+                #transform Sl by adding the leading zeros
+                data['stop'] = str(transform_number(int(data['stop']), leading_zero_count))
+                #store sanitized SL in a variable
+                comparative_stop_loss = data['stop']
+                #iterate over the data items
                 
-                for idx, elm in enumerate(data[item]):
-                    
-                    #if elm has a decimal and is greater than Smallest target(value is ok)
-                    if has_decimal(elm) and (float(elm) >= float(comparative_smallest_target)):
-                        print('elm', elm)
-                        continue
-                    else:
-                        #convert stop value only once
-                        if first_iteration:
-                            data['stop'] = str(transform_number(int(data['stop']), leading_zero_count)) 
-                            first_iteration = False
-                        #transform each element
-                        transformed_elm = float(transform_number(int(elm), leading_zero_count))
-                        print('shtrelm', transformed_elm)
-                        #if elm is gt smallest target then it is correct since this is SHORT
-                        if transformed_elm >= float(comparative_smallest_target):
-                        #convert transformed element to string and replace elm
-                            data[item][idx] = str(transformed_elm)
+                for item in ['entry', 'targets']:
+                    for idx, elm in enumerate(data[item]):
+                        #if elm has a decimal and is greater than SL(value is ok)
+                        
+                        if has_decimal(elm) and float(elm) >= float(comparative_stop_loss):
+                            print('compSL', comparative_stop_loss)
+                            continue
                         else:
-                        #divide by 10 to shift 1dp to right and replace with str of elm
-                            data[item][idx] = str(transformed_elm/10)
-        print('SHORT2',data)
-        return data
+                            #transform each element
+                            transformed_elm = float(transform_number(int(elm), leading_zero_count))
+                            print('trElm',transformed_elm)
+                            #if elm is gt stop loss then it is correct since this is LONG
+                            if transformed_elm >= float(comparative_stop_loss):
+                            #convert transformed element to string and replace elm
+                                data[item][idx] = str(transformed_elm)
+                            else:
+                            #multiply by 10 to shift 1dp to right and replace with str of elm
+                                data[item][idx] = str(transformed_elm*10)
+            print('LONG',data)
+            return data
+
+        #in case side is SHORT
+        else: 
+            #if smallest target has a decimal and the number is gt 1
+            if has_decimal(data['targets'][-1]) and float(data['targets'][-1]) > 1:
+                #return data body
+                print('SHORT1',data)
+                return data
+            else:
+                #set first_iteration in case the stop value has to be transformed
+                first_iteration = True
+                #transform the smallest target wrt to leading zeroes bc it should be the smallest number in the
+                #dataset and other numbers should be greater than it since its the short side and it will used
+                #on a comparative basis to compare other numbers
+                #if not has_decimal(data['targets'][-1]):
+                data['targets'][-1] = str(transform_number(int(data['targets'][-1]), leading_zero_count))
+                #store sanitized value in a variable
+                comparative_smallest_target = data['targets'][-1]
+                #iterate over the data items
+                
+                for item in ['entry', 'targets']:
+                    
+                    for idx, elm in enumerate(data[item]):
+                        
+                        #if elm has a decimal and is greater than Smallest target(value is ok)
+                        if has_decimal(elm) and (float(elm) >= float(comparative_smallest_target)):
+                            print('elm', elm)
+                            continue
+                        else:
+                            #convert stop value only once
+                            if first_iteration:
+                                data['stop'] = str(transform_number(int(data['stop']), leading_zero_count)) 
+                                first_iteration = False
+                            #transform each element
+                            transformed_elm = float(transform_number(int(elm), leading_zero_count))
+                            print('shtrelm', transformed_elm)
+                            #if elm is gt smallest target then it is correct since this is SHORT
+                            if transformed_elm >= float(comparative_smallest_target):
+                            #convert transformed element to string and replace elm
+                                data[item][idx] = str(transformed_elm)
+                            else:
+                            #divide by 10 to shift 1dp to right and replace with str of elm
+                                data[item][idx] = str(transformed_elm/10)
+            print('SHORT2',data)
+    except ValueError as ve:
+            print(ve)
+    except KeyError as ke:
+            print(ke)
+    return data
     
             
 
