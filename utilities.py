@@ -4,9 +4,9 @@ import re, unicodedata, ftfy, json
 from unidecode import unidecode
 
 # Initialize Binance client
-api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
-api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
-client = Client(api_key, api_secret, testnet=True)
+# api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+# api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
+# client = Client(api_key, api_secret, testnet=True)
 
 def count_decimal_places(number):
     return len(str(number).split('.')[1])
@@ -15,7 +15,7 @@ def get_symbol_market_value(symbol):
     ticker = client.futures_symbol_ticker(symbol=symbol)
     market_price = ticker['price']
     return market_price
-print(get_symbol_market_value('BTCUSDT'))
+#print(get_symbol_market_value('BTCUSDT'))
 
 
 def get_binance_futures_symbol_current_market_prices_to_file():
@@ -27,6 +27,12 @@ def get_binance_futures_symbol_current_market_prices_to_file():
         json.dump(symbol_data, file, indent=4)
     return symbol_data
 # print(get_binance_futures_symbol_current_market_prices_to_file())
+
+def logger(text):
+    sep1 = '-'*30
+    with open('errorlog.log', 'w',  encoding='utf-8') as file:
+        file.write(f'{text}\n')
+        file.write(f'{sep1}\n')
 
 
 def get_binance_futures_current_market_price_from_file(symbol):
@@ -50,6 +56,10 @@ def get_binance_futures_current_market_price_from_file(symbol):
     except json.JSONDecodeError:
         print(f"Error: Invalid JSON data in file.")
         return None
+    except ValueError as ve:
+        print(f"ValueError: {ve}")
+        #log it to the error log
+        logger(f"ValueError: {ve}")
 #print(get_binance_futures_current_market_price_from_file('BTCUSDT'))
 
 # def get_symbol_market_value_and_divide_by_two(symbol):
@@ -514,6 +524,7 @@ def modify_extracted_data_body(data):
                 return data
             #else if there is no decimal in SL, other values are not sanitized
             else:
+                
                 #transform Sl by adding the leading zeros
                 data['stop'] = str(transform_number(int(data['stop']), leading_zero_count))
                 #store sanitized SL in a variable
@@ -524,7 +535,7 @@ def modify_extracted_data_body(data):
                     for idx, elm in enumerate(data[item]):
                         #if elm has a decimal and is greater than SL(value is ok)
                         
-                        if has_decimal(elm) and float(elm) >= float(comparative_stop_loss):
+                        if has_decimal(elm) and float(elm) >= (float(comparative_stop_loss) and float(ticker_market_value)):
                             print('compSL', comparative_stop_loss)
                             continue
                         else:
@@ -532,12 +543,12 @@ def modify_extracted_data_body(data):
                             transformed_elm = float(transform_number(int(elm), leading_zero_count))
                             print('trElm',transformed_elm)
                             #if elm is gt stop loss then it is correct since this is LONG
-                            if transformed_elm >= float(comparative_stop_loss):
+                            if transformed_elm >= (float(comparative_stop_loss) and float(ticker_market_value)):
                             #convert transformed element to string and replace elm
                                 data[item][idx] = str(transformed_elm)
                             else:
                             #multiply by 10 to shift 1dp to right and replace with str of elm
-                                data[item][idx] = str(transformed_elm*10)
+                                data[item][idx] = str(round(transformed_elm*10, 4))
             print('LONG',data)
             return data
 
@@ -563,16 +574,17 @@ def modify_extracted_data_body(data):
                 for item in ['entry', 'targets']:
                     
                     for idx, elm in enumerate(data[item]):
-                        
+                        #convert stop value only once bc it is not included in the loop above since its a str
+                        #and not an array like the others
+                        if first_iteration:
+                            data['stop'] = str(transform_number(int(data['stop']), leading_zero_count)) 
+                            first_iteration = False
+
                         #if elm has a decimal and is greater than Smallest target(value is ok)
                         if has_decimal(elm) and (float(elm) >= float(comparative_smallest_target)):
                             print('elm', elm)
                             continue
                         else:
-                            #convert stop value only once
-                            if first_iteration:
-                                data['stop'] = str(transform_number(int(data['stop']), leading_zero_count)) 
-                                first_iteration = False
                             #transform each element
                             transformed_elm = float(transform_number(int(elm), leading_zero_count))
                             print('shtrelm', transformed_elm)
@@ -582,7 +594,7 @@ def modify_extracted_data_body(data):
                                 data[item][idx] = str(transformed_elm)
                             else:
                             #divide by 10 to shift 1dp to right and replace with str of elm
-                                data[item][idx] = str(transformed_elm/10)
+                                data[item][idx] = str(round(transformed_elm/10, 4))
             print('SHORT2',data)
     except ValueError as ve:
             print(ve)
@@ -607,9 +619,58 @@ data_body_1 = {'ticker': '1INCHUSDT', 'side': 'LONG', 'leverage': '20', 'entry':
 
 data_body_2 = {'ticker': 'AVAXUSDT', 'side': 'LONG', 'leverage': '20', 'entry': ['57', '54.5'], 'targets': ['59', '62', '63', '65', '66', '67', '70', '75'], 'stop': '50'}
 
-data_body_3 = {'ticker': 'OMUSDT', 'entry': ['8965', '9130'], 'targets': ['8900', '8830', '8700', '8500', '8180', '7730'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9387'}
+data_body_3 = {'ticker': 'GRTUSDT', 'price': '0.49490', 'entry': ['0.24387', '0.2298'], 'targets': ['0.24521', '0.24721', '0.24951', '0.2521', '0.2645', '0.2789', '0.2981'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.2265'}
 
 #print(modify_extracted_data_body(data_body_3))
+
+# a function to validate the data if there are no errors or inconsistencies in it
+def validate_data(data):
+    try:
+        ticker = data['ticker']
+        price = float(data['price'])
+        entry = list(map(float, data['entry']))
+        targets = list(map(float, data['targets']))
+        leverage = list(map(int, data['leverage']))
+        side = data['side']
+        stop = float(data['stop'])
+        
+        if side == 'SHORT':
+            # Stop should be greater than all values in 'entry' and 'targets'
+            if not (stop > max(entry) and stop > max(targets)):
+                raise ValueError(f"For SHORT side, stop {stop} should be greater than all entry and target values.")
+            
+            # Stop should be greater than 'price'
+            if not (stop > price):
+                raise ValueError(f"For SHORT side, stop {stop} should be greater than price {price}.")
+            
+            # 'entry'[0] should be greater than all values in 'targets'
+            if not (entry[0] > max(targets)):
+                raise ValueError(f"For SHORT side, entry[0] {entry[0]} should be greater than all target values.")
+        
+        elif side == 'LONG':
+            # Stop should be less than all values in 'entry' and 'targets'
+            if not (stop < min(entry) and stop < min(targets)):
+                raise ValueError(f"For LONG side, stop {stop} should be less than all entry and target values.")
+            
+            # Stop should be less than 'price'
+            if not (stop < price):
+                raise ValueError(f"For LONG side, stop {stop} should be less than price {price}.")
+            
+            # 'entry'[0] should be less than all values in 'targets'
+            if not (entry[0] < min(targets)):
+                raise ValueError(f"For LONG side, entry[0] {entry[0]} should be less than all target values.")
+        
+        else:
+            raise ValueError(f"Invalid side '{side}'. Side must be either 'SHORT' or 'LONG'.")
+        
+        print("Data is valid.")
+        return data
+    
+    except ValueError as e:
+        print(f"Validation error: {e}")
+
+#print(validate_data(data_body_3))
+
 
 #a function to get the number by which to divide the numbers in the data body
 def get_divisor(market_value_div_by_2):

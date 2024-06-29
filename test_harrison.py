@@ -54,7 +54,7 @@ for idx, block in enumerate(blocks): #start at 1st block(blocks, start=1) #get t
     #modify the data body to respect the decimals like on the live market
     modified_json_block = modify_extracted_data_body(json_block_copy)
     try:
-            with open('jsonblocx.txt', 'a',  encoding='utf-8') as file:  # Open file in append mode
+            with open('jsonblocx.txt', 'w',  encoding='utf-8') as file:  # Open file in append mode
                     for line in block.splitlines():
                         file.write(f'{line}\n')
                     file.write(f'{sep1}\n')

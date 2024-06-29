@@ -2,7 +2,7 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block, extract_ticker_from_harrisons_data_block
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block, extract_ticker_from_harrisons_data_block, get_binance_futures_current_market_price_from_file, logger
 #from test import process_lines
 
 
@@ -103,6 +103,12 @@ def extract_signal_data_from_harrisons(text):
     # Extract TICKER
     
     tradeData['ticker'] = extract_ticker_from_harrisons_data_block(text)
+    ticker = extract_ticker_from_harrisons_data_block(text)
+    try:
+        tradeData['price'] = get_binance_futures_current_market_price_from_file(ticker)
+    except ValueError as ve:
+        logger(text)
+        print(ve)
     #========================================================== 
     # Extract ENTRY prices 
     tradeData['entry'] = extract_entry_values_from_harrisons_data_block(text)
