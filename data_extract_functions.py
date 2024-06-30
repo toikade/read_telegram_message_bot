@@ -104,8 +104,10 @@ def extract_signal_data_from_harrisons(text):
     
     tradeData['ticker'] = extract_ticker_from_harrisons_data_block(text)
     ticker = extract_ticker_from_harrisons_data_block(text)
+    #========================================================== 
+    # Extract mark_price or live market price 
     try:
-        tradeData['price'] = get_binance_futures_current_market_price_from_file(ticker)
+        tradeData['mark_price'] = get_binance_futures_current_market_price_from_file(ticker)
     except ValueError as ve:
         logger(text)
         print(ve)

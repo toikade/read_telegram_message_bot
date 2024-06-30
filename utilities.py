@@ -30,7 +30,7 @@ def get_binance_futures_symbol_current_market_prices_to_file():
 
 def logger(text):
     sep1 = '-'*30
-    with open('errorlog.log', 'w',  encoding='utf-8') as file:
+    with open('errorlog.log', 'a',  encoding='utf-8') as file:
         file.write(f'{text}\n')
         file.write(f'{sep1}\n')
 
@@ -60,6 +60,9 @@ def get_binance_futures_current_market_price_from_file(symbol):
         print(f"ValueError: {ve}")
         #log it to the error log
         logger(f"ValueError: {ve}")
+        ##alert the administrator through telegram channel
+
+
 #print(get_binance_futures_current_market_price_from_file('BTCUSDT'))
 
 # def get_symbol_market_value_and_divide_by_two(symbol):
@@ -535,7 +538,7 @@ def modify_extracted_data_body(data):
                     for idx, elm in enumerate(data[item]):
                         #if elm has a decimal and is greater than SL(value is ok)
                         
-                        if has_decimal(elm) and float(elm) >= (float(comparative_stop_loss) and float(ticker_market_value)):
+                        if has_decimal(elm) and float(elm) >= (float(comparative_stop_loss) and float(elm) >= float(ticker_market_value)):
                             print('compSL', comparative_stop_loss)
                             continue
                         else:
@@ -543,7 +546,7 @@ def modify_extracted_data_body(data):
                             transformed_elm = float(transform_number(int(elm), leading_zero_count))
                             print('trElm',transformed_elm)
                             #if elm is gt stop loss then it is correct since this is LONG
-                            if transformed_elm >= (float(comparative_stop_loss) and float(ticker_market_value)):
+                            if transformed_elm >= float(comparative_stop_loss) and transformed_elm >=float(ticker_market_value):
                             #convert transformed element to string and replace elm
                                 data[item][idx] = str(transformed_elm)
                             else:
@@ -597,9 +600,13 @@ def modify_extracted_data_body(data):
                                 data[item][idx] = str(round(transformed_elm/10, 4))
             print('SHORT2',data)
     except ValueError as ve:
-            print(ve)
+        print(ve)
     except KeyError as ke:
-            print(ke)
+        print(ke)
+    except TypeError as te:
+        print(te)
+        logger(f"{te}")
+        pass
     return data
     
             
@@ -627,7 +634,7 @@ data_body_3 = {'ticker': 'GRTUSDT', 'price': '0.49490', 'entry': ['0.24387', '0.
 def validate_data(data):
     try:
         ticker = data['ticker']
-        price = float(data['price'])
+        price = float(data['mark_price'])
         entry = list(map(float, data['entry']))
         targets = list(map(float, data['targets']))
         leverage = list(map(int, data['leverage']))
@@ -668,6 +675,9 @@ def validate_data(data):
     
     except ValueError as e:
         print(f"Validation error: {e}")
+        #log error to errorlog file
+        logger(f"Validation error: {e}")
+        ##alert the administrator through telegram group
 
 #print(validate_data(data_body_3))
 
