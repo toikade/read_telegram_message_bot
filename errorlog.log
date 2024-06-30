@@ -382,3 +382,83 @@ ValueError: Symbol '10000LADYSUSDT' not found in data.
 ------------------------------
 float() argument must be a string or a real number, not 'NoneType'
 ------------------------------
+ValueError: Symbol 'ICPUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'ICPUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'ICPUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol 'FTTUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'FTTUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'FTTUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol '10000SATSUSDT' not found in data.
+------------------------------
+ValueError: Symbol '10000SATSUSDT' not found in data.
+------------------------------
+ValueError: Symbol '10000SATSUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol 'MERLUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'MERLUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'MERLUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+ValueError: Symbol '1000FLOKIUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol 'NKNUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'NKNUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'NKNUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol 'PEPEUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'PEPEUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'PEPEUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------
+ValueError: Symbol 'POLYXLONGUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'POLYXLONGUSDT' not found in data.
+------------------------------
+ValueError: Symbol 'POLYXLONGUSDT' not found in data.
+------------------------------
+float() argument must be a string or a real number, not 'NoneType'
+------------------------------

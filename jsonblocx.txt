@@ -38375,3 +38375,5187 @@ GEM COIN USE 1% ONLY
 {'ticker': 'IDEXUSDT', 'mark_price': '0.0551200', 'entry': ['0.08190', '0.07800'], 'targets': ['0.08270', '0.08400', '0.08650', '0.08800', '0.09050', '0.09300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0745'}
 ==============================
 {'ticker': 'IDEXUSDT', 'mark_price': '0.0551200', 'entry': ['0.08190', '0.07800'], 'targets': ['0.08270', '0.08400', '0.08650', '0.08800', '0.09050', '0.09300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0745'}
+#LQTY/USDT
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 1.73   1.6800
+Take-Profit Targets: 
+1) 1.739
+2) 1.750
+3) 1.765
+4) 1.785
+5) 1.815
+6) 1.850
+
+Stop-Loss: 1.65
+------------------------------
+{'ticker': 'LQTYUSDT', 'mark_price': '0.753300', 'entry': ['1.73', '1.6800'], 'targets': ['1.739', '1.750', '1.765', '1.785', '1.815', '1.850'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.65'}
+==============================
+{'ticker': 'LQTYUSDT', 'mark_price': '0.753300', 'entry': ['1.73', '1.6800'], 'targets': ['1.739', '1.750', '1.765', '1.785', '1.815', '1.850'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.65'}
+#WLD/USDT
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 7.032  6.70
+Take-Profit Targets: 
+1) 7.100
+2) 7.170
+3) 7.250
+4) 7.450
+5) 7.700
+6) 8.000
+
+Stop-Loss: 6.50
+------------------------------
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['7.032', '6.70'], 'targets': ['7.100', '7.170', '7.250', '7.450', '7.700', '8.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.50'}
+==============================
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['7.032', '6.70'], 'targets': ['7.100', '7.170', '7.250', '7.450', '7.700', '8.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.50'}
+#BOND/USDT
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 4.50  4.30
+Take-Profit Targets: 
+1) 4.550
+2) 4.600
+3) 4.655
+4) 4.730
+5) 4.850
+6) 5.000
+
+Stop-Loss: 4.15
+------------------------------
+{'ticker': 'BONDUSDT', 'mark_price': '2.800000', 'entry': ['4.50', '4.30'], 'targets': ['4.550', '4.600', '4.655', '4.730', '4.850', '5.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.15'}
+==============================
+{'ticker': 'BONDUSDT', 'mark_price': '2.800000', 'entry': ['4.50', '4.30'], 'targets': ['4.550', '4.600', '4.655', '4.730', '4.850', '5.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.15'}
+⚡️⚡️#PYTH/USDT⚡️⚡️
+Signal Type: LONG
+Leverage: Cross 20x
+Entry Targets: 0.8885  0.8550
+Take-Profit Targets: 
+1) 0.8920
+2) 0.8960
+3) 0.9010
+4) 0.9090
+5) 0.9200
+6) 0.9300
+
+Stop-Loss: 0.83
+------------------------------
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.8885', '0.8550'], 'targets': ['0.8920', '0.8960', '0.9010', '0.9090', '0.9200', '0.9300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.83'}
+==============================
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.8885', '0.8550'], 'targets': ['0.8920', '0.8960', '0.9010', '0.9090', '0.9200', '0.9300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.83'}
+⚡️⚡️#SUSHI/USDT ⚡️⚡️
+
+LONG 
+
+Leverage: 20x
+
+Entry: 1.5687 - 1.5555
+
+Target: 
+1) 1.5770 
+2) 1.5804 
+3) 1.5895 
+4) 1.5970 
+5) 1.6172 
+6) 1.6380
+
+StopLoss : 1.4933
+------------------------------
+{'ticker': 'SUSHIUSDT', 'mark_price': '0.8230', 'entry': ['1.5687', '1.5555'], 'targets': ['1.5770', '1.5804', '1.5895', '1.5970', '1.6172', '1.6380'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.4933'}
+==============================
+{'ticker': 'SUSHIUSDT', 'mark_price': '0.8230', 'entry': ['1.5687', '1.5555'], 'targets': ['1.5770', '1.5804', '1.5895', '1.5970', '1.6172', '1.6380'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.4933'}
+⚡️⚡️#DYDX/USDT⚡️⚡️
+
+LONG 
+
+Leverage: 20x
+
+Entry: 3.044 - 2.999
+
+ Target: 
+1) 3.051 
+2) 3.060 
+3) 3.071 
+4) 3.090 
+5) 3.119 
+6) 3.189
+
+StopLoss : 2.916
+------------------------------
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['3.044', '2.999'], 'targets': ['3.051', '3.060', '3.071', '3.090', '3.119', '3.189'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.916'}
+==============================
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['3.044', '2.999'], 'targets': ['3.051', '3.060', '3.071', '3.090', '3.119', '3.189'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.916'}
+⚡️⚡️#ICP/USDT⚡️⚡️
+
+SHORT
+
+Leverage: 20x
+
+Entry: 17.818  - 18.000
+
+ Target: 
+1) 17.615 
+2) 17.535 
+3) 17.432 
+4) 17.230 
+5) 17.010 
+6) 16.618
+
+StopLoss : 18.603
+------------------------------
+{'ticker': 'ICPUSDT', 'mark_price': None, 'entry': ['17.818', '18.000'], 'targets': ['17.615', '17.535', '17.432', '17.230', '17.010', '16.618'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '18.603'}
+==============================
+{'ticker': 'ICPUSDT', 'mark_price': None, 'entry': ['17.818', '18.000'], 'targets': ['17.615', '17.535', '17.432', '17.230', '17.010', '16.618'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '18.603'}
+⚡️⚡️#HIFI/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 1.132  
+Take-Profit Targets: 
+1) 1.141
+2) 1.150
+3) 1.160
+4) 1.175
+5) 1.190
+6) 1.210
+
+Stop-Loss: 1.09
+------------------------------
+{'ticker': 'HIFIUSDT', 'mark_price': '0.4444000', 'entry': ['1.132'], 'targets': ['1.141', '1.150', '1.160', '1.175', '1.190', '1.210'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.09'}
+==============================
+{'ticker': 'HIFIUSDT', 'mark_price': '0.4444000', 'entry': ['1.132'], 'targets': ['1.141', '1.150', '1.160', '1.175', '1.190', '1.210'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.09'}
+⚡️⚡️#NFP/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.7190  0.6800
+Take-Profit Targets: 
+1) 0.7250
+2) 0.7320
+3) 0.7400
+4) 0.7550
+5) 0.7750
+6) 0.7980
+
+Stop-Loss: 0.6500 
+
+SPOT TARGETS   0.85  0.90
+------------------------------
+{'ticker': 'NFPUSDT', 'mark_price': '0.3636000', 'entry': ['0.7190', '0.6800'], 'targets': ['0.7250', '0.7320', '0.7400', '0.7550', '0.7750', '0.7980'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6500'}
+==============================
+{'ticker': 'NFPUSDT', 'mark_price': '0.3636000', 'entry': ['0.7190', '0.6800'], 'targets': ['0.7250', '0.7320', '0.7400', '0.7550', '0.7750', '0.7980'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6500'}
+⚡️⚡️#TON/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 5.165   5.070
+Take-Profit Targets: 
+1) 5.180
+2) 5.195
+3) 5.210
+4) 5.235
+5) 5.270
+6) 5.305
+
+Stop-Loss: 5
+------------------------------
+{'ticker': 'TONUSDT', 'mark_price': '7.6003000', 'entry': ['5.165', '5.070'], 'targets': ['5.180', '5.195', '5.210', '5.235', '5.270', '5.305'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5'}
+==============================
+{'ticker': 'TONUSDT', 'mark_price': '7.6003000', 'entry': ['5.165', '5.070'], 'targets': ['5.180', '5.195', '5.210', '5.235', '5.270', '5.305'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5'}
+⚡️⚡️#LSK/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 1.89  
+Take-Profit Targets: 
+1) 1.905
+2) 1.920
+3) 1.940
+4) 1.965
+5) 2.000
+6) 2.050
+
+Stop-Loss: 1.82
+------------------------------
+{'ticker': 'LSKUSDT', 'mark_price': '1.012800', 'entry': ['1.89'], 'targets': ['1.905', '1.920', '1.940', '1.965', '2.000', '2.050'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.82'}
+==============================
+{'ticker': 'LSKUSDT', 'mark_price': '1.012800', 'entry': ['1.89'], 'targets': ['1.905', '1.920', '1.940', '1.965', '2.000', '2.050'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.82'}
+⚡️⚡️#POLYX/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.5730  0.5630
+Take-Profit Targets: 
+1) 0.5770
+2) 0.5810
+3) 0.5855
+4) 0.5940
+5) 0.6030
+6) 0.7030
+
+Stop-Loss: 0.5550
+------------------------------
+{'ticker': 'POLYXUSDT', 'mark_price': '0.4311100', 'entry': ['0.5730', '0.5630'], 'targets': ['0.5770', '0.5810', '0.5855', '0.5940', '0.6030', '0.7030'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.5550'}
+==============================
+{'ticker': 'POLYXUSDT', 'mark_price': '0.4311100', 'entry': ['0.5730', '0.5630'], 'targets': ['0.5770', '0.5810', '0.5855', '0.5940', '0.6030', '0.7030'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.5550'}
+⚡️⚡️#C98/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.4255
+Take-Profit Targets: 
+1) 0.4280
+2) 0.4305
+3) 0.4330
+4) 0.4380
+5) 0.4440
+6) 0.4500
+
+Stop-Loss: 0.40
+------------------------------
+{'ticker': 'C98USDT', 'mark_price': '0.1760', 'entry': ['0.4255'], 'targets': ['0.4280', '0.4305', '0.4330', '0.4380', '0.4440', '0.4500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.40'}
+==============================
+{'ticker': 'C98USDT', 'mark_price': '0.1760', 'entry': ['0.4255'], 'targets': ['0.4280', '0.4305', '0.4330', '0.4380', '0.4440', '0.4500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.40'}
+⚡️⚡️#GAS/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 6.91
+Take-Profit Targets: 
+1) 6.96
+2) 7.02
+3) 7.09
+4) 7.18
+5) 7.30
+6) 7.40
+
+Stop-Loss: 6.60
+------------------------------
+{'ticker': 'GASUSDT', 'mark_price': '3.695000', 'entry': ['6.91'], 'targets': ['6.96', '7.02', '7.09', '7.18', '7.30', '7.40'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.60'}
+==============================
+{'ticker': 'GASUSDT', 'mark_price': '3.695000', 'entry': ['6.91'], 'targets': ['6.96', '7.02', '7.09', '7.18', '7.30', '7.40'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.60'}
+⚡️⚡️#NEAR/USDT⚡️⚡️
+
+SHORT
+
+Leverage: 20x
+
+Entry: 7.278 - 7.442
+
+Target: 
+7.256 
+2) 7.210 
+3) 7.177 
+4) 7.130 
+5) 7.050 
+6) 6.945 
+
+StopLoss : 7.633
+------------------------------
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['7.278', '7.442'], 'targets': ['7.256', '7.210', '7.177', '7.130', '7.050', '6.945'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '7.633'}
+==============================
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['7.278', '7.442'], 'targets': ['7.256', '7.210', '7.177', '7.130', '7.050', '6.945'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '7.633'}
+⚡️⚡️#GMT/USDT⚡️⚡️
+
+Long 
+
+Leverage: 20x
+
+Buy: 0.2931 - 0.2837
+
+Target: 
+1) 0.2961 
+2) 0.2991 
+3) 0.3020 
+4) 0.3051 
+5) 0.3083 
+6) 0.3123
+
+StopLoss: 0.2686
+------------------------------
+{'ticker': 'GMTUSDT', 'mark_price': '0.15500', 'entry': ['0.2931', '0.2837'], 'targets': ['0.2961', '0.2991', '0.3020', '0.3051', '0.3083', '0.3123'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2686'}
+==============================
+{'ticker': 'GMTUSDT', 'mark_price': '0.15500', 'entry': ['0.2931', '0.2837'], 'targets': ['0.2961', '0.2991', '0.3020', '0.3051', '0.3083', '0.3123'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2686'}
+⚡️⚡️#MAVIA/USDT⚡️⚡️
+
+TYPE: LONG
+
+LEVERAGE: 25X
+
+ENTRY:4.929  - 4.800
+
+TARGETS: 
+1) 5.030
+2) 5.150
+3) 5.250
+4) 5.450
+5) 5.650
+
+STOP: 4.510
+------------------------------
+{'ticker': 'MAVIAUSDT', 'mark_price': '2.8444000', 'entry': ['4.929', '4.800'], 'targets': ['5.030', '5.150', '5.250', '5.450', '5.650'], 'leverage': ['25'], 'side': 'LONG', 'stop': '4.510'}
+==============================
+{'ticker': 'MAVIAUSDT', 'mark_price': '2.8444000', 'entry': ['4.929', '4.800'], 'targets': ['5.030', '5.150', '5.250', '5.450', '5.650'], 'leverage': ['25'], 'side': 'LONG', 'stop': '4.510'}
+⚡️⚡️#CELR/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 25X
+Entry Range: 0.03741
+Take-Profit Targets:
+1) 0.03797
+2) 0.03835
+3) 0.03872
+4) 0.03928
+5) 0.03965
+6) 0.04022
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'CELRUSDT', 'mark_price': '0.01690', 'entry': ['0.03741'], 'targets': ['0.03797', '0.03835', '0.03872', '0.03928', '0.03965', '0.04022'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.0337'}
+==============================
+{'ticker': 'CELRUSDT', 'mark_price': '0.01690', 'entry': ['0.03741'], 'targets': ['0.03797', '0.03835', '0.03872', '0.03928', '0.03965', '0.04022'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.0337'}
+⚡️⚡️#ONT/USDT⚡️⚡️
+Signal Type: Short
+Leverage: Cross 50X_25X
+Entry Range: 0.4372
+Take-Profit Targets:
+1) 0.43064
+2) 0.42627
+3) 0.42190
+4) 0.41534
+5) 0.41097
+6) 0.40441
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'ONTUSDT', 'mark_price': '0.2011', 'entry': ['0.4372'], 'targets': ['0.43064', '0.42627', '0.42190', '0.41534', '0.41097', '0.40441'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.4809'}
+==============================
+{'ticker': 'ONTUSDT', 'mark_price': '0.2011', 'entry': ['0.4372'], 'targets': ['0.43064', '0.42627', '0.42190', '0.41534', '0.41097', '0.40441'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.4809'}
+⚡️⚡️#FTT/USDT⚡️⚡️
+Signal Type: Short
+Leverage: Cross 25X
+Entry Range: 1.644
+Take-Profit Targets:
+1) 1.61934
+2) 1.60290
+3) 1.58646
+4) 1.56180
+5) 1.54536
+6) 1.52070
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'FTTUSDT', 'mark_price': None, 'entry': ['1.644'], 'targets': ['1.61934', '1.60290', '1.58646', '1.56180', '1.54536', '1.52070'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '1.8084'}
+==============================
+{'ticker': 'FTTUSDT', 'mark_price': None, 'entry': ['1.644'], 'targets': ['1.61934', '1.60290', '1.58646', '1.56180', '1.54536', '1.52070'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '1.8084'}
+#BOME/USDT 
+Signal Type: Long
+Leverage: Cross 50X
+Entry Range: 0.011087
+Take-Profit Targets:
+1) 0.01125
+2) 0.01136
+3) 0.01148
+4) 0.01164
+5) 0.01175
+6) 0.01192
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.011087'], 'targets': ['0.01125', '0.01136', '0.01148', '0.01164', '0.01175', '0.01192'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.01'}
+==============================
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.011087'], 'targets': ['0.01125', '0.01136', '0.01148', '0.01164', '0.01175', '0.01192'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.01'}
+⚡️⚡️#IDEX/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.0675  0.06500
+Take-Profit Targets: 
+1) 0.06820
+2) 0.06890
+3) 0.06960
+4) 0.07100
+5) 0.07250
+6) 0.07500
+
+Stop-Loss: 0.06200
+
+SPOT TARGETS   0.80   0.85  0.900
+
+GEM COIN USE 1% ONLY
+------------------------------
+{'ticker': 'IDEXUSDT', 'mark_price': '0.0551200', 'entry': ['0.0675', '0.06500'], 'targets': ['0.06820', '0.06890', '0.06960', '0.07100', '0.07250', '0.07500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.06200'}
+==============================
+{'ticker': 'IDEXUSDT', 'mark_price': '0.0551200', 'entry': ['0.0675', '0.06500'], 'targets': ['0.06820', '0.06890', '0.06960', '0.07100', '0.07250', '0.07500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.06200'}
+⚡️⚡️#FIL/USDT⚡️⚡️
+Signal Type: Long
+Leverage : Cross 20x
+Entry Targets: 6.255   6.00
+Take-Profit Targets:
+1) 6.350
+2) 6.450
+3) 6.600
+4) 6.800
+5) 7.000
+6) 7.200
+
+Stop-Loss: 5.50
+
+
+SPOT + FUTURE  
+
+SPOT TPS   8$  9$  10$
+------------------------------
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['6.255', '6.00'], 'targets': ['6.350', '6.450', '6.600', '6.800', '7.000', '7.200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.50'}
+==============================
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['6.255', '6.00'], 'targets': ['6.350', '6.450', '6.600', '6.800', '7.000', '7.200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.50'}
+⚡️⚡️INJ/USDT⚡️⚡️
+
+Entry Targets : 
+1) 25.50
+2) 20.00
+
+BUY & HOLD 
+
+Take-Profit Targets:
+1) 30
+2) 38
+3) 50
+4) 80
+
+Stoploss : HOLD
+------------------------------
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['25.50', '20.00'], 'targets': ['30', '38', '50', '80'], 'leverage': ['1'], 'side': 'LONG', 'stop': '18.0'}
+==============================
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['25.50', '20.00'], 'targets': ['30', '38', '50', '80'], 'leverage': ['1'], 'side': 'LONG', 'stop': '18.0'}
+⚡️⚡️ARB/USDT ⚡️⚡️
+
+Entry Targets : 
+1) 1.125
+2) 0.90
+
+BUY & HOLD 
+
+Take-Profit Targets:
+1) 1.40
+2) 1.80
+3) 2.30
+4) 3.00
+
+Stoploss : HOLD
+------------------------------
+{'ticker': 'ARBUSDT', 'mark_price': '0.818700', 'entry': ['1.125', '0.90'], 'targets': ['1.40', '1.80', '2.30', '3.00'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.81'}
+==============================
+{'ticker': 'ARBUSDT', 'mark_price': '0.818700', 'entry': ['1.125', '0.90'], 'targets': ['1.40', '1.80', '2.30', '3.00'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.81'}
+⚡️⚡️FET/USDT ⚡️⚡️
+
+Entry Targets : 
+1) 2.14
+2) 1.80
+
+BUY & HOLD 
+
+Take-Profit Targets:
+1) 2.50
+2) 3.00
+3) 3.70
+4) 5.00
+
+Stoploss : HOLD
+------------------------------
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.14', '1.80'], 'targets': ['2.50', '3.00', '3.70', '5.00'], 'leverage': ['1'], 'side': 'LONG', 'stop': '1.62'}
+==============================
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.14', '1.80'], 'targets': ['2.50', '3.00', '3.70', '5.00'], 'leverage': ['1'], 'side': 'LONG', 'stop': '1.62'}
+⚡️⚡️BOME/USDT ⚡️⚡️
+
+Entry Targets : 
+1) 0.0097
+2) 0.0080
+
+BUY & HOLD 
+
+Take-Profit Targets:
+1) 0.0120
+2) 0.0150
+3) 0.0200
+4) 0.0300
+
+Stoploss : HOLD
+------------------------------
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.0097', '0.0080'], 'targets': ['0.0120', '0.0150', '0.0200', '0.0300'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.0072'}
+==============================
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.0097', '0.0080'], 'targets': ['0.0120', '0.0150', '0.0200', '0.0300'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.0072'}
+⚡️⚡️OCEAN/USDT⚡️⚡️
+
+Entry Targets : 
+1) 0.8750
+2) 0.7000
+
+BUY & HOLD 
+
+Take-Profit Targets:
+1) 1.00
+2) 1.30
+3) 1.80
+4) 2.50
+
+Stoploss : HOLD
+------------------------------
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.8750', '0.7000'], 'targets': ['1.00', '1.30', '1.80', '2.50'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.63'}
+==============================
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.8750', '0.7000'], 'targets': ['1.00', '1.30', '1.80', '2.50'], 'leverage': ['1'], 'side': 'LONG', 'stop': '0.63'}
+⚡️⚡️#BICO/USDT⚡️⚡️
+Signal Type: LONG
+Leverage: Cross 20x
+Entry Targets: 0.5870  0.5300
+Take-Profit Targets: 
+1) 0.5910
+2) 0.5960
+3) 0.6020
+4) 0.6100
+5) 0.6250
+6) 0.6400
+
+Stop-Loss: DCA
+
+SPOT TARGET  0.67  0.700  0.750
+------------------------------
+{'ticker': 'BICOUSDT', 'mark_price': '0.3500000', 'entry': ['0.5870', '0.5300'], 'targets': ['0.5910', '0.5960', '0.6020', '0.6100', '0.6250', '0.6400'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.477'}
+==============================
+{'ticker': 'BICOUSDT', 'mark_price': '0.3500000', 'entry': ['0.5870', '0.5300'], 'targets': ['0.5910', '0.5960', '0.6020', '0.6100', '0.6250', '0.6400'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.477'}
+⚡️⚡️#AEVO/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 1.915   1.70
+Take-Profit Targets: 
+1) 1.930
+2) 1.960
+3) 2.000
+4) 2.050
+5) 2.100
+6) 2.170
+
+Stop-Loss: DCA
+
+
+SPOT TPS    2.30   2.50  2.70  3.00
+------------------------------
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.915', '1.70'], 'targets': ['1.930', '1.960', '2.000', '2.050', '2.100', '2.170'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.53'}
+==============================
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.915', '1.70'], 'targets': ['1.930', '1.960', '2.000', '2.050', '2.100', '2.170'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.53'}
+⚡️⚡️#FIL/USDT⚡️⚡️ 
+Signal Type: Long
+Leverage : Cross 20x
+Entry Targets: 5.605  5.00
+Take-Profit Targets:
+1) 5.650
+2) 5.700
+3) 5.800
+4) 5.950
+5) 6.200
+6) 6.500
+
+Stop-Loss: DCA
+
+SPOT + FUTURE  
+
+SPOT TPS   8$  9$  10$
+------------------------------
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['5.605', '5.00'], 'targets': ['5.650', '5.700', '5.800', '5.950', '6.200', '6.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.5'}
+==============================
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['5.605', '5.00'], 'targets': ['5.650', '5.700', '5.800', '5.950', '6.200', '6.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.5'}
+⚡️⚡️#W/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.5802
+Take-Profit Targets: 
+1) 0.585
+2) 0.591
+3) 0.600
+4) 0.612
+5) 0.625
+6) 0.640
+
+Stop-Loss: 0.55
+------------------------------
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.5802'], 'targets': ['0.585', '0.591', '0.600', '0.612', '0.625', '0.640'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.55'}
+==============================
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.5802'], 'targets': ['0.585', '0.591', '0.600', '0.612', '0.625', '0.640'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.55'}
+⚡️⚡️#WLD/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 4.715
+Take-Profit Targets: 
+1) 4.750
+2) 4.785
+3) 4.820
+4) 4.900
+5) 5.000
+6) 5.150
+
+Stop-Loss: 4.4
+
+SPOT TPS   5.50  6.00  7.00
+------------------------------
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.715'], 'targets': ['4.750', '4.785', '4.820', '4.900', '5.000', '5.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.4'}
+==============================
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.715'], 'targets': ['4.750', '4.785', '4.820', '4.900', '5.000', '5.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.4'}
+⚡️⚡️#CHR/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.3295
+Take-Profit Targets:
+1) 0.3307
+2) 0.3320
+3) 0.3335
+4) 0.3360
+5) 0.3390
+6) 0.3420
+
+Stop Loss: 0.318
+------------------------------
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.3295'], 'targets': ['0.3307', '0.3320', '0.3335', '0.3360', '0.3390', '0.3420'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.318'}
+==============================
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.3295'], 'targets': ['0.3307', '0.3320', '0.3335', '0.3360', '0.3390', '0.3420'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.318'}
+⚡️⚡️#INJ/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 25.09  24.00   23.00
+Take-Profit Targets: 
+1) 25.50
+2) 26.00
+3) 27.00
+4) 28.50
+5) 30.50
+6) 32.00
+
+Stop-Loss: DCA
+
+SPOT  35   37  40
+------------------------------
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['25.09', '24.00'], 'targets': ['25.50', '26.00', '27.00', '28.50', '30.50', '32.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '21.6'}
+==============================
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['25.09', '24.00'], 'targets': ['25.50', '26.00', '27.00', '28.50', '30.50', '32.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '21.6'}
+⚡️⚡️#ADA/USDT⚡️⚡️
+
+Long 
+
+Leverage: 20x
+
+Buy: 0.4900 - 0.4700
+
+Target: 
+1) 0.4949 
+2) 0.4998 
+3) 0.5048 
+4) 0.5098 
+5) 0.5150 
+6) 0.5203
+
+StopLoss: 0.4600
+------------------------------
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.4900', '0.4700'], 'targets': ['0.4949', '0.4998', '0.5048', '0.5098', '0.5150', '0.5203'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4600'}
+==============================
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.4900', '0.4700'], 'targets': ['0.4949', '0.4998', '0.5048', '0.5098', '0.5150', '0.5203'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4600'}
+⚡️⚡️#XAI/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 50X_25X
+Entry Range: 0.7570
+Take-Profit Targets:
+1) 0.76836
+2) 0.77593
+3) 0.78350
+4) 0.79485
+5) 0.80242
+6) 0.81378
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'XAIUSDT', 'mark_price': '0.5700000', 'entry': ['0.7570'], 'targets': ['0.76836', '0.77593', '0.78350', '0.79485', '0.80242', '0.81378'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.6813'}
+==============================
+{'ticker': 'XAIUSDT', 'mark_price': '0.5700000', 'entry': ['0.7570'], 'targets': ['0.76836', '0.77593', '0.78350', '0.79485', '0.80242', '0.81378'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.6813'}
+⚡️⚡️#YGG/USDT⚡️⚡️
+Signal Type: Short
+Leverage: Cross 50X_25X
+Entry Range: 0.9066
+Take-Profit Targets:
+1) 0.89300
+2) 0.88394
+3) 0.87487
+4) 0.86127
+5) 0.85220
+6) 0.83861
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'YGGUSDT', 'mark_price': '0.6500000', 'entry': ['0.9066'], 'targets': ['0.89300', '0.88394', '0.87487', '0.86127', '0.85220', '0.83861'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9973'}
+==============================
+{'ticker': 'YGGUSDT', 'mark_price': '0.6500000', 'entry': ['0.9066'], 'targets': ['0.89300', '0.88394', '0.87487', '0.86127', '0.85220', '0.83861'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9973'}
+⚡️⚡️#ONT/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.3550   0.3300
+Take-Profit Targets: 
+1) 0.3580
+2) 0.3610
+3) 0.3645
+4) 0.3690
+5) 0.3750
+6) 0.3850
+
+Stop-Loss: 0.3170
+------------------------------
+{'ticker': 'ONTUSDT', 'mark_price': '0.2011', 'entry': ['0.3550', '0.3300'], 'targets': ['0.3580', '0.3610', '0.3645', '0.3690', '0.3750', '0.3850'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3170'}
+==============================
+{'ticker': 'ONTUSDT', 'mark_price': '0.2011', 'entry': ['0.3550', '0.3300'], 'targets': ['0.3580', '0.3610', '0.3645', '0.3690', '0.3750', '0.3850'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3170'}
+⚡️⚡️DOGE/USDT⚡️⚡️
+
+ Exchange -> Bingx 
+
+Signal Type: Regular (Long)
+Leverage: Cross (75х)
+
+Entry Targets:
+0.16156
+
+Take-Profit Targets:
+1) 0.16398
+2) 0.16560
+3) 0.16721
+4) 0.16964
+5) 0.17125
+6) 0.17368
+
+STOP LOSS Target:
+5-10%
+------------------------------
+{'ticker': 'DOGEUSDT', 'mark_price': '0.127000', 'entry': ['0.16156'], 'targets': ['0.16398', '0.16560', '0.16721', '0.16964', '0.17125', '0.17368'], 'leverage': ['75'], 'side': 'LONG', 'stop': '0.1454'}
+==============================
+{'ticker': 'DOGEUSDT', 'mark_price': '0.127000', 'entry': ['0.16156'], 'targets': ['0.16398', '0.16560', '0.16721', '0.16964', '0.17125', '0.17368'], 'leverage': ['75'], 'side': 'LONG', 'stop': '0.1454'}
+⚡️⚡️XLM/USDT⚡️⚡️
+
+Exchange -> Bingx 
+
+Signal Type: Regular (Short)
+Leverage: Cross (50х)
+
+Entry Targets:
+0.11154
+
+Take-Profit Targets:
+1) 0.10987
+2) 0.10875
+3) 0.10764
+4) 0.10596
+5) 0.10485
+6) 0.10317
+
+STOP LOSS Target:
+5-10%
+------------------------------
+{'ticker': 'XLMUSDT', 'mark_price': '0.08890', 'entry': ['0.11154'], 'targets': ['0.10987', '0.10875', '0.10764', '0.10596', '0.10485', '0.10317'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '0.1227'}
+==============================
+{'ticker': 'XLMUSDT', 'mark_price': '0.08890', 'entry': ['0.11154'], 'targets': ['0.10987', '0.10875', '0.10764', '0.10596', '0.10485', '0.10317'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '0.1227'}
+⚡️⚡️#HFT/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.3165
+Take-Profit Targets: 
+1) 0.3190
+2) 0.3215
+3) 0.3240
+4) 0.3290
+5) 0.3345
+6) 0.3400
+
+Stop-Loss: 0.295
+------------------------------
+{'ticker': 'HFTUSDT', 'mark_price': '0.2066000', 'entry': ['0.3165'], 'targets': ['0.3190', '0.3215', '0.3240', '0.3290', '0.3345', '0.3400'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.295'}
+==============================
+{'ticker': 'HFTUSDT', 'mark_price': '0.2066000', 'entry': ['0.3165'], 'targets': ['0.3190', '0.3215', '0.3240', '0.3290', '0.3345', '0.3400'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.295'}
+⚡️⚡️#HFT/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.3025
+Take-Profit Targets: 
+1) 0.3037
+2) 0.3055
+3) 0.3075
+4) 0.3110
+5) 0.3155
+6) 0.3200
+
+Stop-Loss: 0.285
+------------------------------
+{'ticker': 'HFTUSDT', 'mark_price': '0.2066000', 'entry': ['0.3025'], 'targets': ['0.3037', '0.3055', '0.3075', '0.3110', '0.3155', '0.3200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.285'}
+==============================
+{'ticker': 'HFTUSDT', 'mark_price': '0.2066000', 'entry': ['0.3025'], 'targets': ['0.3037', '0.3055', '0.3075', '0.3110', '0.3155', '0.3200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.285'}
+⚡️⚡️#PENDLE/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross  20x
+Entry Targets: 6.533
+Take-Profit Targets:
+1) 6.5750
+2) 6.6200
+3) 6.6670
+4) 6.7500
+5) 6.8500
+6) 6.9555
+
+Stop-Loss: 6.300
+------------------------------
+{'ticker': 'PENDLEUSDT', 'mark_price': '4.9500000', 'entry': ['6.533'], 'targets': ['6.5750', '6.6200', '6.6670', '6.7500', '6.8500', '6.9555'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.300'}
+==============================
+{'ticker': 'PENDLEUSDT', 'mark_price': '4.9500000', 'entry': ['6.533'], 'targets': ['6.5750', '6.6200', '6.6670', '6.7500', '6.8500', '6.9555'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.300'}
+⚡️⚡️#SUPER/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.95  0.920
+Take-Profit Targets: 
+1) 0.9600
+2) 0.9700
+3) 0.9800
+4) 0.9970
+5) 1.0200
+6) 1.0500
+
+Stop-Loss: DCA 
+
+SPOT TPS   1.10   1.15
+------------------------------
+{'ticker': 'SUPERUSDT', 'mark_price': '0.6671000', 'entry': ['0.95', '0.920'], 'targets': ['0.9600', '0.9700', '0.9800', '0.9970', '1.0200', '1.0500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.828'}
+==============================
+{'ticker': 'SUPERUSDT', 'mark_price': '0.6671000', 'entry': ['0.95', '0.920'], 'targets': ['0.9600', '0.9700', '0.9800', '0.9970', '1.0200', '1.0500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.828'}
+⚡️⚡️#OM/USDT⚡️⚡️
+
+SHORT
+
+LEVERAGE - 20x
+
+ENTRY - 8965, 9130 
+
+TARGETS 
+1) 8900
+2) 8830
+3) 8700
+4) 8500
+5) 8180
+6) 7730
+
+STOPLOSS - 9387
+------------------------------
+{'ticker': 'OMUSDT', 'mark_price': '0.5776000', 'entry': ['8965', '9130'], 'targets': ['8900', '8830', '8700', '8500', '8180', '7730'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9387'}
+==============================
+{'ticker': 'OMUSDT', 'mark_price': '0.5776000', 'entry': ['0.8965', '0.913'], 'targets': ['0.89', '0.883', '0.87', '0.85', '0.818', '0.7730'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.9387'}
+⚡️⚡️#CHR/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.305
+Take-Profit Targets:
+1) 0.3065
+2) 0.3080
+3) 0.3100
+4) 0.3125
+5) 0.3160
+6) 0.3200
+
+Stop Loss: 0.29
+------------------------------
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.305'], 'targets': ['0.3065', '0.3080', '0.3100', '0.3125', '0.3160', '0.3200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.29'}
+==============================
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.305'], 'targets': ['0.3065', '0.3080', '0.3100', '0.3125', '0.3160', '0.3200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.29'}
+⚡️⚡️#ZETA/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 1.219
+Take-Profit Targets: 
+1) 1.226
+2) 1.235
+3) 1.245
+4) 1.260
+5) 1.280
+6) 1.300
+
+Stop-Loss: 1.160
+------------------------------
+{'ticker': 'ZETAUSDT', 'mark_price': '0.970000', 'entry': ['1.219'], 'targets': ['1.226', '1.235', '1.245', '1.260', '1.280', '1.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.160'}
+==============================
+{'ticker': 'ZETAUSDT', 'mark_price': '0.970000', 'entry': ['1.219'], 'targets': ['1.226', '1.235', '1.245', '1.260', '1.280', '1.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.160'}
+⚡️⚡️#AVAX/USDT⚡️⚡️
+
+SHORT 
+
+LEVERAGE - 20x
+
+ENTRY 
+1) 33.55 
+2) 35.400
+
+TARGETS 
+1) 33.230
+2) 33.020
+3) 32.500
+4) 31.300
+5) 30
+6) 28
+7) 25
+
+STOPLOSS - 37.25
+------------------------------
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['33.55', '35.400'], 'targets': ['33.230', '33.020', '32.500', '31.300', '30', '28', '25'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '37.25'}
+==============================
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['33.55', '35.400'], 'targets': ['33.230', '33.020', '32.500', '31.300', '30', '28', '25'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '37.25'}
+⚡️⚡️#BOME/USDT⚡️⚡️
+Signal Type: Short
+Leverage: Cross 50X_25X
+Entry Range: 0.009088
+Take-Profit Targets:
+1) 0.00895
+2) 0.00886
+3) 0.00877
+4) 0.00863
+5) 0.00854
+6) 0.00841
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.009088'], 'targets': ['0.00895', '0.00886', '0.00877', '0.00863', '0.00854', '0.00841'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.01'}
+==============================
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.009088'], 'targets': ['0.00895', '0.00886', '0.00877', '0.00863', '0.00854', '0.00841'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.01'}
+⚡️⚡️#COMBO/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.71  0.6885
+Take-Profit Targets: 
+1) 0.7135
+2) 0.7170
+3) 0.7205
+4) 0.7280
+5) 0.7360
+6) 0.7450
+
+Stop-Loss: 0.6690
+------------------------------
+{'ticker': 'COMBOUSDT', 'mark_price': '0.720000', 'entry': ['0.71', '0.6885'], 'targets': ['0.7135', '0.7170', '0.7205', '0.7280', '0.7360', '0.7450'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6690'}
+==============================
+{'ticker': 'COMBOUSDT', 'mark_price': '0.720000', 'entry': ['0.71', '0.6885'], 'targets': ['0.7135', '0.7170', '0.7205', '0.7280', '0.7360', '0.7450'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6690'}
+⚡️⚡️#TON/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 6.403  6.30
+Take-Profit Targets: 
+1) 6.440
+2) 6.478
+3) 6.515
+4) 6.565
+5) 6.630
+6) 6.730
+
+Stop-Loss: 6.10
+------------------------------
+{'ticker': 'TONUSDT', 'mark_price': '7.6003000', 'entry': ['6.403', '6.30'], 'targets': ['6.440', '6.478', '6.515', '6.565', '6.630', '6.730'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.10'}
+==============================
+{'ticker': 'TONUSDT', 'mark_price': '7.6003000', 'entry': ['6.403', '6.30'], 'targets': ['6.440', '6.478', '6.515', '6.565', '6.630', '6.730'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6.10'}
+⚡️⚡️#BOME/USDT⚡️⚡️
+
+Signal type: Long 
+Leverage: 20x
+
+Buy: 0.01042 - 0.01010
+
+Target: 
+1) 0.01053 
+2) 0.01064 
+3) 0.01075 
+4) 0.01086 
+5) 0.01097 
+6) 0.01111
+
+StopLoss: 0.00980
+------------------------------
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.01042', '0.01010'], 'targets': ['0.01053', '0.01064', '0.01075', '0.01086', '0.01097', '0.01111'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.00980'}
+==============================
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.01042', '0.01010'], 'targets': ['0.01053', '0.01064', '0.01075', '0.01086', '0.01097', '0.01111'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.00980'}
+⚡️⚡️#1000BONK/USDT⚡️⚡️
+
+Signal Type:Long
+Leverage: Cross 50X
+
+Entry targets: 0.021113
+
+Take Profit Targets:
+1) 0.02143
+2) 0.02164
+3) 0.02185
+4) 0.02217
+5) 0.02238
+6) 0.02270
+
+Stop Loss: 5.10%
+------------------------------
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.021113'], 'targets': ['0.02143', '0.02164', '0.02185', '0.02217', '0.02238', '0.02270'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.019'}
+==============================
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.021113'], 'targets': ['0.02143', '0.02164', '0.02185', '0.02217', '0.02238', '0.02270'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.019'}
+⚡️⚡️#1000RATS/USDT⚡️⚡️
+
+Signal Type: Short
+Leverge: Cross 20X
+
+Entry targets: 0.1721
+
+Take Profit Targets:
+1) 0.17038
+2) 0.16866
+3) 0.16694
+4) 0.16522
+5) 0.16350
+6) 0.16177
+
+Stoploss: 0.18931
+------------------------------
+{'ticker': '1000RATSUSDT', 'mark_price': '0.1463100', 'entry': ['0.1721'], 'targets': ['0.17038', '0.16866', '0.16694', '0.16522', '0.16350', '0.16177'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.18931'}
+==============================
+{'ticker': '1000RATSUSDT', 'mark_price': '0.1463100', 'entry': ['0.1721'], 'targets': ['0.17038', '0.16866', '0.16694', '0.16522', '0.16350', '0.16177'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.18931'}
+⚡️⚡️#10000SATS/USD⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 25X
+
+EntryTargets: 0.00352894
+
+Take Profit Targets:
+1) 0.00349
+2) 0.00346
+3) 0.00342
+4) 0.00339
+5) 0.00335
+6) 0.00332
+
+Stoploss: 0.00388
+------------------------------
+{'ticker': '10000SATSUSDT', 'mark_price': None, 'entry': ['0.00352894'], 'targets': ['0.00349', '0.00346', '0.00342', '0.00339', '0.00335', '0.00332'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.00388'}
+==============================
+{'ticker': '10000SATSUSDT', 'mark_price': None, 'entry': ['0.00352894'], 'targets': ['0.00349', '0.00346', '0.00342', '0.00339', '0.00335', '0.00332'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.00388'}
+⚡️⚡️#AUDIO/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.1980  0.1950
+Take-Profit Targets: 
+1) 0.1990
+2) 0.2000
+3) 0.2010
+4) 0.2027
+5) 0.2055
+6) 0.2080
+
+Stop-Loss: 0.19
+------------------------------
+{'ticker': 'AUDIOUSDT', 'mark_price': '0.2900', 'entry': ['0.1980', '0.1950'], 'targets': ['0.1990', '0.2000', '0.2010', '0.2027', '0.2055', '0.2080'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.19'}
+==============================
+{'ticker': 'AUDIOUSDT', 'mark_price': '0.2900', 'entry': ['0.1980', '0.1950'], 'targets': ['0.1990', '0.2000', '0.2010', '0.2027', '0.2055', '0.2080'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.19'}
+⚡️⚡️#LPT/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 15.49  15.30
+Take-Profit Targets: 
+1) 15.560
+2) 15.630
+3) 15.710
+4) 15.845
+5) 16.000
+6) 16.150
+
+Stop-Loss: 15.10
+------------------------------
+{'ticker': 'LPTUSDT', 'mark_price': '4.792', 'entry': ['15.49', '15.30'], 'targets': ['15.560', '15.630', '15.710', '15.845', '16.000', '16.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '15.10'}
+==============================
+{'ticker': 'LPTUSDT', 'mark_price': '4.792', 'entry': ['15.49', '15.30'], 'targets': ['15.560', '15.630', '15.710', '15.845', '16.000', '16.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '15.10'}
+⚡️⚡️#TIA/USDT⚡️⚡️
+
+Signal type: Long
+Leverage: 25x
+
+Entry: 11.712 - 10.77
+
+Target: 
+1) 11.79 
+2) 11.93 
+3) 12.05 
+4) 12.16 
+5) 12.49
+6) 12.90 
+7) 13.99
+
+StopLoss: 10.64
+------------------------------
+{'ticker': 'TIAUSDT', 'mark_price': '6.2400000', 'entry': ['11.712', '10.77'], 'targets': ['11.79', '11.93', '12.05', '12.16', '12.49', '12.90', '13.99'], 'leverage': ['25'], 'side': 'LONG', 'stop': '10.64'}
+==============================
+{'ticker': 'TIAUSDT', 'mark_price': '6.2400000', 'entry': ['11.712', '10.77'], 'targets': ['11.79', '11.93', '12.05', '12.16', '12.49', '12.90', '13.99'], 'leverage': ['25'], 'side': 'LONG', 'stop': '10.64'}
+⚡️⚡️#BAKE/USDT⚡️⚡️
+
+Signal Type: Long
+
+Leverage: Cross 50x
+Entry Target : 0.2700
+
+Take Profit Targets:
+1) 0.27405
+2) 0.27675
+3) 0.27945
+4) 0.28350
+5) 0.28620
+6) 0.29025
+
+Stop Loss: 5.10%
+------------------------------
+{'ticker': 'BAKEUSDT', 'mark_price': '0.8649', 'entry': ['0.2700'], 'targets': ['0.27405', '0.27675', '0.27945', '0.28350', '0.28620', '0.29025'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.243'}
+==============================
+{'ticker': 'BAKEUSDT', 'mark_price': '0.8649', 'entry': ['0.2700'], 'targets': ['0.27405', '0.27675', '0.27945', '0.28350', '0.28620', '0.29025'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.243'}
+⚡️⚡️#ETHW/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 25X
+
+Entry Range: 4.088
+
+Take-Profit Targets:
+1) 4.14932
+2) 4.19020
+3) 4.23108
+4) 4.29240
+5) 4.33328
+6) 4.39460
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'ETHWUSDT', 'mark_price': '2.3420000', 'entry': ['4.088'], 'targets': ['4.14932', '4.19020', '4.23108', '4.29240', '4.33328', '4.39460'], 'leverage': ['25'], 'side': 'LONG', 'stop': '3.6792'}
+==============================
+{'ticker': 'ETHWUSDT', 'mark_price': '2.3420000', 'entry': ['4.088'], 'targets': ['4.14932', '4.19020', '4.23108', '4.29240', '4.33328', '4.39460'], 'leverage': ['25'], 'side': 'LONG', 'stop': '3.6792'}
+⚡️⚡️#BIGTIME/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.2550 
+
+Take-Profit Targets: 
+1) 0.2530
+2) 0.2505
+3) 0.2480
+4) 0.2430
+5) 0.2380
+6) 0.2320
+
+Stop-Loss: 0.262
+
+put limits
+------------------------------
+{'ticker': 'BIGTIMEUSDT', 'mark_price': '0.1202000', 'entry': ['0.2550'], 'targets': ['0.2530', '0.2505', '0.2480', '0.2430', '0.2380', '0.2320'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.262'}
+==============================
+{'ticker': 'BIGTIMEUSDT', 'mark_price': '0.1202000', 'entry': ['0.2550'], 'targets': ['0.2530', '0.2505', '0.2480', '0.2430', '0.2380', '0.2320'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.262'}
+⚡️⚡️#STX/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 3.045  3.00
+Take-Profit Targets: 
+1) 3.0650
+2) 3.0850
+3) 3.1050
+4) 3.1300
+5) 3.1750
+6) 3.2150
+
+Stop-Loss: 2.93
+------------------------------
+{'ticker': 'STXUSDT', 'mark_price': '1.6843000', 'entry': ['3.045', '3.00'], 'targets': ['3.0650', '3.0850', '3.1050', '3.1300', '3.1750', '3.2150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.93'}
+==============================
+{'ticker': 'STXUSDT', 'mark_price': '1.6843000', 'entry': ['3.045', '3.00'], 'targets': ['3.0650', '3.0850', '3.1050', '3.1300', '3.1750', '3.2150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.93'}
+⚡️⚡️#ENA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 25x
+
+Entry: 0.979 - 0.917
+
+Target: 
+1) 0.985 
+2) 0.993 
+3) 1.001 
+4) 1.013 
+5) 1.03 
+6) 1.07 
+7) 1.13
+
+StopLoss: 0.903
+------------------------------
+{'ticker': 'ENAUSDT', 'mark_price': '0.6394000', 'entry': ['0.979', '0.917'], 'targets': ['0.985', '0.993', '1.001', '1.013', '1.03', '1.07', '1.13'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.903'}
+==============================
+{'ticker': 'ENAUSDT', 'mark_price': '0.6394000', 'entry': ['0.979', '0.917'], 'targets': ['0.985', '0.993', '1.001', '1.013', '1.03', '1.07', '1.13'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.903'}
+⚡️⚡️#THETA/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 2.455
+Take-Profit Targets: 
+1) 2.470
+2) 2.485
+3) 2.498
+4) 2.520
+5) 2.550
+6) 2.580
+
+Stop-Loss: 2.35
+------------------------------
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.455'], 'targets': ['2.470', '2.485', '2.498', '2.520', '2.550', '2.580'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+==============================
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.455'], 'targets': ['2.470', '2.485', '2.498', '2.520', '2.550', '2.580'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+⚡️⚡️#TIA/USDT⚡️⚡️
+Signal Type: Long
+Leverage : Cross 20x
+Entry Targets: 11.62  11.40
+Take-Profit Targets:
+1) 11.700
+2) 11.780
+3) 11.880
+4) 12.020
+5) 12.250
+6) 12.500
+
+Stop-Loss: 10.95
+------------------------------
+{'ticker': 'TIAUSDT', 'mark_price': '6.2400000', 'entry': ['11.62', '11.40'], 'targets': ['11.700', '11.780', '11.880', '12.020', '12.250', '12.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '10.95'}
+==============================
+{'ticker': 'TIAUSDT', 'mark_price': '6.2400000', 'entry': ['11.62', '11.40'], 'targets': ['11.700', '11.780', '11.880', '12.020', '12.250', '12.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '10.95'}
+⚡️⚡️#1000FLOKI/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.1983
+Take-Profit Targets: 
+1) 0.1995
+2) 0.2007
+3) 0.2020
+4) 0.2035
+5) 0.2065
+6) 0.2100
+
+Stop-Loss: 0.1950
+------------------------------
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.1983'], 'targets': ['0.1995', '0.2007', '0.2020', '0.2035', '0.2065', '0.2100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1950'}
+==============================
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.1983'], 'targets': ['0.1995', '0.2007', '0.2020', '0.2035', '0.2065', '0.2100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1950'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.007615  0.007200
+Take-Profit Targets: 
+1) 0.007655
+2) 0.007700
+3) 0.007750
+4) 0.007840
+5) 0.007980
+6) 0.008100
+
+Stop-Loss: 0.007000
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.007615', '0.007200'], 'targets': ['0.007655', '0.007700', '0.007750', '0.007840', '0.007980', '0.008100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.007000'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.007615', '0.007200'], 'targets': ['0.007655', '0.007700', '0.007750', '0.007840', '0.007980', '0.008100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.007000'}
+#BTC/USDT
+Signal Type: Long
+Leverage: Cross 50x
+Entry Targets: 63700   62500
+Take-Profit Targets: 
+1) 64000
+2) 64350
+3) 64700
+4) 65200
+5) 65800
+6) 66550
+
+Stop-Loss: DCA 
+
+60000 if come then 3rd dca
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['63700', '62500'], 'targets': ['64000', '64350', '64700', '65200', '65800', '66550'], 'leverage': ['50'], 'side': 'LONG', 'stop': '56250.0'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['63700', '62500'], 'targets': ['64000', '64350', '64700', '65200', '65800', '66550'], 'leverage': ['50'], 'side': 'LONG', 'stop': '56250.0'}
+#ETHFI/USDT
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 3.685  3.600
+Take-Profit Targets: 
+1) 3.710
+2) 3.735
+3) 3.770
+4) 3.820
+5) 3.900
+6) 4.000
+
+Stop-Loss: 3.50
+------------------------------
+{'ticker': 'ETHFIUSDT', 'mark_price': '3.4110000', 'entry': ['3.685', '3.600'], 'targets': ['3.710', '3.735', '3.770', '3.820', '3.900', '4.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.50'}
+==============================
+{'ticker': 'ETHFIUSDT', 'mark_price': '3.4110000', 'entry': ['3.685', '3.600'], 'targets': ['3.710', '3.735', '3.770', '3.820', '3.900', '4.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.50'}
+#STX/USDT
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 2.725  2.600
+Take-Profit Targets: 
+1) 2.770
+2) 2.825
+3) 2.870
+4) 2.950
+5) 3.100
+6) 3.250
+
+Stop-Loss: 2.35
+
+SPOT + FUTURE
+------------------------------
+{'ticker': 'STXUSDT', 'mark_price': '1.6843000', 'entry': ['2.725', '2.600'], 'targets': ['2.770', '2.825', '2.870', '2.950', '3.100', '3.250'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+==============================
+{'ticker': 'STXUSDT', 'mark_price': '1.6843000', 'entry': ['2.725', '2.600'], 'targets': ['2.770', '2.825', '2.870', '2.950', '3.100', '3.250'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+⚡️⚡️#MERL/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 25X
+
+Entry Range: 0.8602
+
+Take-Profit Targets:
+1) 0.87310
+2) 0.88171
+3) 0.89031
+4) 0.90321
+5) 0.91181
+6) 0.92472
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'MERLUSDT', 'mark_price': None, 'entry': ['0.8602'], 'targets': ['0.87310', '0.88171', '0.89031', '0.90321', '0.91181', '0.92472'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.7742'}
+==============================
+{'ticker': 'MERLUSDT', 'mark_price': None, 'entry': ['0.8602'], 'targets': ['0.87310', '0.88171', '0.89031', '0.90321', '0.91181', '0.92472'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.7742'}
+⚡️⚡️#EOS/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 75X_25X
+
+Entry Range: 0.8960
+
+Take-Profit Targets:
+1) 0.88256
+2) 0.87360
+3) 0.86464
+4) 0.85120
+5) 0.84224
+6) 0.82880
+
+Stoploss: 
+5-10%
+------------------------------
+{'ticker': 'EOSUSDT', 'mark_price': '0.572', 'entry': ['0.8960'], 'targets': ['0.88256', '0.87360', '0.86464', '0.85120', '0.84224', '0.82880'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9856'}
+==============================
+{'ticker': 'EOSUSDT', 'mark_price': '0.572', 'entry': ['0.8960'], 'targets': ['0.88256', '0.87360', '0.86464', '0.85120', '0.84224', '0.82880'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9856'}
+⚡️⚡️#BNX/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 25X
+
+Entry Range: 1.0007
+
+Take-Profit Targets:
+1) 0.98569
+2) 0.97568
+3) 0.96568
+4) 0.95067
+5) 0.94066
+6) 0.92565
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'BNXUSDT', 'mark_price': '1.061000', 'entry': ['1.0007'], 'targets': ['0.98569', '0.97568', '0.96568', '0.95067', '0.94066', '0.92565'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '1.1008'}
+==============================
+{'ticker': 'BNXUSDT', 'mark_price': '1.061000', 'entry': ['1.0007'], 'targets': ['0.98569', '0.97568', '0.96568', '0.95067', '0.94066', '0.92565'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '1.1008'}
+⚡️⚡️#ATA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 25X
+
+Entry Range: 0.2561
+
+Take-Profit Targets:
+1) 0.25994
+2) 0.26250
+3) 0.26506
+4) 0.26891
+5) 0.27147
+6) 0.27531
+
+Stoploss;
+5-10%
+------------------------------
+{'ticker': 'ATAUSDT', 'mark_price': '0.1099', 'entry': ['0.2561'], 'targets': ['0.25994', '0.26250', '0.26506', '0.26891', '0.27147', '0.27531'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.2305'}
+==============================
+{'ticker': 'ATAUSDT', 'mark_price': '0.1099', 'entry': ['0.2561'], 'targets': ['0.25994', '0.26250', '0.26506', '0.26891', '0.27147', '0.27531'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.2305'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 50X
+
+Entry Range: 0.0071436
+
+Take-Profit Targets:
+1) 0.00725
+2) 0.00732
+3) 0.00739
+4) 0.00750
+5) 0.00757
+6) 0.00768
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.0071436'], 'targets': ['0.00725', '0.00732', '0.00739', '0.00750', '0.00757', '0.00768'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.0064'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.0071436'], 'targets': ['0.00725', '0.00732', '0.00739', '0.00750', '0.00757', '0.00768'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.0064'}
+⚡️⚡️#SFP/USDT⚡️⚡️
+
+Signal Type: Short 
+Leverage: Cross 25X
+
+Entry Range: 0.8361
+
+Take-Profit Targets:
+1) 0.82356
+2) 0.81520
+3) 0.80684
+4) 0.79430
+5) 0.78593
+6) 0.77339
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['0.8361'], 'targets': ['0.82356', '0.81520', '0.80684', '0.79430', '0.78593', '0.77339'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9197'}
+==============================
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['0.8361'], 'targets': ['0.82356', '0.81520', '0.80684', '0.79430', '0.78593', '0.77339'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.9197'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.922   2.850
+
+Take-Profit Targets: 
+1) 2.940
+2) 2.965
+3) 2.985
+4) 3.015
+5) 3.065
+6) 3.115
+
+Stop-Loss: 2.80
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.922', '2.850'], 'targets': ['2.940', '2.965', '2.985', '3.015', '3.065', '3.115'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.80'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.922', '2.850'], 'targets': ['2.940', '2.965', '2.985', '3.015', '3.065', '3.115'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.80'}
+⚡️⚡️#ONG/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.6642  0.6400
+
+Take-Profit Targets: 
+1) 0.6675
+2) 0.6710
+3) 0.6755
+4) 0.6830
+5) 0.6920
+6) 0.7030
+
+Stop-Loss: 0.6300
+------------------------------
+{'ticker': 'ONGUSDT', 'mark_price': '0.4030000', 'entry': ['0.6642', '0.6400'], 'targets': ['0.6675', '0.6710', '0.6755', '0.6830', '0.6920', '0.7030'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6300'}
+==============================
+{'ticker': 'ONGUSDT', 'mark_price': '0.4030000', 'entry': ['0.6642', '0.6400'], 'targets': ['0.6675', '0.6710', '0.6755', '0.6830', '0.6920', '0.7030'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6300'}
+⚡️⚡️#BTC/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 50x
+
+Entry Targets: 62800   62500
+
+Take-Profit Targets: 
+1) 63050
+2) 63300
+3) 63600
+4) 63900
+5) 64400
+6) 6500p
+
+Stop-Loss: 62000
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['62800', '62500'], 'targets': ['63050', '63300', '63600', '63900', '64400', '6500'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '62000'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['62800', '62500'], 'targets': ['63050', '63300', '63600', '63900', '64400', '6500'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '62000'}
+⚡️⚡️#MINA/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 50X
+
+Entry Targets: 0.8258
+
+Take-Profit Targets:
+1) 0.81341
+2) 0.80516
+3) 0.79690
+4) 0.78451
+5) 0.77625
+6) 0.76387
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'MINAUSDT', 'mark_price': '0.5000000', 'entry': ['0.8258'], 'targets': ['0.81341', '0.80516', '0.79690', '0.78451', '0.77625', '0.76387'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '0.9084'}
+==============================
+{'ticker': 'MINAUSDT', 'mark_price': '0.5000000', 'entry': ['0.8258'], 'targets': ['0.81341', '0.80516', '0.79690', '0.78451', '0.77625', '0.76387'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '0.9084'}
+⚡️⚡️#MASK/USDT⚡️⚡️
+Exchange -> Bingx 
+
+Signal Type: Short
+Leverage: Cross 50X
+
+Entry Targets: 3.410
+
+Take-Profit Targets:
+1) 3.35885
+2) 3.32475
+3) 3.29065
+4) 3.23950
+5) 3.20540
+6) 3.15425
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'MASKUSDT', 'mark_price': '3.3000', 'entry': ['3.410'], 'targets': ['3.35885', '3.32475', '3.29065', '3.23950', '3.20540', '3.15425'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '3.751'}
+==============================
+{'ticker': 'MASKUSDT', 'mark_price': '3.3000', 'entry': ['3.410'], 'targets': ['3.35885', '3.32475', '3.29065', '3.23950', '3.20540', '3.15425'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '3.751'}
+⚡️⚡️#MEW/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 25X
+
+Entry Range: 0.005583
+
+Take-Profit Targets:
+1) 0.00550
+2) 0.00544
+3) 0.00539
+4) 0.00530
+5) 0.00525
+6) 0.00516
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'MEWUSDT', 'mark_price': '0.0040040', 'entry': ['0.005583'], 'targets': ['0.00550', '0.00544', '0.00539', '0.00530', '0.00525', '0.00516'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.0061'}
+==============================
+{'ticker': 'MEWUSDT', 'mark_price': '0.0040040', 'entry': ['0.005583'], 'targets': ['0.00550', '0.00544', '0.00539', '0.00530', '0.00525', '0.00516'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '0.0061'}
+⚡️⚡️#BEL/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.927  0.88
+
+Take-Profit Targets: 
+1) 0.9307
+2) 0.9350
+3) 0.9400
+4) 0.9480
+5) 0.9600
+6) 0.9700
+
+Stop-Loss: 0.85
+
+SPOT TPS  1.00   1.05   1.10
+------------------------------
+{'ticker': 'BELUSDT', 'mark_price': '0.68480', 'entry': ['0.927', '0.88'], 'targets': ['0.9307', '0.9350', '0.9400', '0.9480', '0.9600', '0.9700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.85'}
+==============================
+{'ticker': 'BELUSDT', 'mark_price': '0.68480', 'entry': ['0.927', '0.88'], 'targets': ['0.9307', '0.9350', '0.9400', '0.9480', '0.9600', '0.9700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.85'}
+⚡️⚡️#GAS/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 5.50 
+
+Take-Profit Targets: 
+1) 5.525
+2) 5.550
+3) 5.575
+4) 5.615
+5) 5.680
+6) 5.750
+
+Stop-Loss: 5.4
+------------------------------
+{'ticker': 'GASUSDT', 'mark_price': '3.695000', 'entry': ['5.50'], 'targets': ['5.525', '5.550', '5.575', '5.615', '5.680', '5.750'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.4'}
+==============================
+{'ticker': 'GASUSDT', 'mark_price': '3.695000', 'entry': ['5.50'], 'targets': ['5.525', '5.550', '5.575', '5.615', '5.680', '5.750'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.4'}
+⚡️⚡️#LOOM/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.0948  0.09400
+
+Take-Profit Targets: 
+1) 0.09520
+2) 0.09560
+3) 0.09600
+4) 0.09680
+5) 0.09780
+6) 0.09900
+
+Stop-Loss: 0.09270
+------------------------------
+{'ticker': 'LOOMUSDT', 'mark_price': '0.0650000', 'entry': ['0.0948', '0.09400'], 'targets': ['0.09520', '0.09560', '0.09600', '0.09680', '0.09780', '0.09900'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.09270'}
+==============================
+{'ticker': 'LOOMUSDT', 'mark_price': '0.0650000', 'entry': ['0.0948', '0.09400'], 'targets': ['0.09520', '0.09560', '0.09600', '0.09680', '0.09780', '0.09900'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.09270'}
+⚡️⚡️#CFX/USDT⚡️⚡️
+Exchange -> Bingx 
+
+Signal Type: Long
+Leverage: Cross 50х
+
+Entry Targets: 0.24318
+
+Take-Profit Targets:
+1) 0.24683
+2) 0.24926
+3) 0.25169
+4) 0.25534
+5) 0.25777
+6) 0.26142
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'CFXUSDT', 'mark_price': '0.1754000', 'entry': ['0.24318'], 'targets': ['0.24683', '0.24926', '0.25169', '0.25534', '0.25777', '0.26142'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.2189'}
+==============================
+{'ticker': 'CFXUSDT', 'mark_price': '0.1754000', 'entry': ['0.24318'], 'targets': ['0.24683', '0.24926', '0.25169', '0.25534', '0.25777', '0.26142'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.2189'}
+⚡️⚡️#CHR/USDT⚡️⚡️
+Exchange -> Bingx 
+
+Signal Type: Long
+Leverage: Cross 20х
+
+Entry Targets: 0.3220
+
+Take-Profit Targets:
+1) 0.32683
+2) 0.33005
+3) 0.33327
+4) 0.33810
+5) 0.34132
+6) 0.34615
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.3220'], 'targets': ['0.32683', '0.33005', '0.33327', '0.33810', '0.34132', '0.34615'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2898'}
+==============================
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.3220'], 'targets': ['0.32683', '0.33005', '0.33327', '0.33810', '0.34132', '0.34615'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2898'}
+⚡️⚡️#CAKE/USDT⚡️⚡️
+Exchange -> Bingx 
+
+Signal Type: Short
+Leverage: Cross 50х
+
+Entry Targets: 2.764
+
+Take-Profit Targets:
+1) 2.72254
+2) 2.69490
+3) 2.66726
+4) 2.62580
+5) 2.59816
+6) 2.55670
+
+Stoploss:
+5-10%
+------------------------------
+{'ticker': 'CAKEUSDT', 'mark_price': '2.3000000', 'entry': ['2.764'], 'targets': ['2.72254', '2.69490', '2.66726', '2.62580', '2.59816', '2.55670'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '3.0404'}
+==============================
+{'ticker': 'CAKEUSDT', 'mark_price': '2.3000000', 'entry': ['2.764'], 'targets': ['2.72254', '2.69490', '2.66726', '2.62580', '2.59816', '2.55670'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '3.0404'}
+⚡️⚡️#AEVO/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.533  1.450
+
+Take-Profit Targets: 
+1) 1.550
+2) 1.570
+3) 1.590
+4) 1.620
+5) 1.660
+6) 1.700
+
+Stop-Loss: 1.40
+
+SPOT TPS    1.85   2.00  2.10
+------------------------------
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.533', '1.450'], 'targets': ['1.550', '1.570', '1.590', '1.620', '1.660', '1.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.40'}
+==============================
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.533', '1.450'], 'targets': ['1.550', '1.570', '1.590', '1.620', '1.660', '1.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.40'}
+⚡️⚡️#1000SHIB/USDT⚡️⚡️
+
+Signal type: Short 
+Leverage: 20x
+
+Buy: 0.02380 - 0.02450
+
+Target: 
+1) 0.02357
+2) 0.02334 
+3) 0.02311 
+4) 0.02280 
+5) 0.02255 
+6) 0.02230
+
+StopLoss: 0.02515
+------------------------------
+{'ticker': '1000SHIBUSDT', 'mark_price': '0.017500', 'entry': ['0.02380', '0.02450'], 'targets': ['0.02357', '0.02334', '0.02311', '0.02280', '0.02255', '0.02230'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.02515'}
+==============================
+{'ticker': '1000SHIBUSDT', 'mark_price': '0.017500', 'entry': ['0.02380', '0.02450'], 'targets': ['0.02357', '0.02334', '0.02311', '0.02280', '0.02255', '0.02230'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.02515'}
+⚡️⚡️#AVAX/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 33.85  33.00
+
+Take-Profit Targets: 
+1) 34.100
+2) 34.350
+3) 34.650
+4) 35.200
+5) 36.000
+6) 36.800
+
+Stop-Loss: 30
+
+spot tps   37   38  39
+------------------------------
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['33.85', '33.00'], 'targets': ['34.100', '34.350', '34.650', '35.200', '36.000', '36.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+==============================
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['33.85', '33.00'], 'targets': ['34.100', '34.350', '34.650', '35.200', '36.000', '36.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+⚡️⚡️#ENS/USDT⚡️⚡️
+
+SHORT
+Leverage: 20x
+
+Entry: 15.906 - 16.174
+
+ Target: 
+1) 15.810 
+2) 15.730 
+3) 15.625 
+4) 15.451 
+5) 15.090 
+6) 14.779
+
+StopLoss : 16.867
+------------------------------
+{'ticker': 'ENSUSDT', 'mark_price': '26.556', 'entry': ['15.906', '16.174'], 'targets': ['15.810', '15.730', '15.625', '15.451', '15.090', '14.779'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '16.867'}
+==============================
+{'ticker': 'ENSUSDT', 'mark_price': '26.556', 'entry': ['15.906', '16.174'], 'targets': ['15.810', '15.730', '15.625', '15.451', '15.090', '14.779'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '16.867'}
+⚡️⚡️#NEAR/USDT⚡️⚡️
+
+SHORT
+Leverage: 20x
+
+Entry: 6.794 - 6.858
+
+Target: 
+1) 6.765 
+2) 6.739 
+3) 6.701 
+4) 6.634 
+5) 6.515
+
+StopLoss : 7.011
+------------------------------
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['6.794', '6.858'], 'targets': ['6.765', '6.739', '6.701', '6.634', '6.515'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '7.011'}
+==============================
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['6.794', '6.858'], 'targets': ['6.765', '6.739', '6.701', '6.634', '6.515'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '7.011'}
+⚡️⚡️#HIGH/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 3.975
+
+Take-Profit Targets: 
+1) 3.930
+2) 3.885
+3) 3.830
+4) 3.750
+5) 3.680
+6) 3.600
+
+Stop-Loss: 4.15
+------------------------------
+{'ticker': 'HIGHUSDT', 'mark_price': '2.155000', 'entry': ['3.975'], 'targets': ['3.930', '3.885', '3.830', '3.750', '3.680', '3.600'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '4.15'}
+==============================
+{'ticker': 'HIGHUSDT', 'mark_price': '2.155000', 'entry': ['3.975'], 'targets': ['3.930', '3.885', '3.830', '3.750', '3.680', '3.600'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '4.15'}
+⚡️⚡️#ZETA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.21  1.180
+
+Take-Profit Targets: 
+1) 1.218
+2) 1.226
+3) 1.235
+4) 1.247
+5) 1.265
+6) 1.290
+
+Stop-Loss: 1.15
+------------------------------
+{'ticker': 'ZETAUSDT', 'mark_price': '0.970000', 'entry': ['1.21', '1.180'], 'targets': ['1.218', '1.226', '1.235', '1.247', '1.265', '1.290'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.15'}
+==============================
+{'ticker': 'ZETAUSDT', 'mark_price': '0.970000', 'entry': ['1.21', '1.180'], 'targets': ['1.218', '1.226', '1.235', '1.247', '1.265', '1.290'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.15'}
+⚡️⚡️#SOL/USDT⚡️⚡️
+
+Signal Type: Short 
+Leverage: 20x
+
+Buy: 130.1000 - 133.0000
+
+Target: 
+1) 128.7000 
+2) 127.4000 
+3) 126.0000 
+4) 124.000 
+5) 122.2000 
+6) 120.4000
+
+StopLoss: 136.7000
+------------------------------
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['130.1000', '133.0000'], 'targets': ['128.7000', '127.4000', '126.0000', '124.000', '122.2000', '120.4000'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '136.7000'}
+==============================
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['130.1000', '133.0000'], 'targets': ['128.7000', '127.4000', '126.0000', '124.000', '122.2000', '120.4000'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '136.7000'}
+⚡️⚡️#AVAX/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 32.80  32.00
+
+Take-Profit Targets: 
+1) 33.050
+2) 33.300
+3) 33.600
+4) 34.100
+5) 34.700
+6) 35.500
+
+Stop-Loss: 30
+
+spot tps   37   38  39
+------------------------------
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['32.80', '32.00'], 'targets': ['33.050', '33.300', '33.600', '34.100', '34.700', '35.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+==============================
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['32.80', '32.00'], 'targets': ['33.050', '33.300', '33.600', '34.100', '34.700', '35.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+⚡️⚡️#WLD/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 4.381  4.300
+
+Take-Profit Targets: 
+1) 4.405
+2) 4.430
+3) 4.460
+4) 4.505
+5) 4.570
+6) 4.650
+
+Stop-Loss: 4.200
+
+SPOT TPS   5.00   5.50
+------------------------------
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.381', '4.300'], 'targets': ['4.405', '4.430', '4.460', '4.505', '4.570', '4.650'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.200'}
+==============================
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.381', '4.300'], 'targets': ['4.405', '4.430', '4.460', '4.505', '4.570', '4.650'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.200'}
+⚡️⚡️#AEVO/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.372  1.300
+
+Take-Profit Targets: 
+1) 1.390
+2) 1.405
+3) 1.420
+4) 1.445
+5) 1.475
+6) 1.500
+
+Stop-Loss: DCA  1.20 FUTURE
+
+SPOT TPS    1.55   1.65    1.800
+------------------------------
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.372', '1.300'], 'targets': ['1.390', '1.405', '1.420', '1.445', '1.475', '1.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.20'}
+==============================
+{'ticker': 'AEVOUSDT', 'mark_price': '0.4845000', 'entry': ['1.372', '1.300'], 'targets': ['1.390', '1.405', '1.420', '1.445', '1.475', '1.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.20'}
+⚡️⚡️#MANTA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.628  1.55
+
+Take-Profit Targets: 
+1) 1.642
+2) 1.657
+3) 1.680
+4) 1.710
+5) 1.750
+6) 1.800
+
+Stop-Loss: DCA   1.40 
+
+ SPOT  TPS   2.00   2.20   2.40
+------------------------------
+{'ticker': 'MANTAUSDT', 'mark_price': '0.8601000', 'entry': ['1.628', '1.55'], 'targets': ['1.642', '1.657', '1.680', '1.710', '1.750', '1.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.40'}
+==============================
+{'ticker': 'MANTAUSDT', 'mark_price': '0.8601000', 'entry': ['1.628', '1.55'], 'targets': ['1.642', '1.657', '1.680', '1.710', '1.750', '1.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.40'}
+⚡️⚡️#SUI/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.109  1.050
+
+Take-Profit Targets: 
+1) 1.115
+2) 1.130
+3) 1.145
+4) 1.170
+5) 1.200
+6) 1.240
+
+Stop-Loss: DCA
+
+SPOT + FUTURE  
+
+SPOT TPS   1.30   1.40
+------------------------------
+{'ticker': 'SUIUSDT', 'mark_price': '0.828600', 'entry': ['1.109', '1.050'], 'targets': ['1.115', '1.130', '1.145', '1.170', '1.200', '1.240'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.945'}
+==============================
+{'ticker': 'SUIUSDT', 'mark_price': '0.828600', 'entry': ['1.109', '1.050'], 'targets': ['1.115', '1.130', '1.145', '1.170', '1.200', '1.240'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.945'}
+⚡️⚡️#SFP/USDT⚡️⚡️
+
+LONG
+LEVERAGE - 20x
+
+ENTRY: 8153 - 7890
+
+Take Profit Target:
+1) 8200 
+2) 8260 
+3) 8340 
+4) 8425 
+5) 8602 
+6) 8810 
+7) 9080
+
+STOPLOSS - 7620
+------------------------------
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['8153', '7890'], 'targets': ['8200', '8260', '8340', '8425', '8602', '8810', '9080'], 'leverage': ['20'], 'side': 'LONG', 'stop': '7620'}
+==============================
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['0.8153', '0.789'], 'targets': ['0.82', '0.826', '0.834', '0.8425', '0.8602', '0.881', '0.908'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.7620'}
+⚡️⚡️#APE/USDT⚡️⚡️
+
+SHORT
+LEVERAGE - 20x
+
+ENTRY - 1.1660 , 1.1850 
+
+TARGETS 
+1) 1.1570 
+2) 1.1400 
+3) 1.1160 
+4) 1.0680 
+5) 1.020 
+6) 0.9700
+
+STOPLOSS - 1.2210
+------------------------------
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.1660', '1.1850'], 'targets': ['1.1570', '1.1400', '1.1160', '1.0680', '1.020', '0.9700'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.2210'}
+==============================
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.1660', '1.1850'], 'targets': ['1.1570', '1.1400', '1.1160', '1.0680', '1.020', '0.9700'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.2210'}
+⚡️⚡️#WLD/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 4.235  4.15
+
+Take-Profit Targets: 
+1) 4.255
+2) 4.285
+3) 4.310
+4) 4.365
+5) 4.420
+6) 4.500
+
+Stop-Loss: 4
+------------------------------
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.235', '4.15'], 'targets': ['4.255', '4.285', '4.310', '4.365', '4.420', '4.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4'}
+==============================
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['4.235', '4.15'], 'targets': ['4.255', '4.285', '4.310', '4.365', '4.420', '4.500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4'}
+⚡️⚡️ATOM/USDT⚡️⚡️
+
+LONG
+
+25X
+
+TARGET : 
+1) 8.230
+2) 8.300
+3) 8.380
+4) 8.450
+5) 8.550
+
+STOP : 8.000
+------------------------------
+{'ticker': 'ATOMUSDT', 'mark_price': '7.036', 'entry': 'market', 'targets': ['8.230', '8.300', '8.380', '8.450', '8.550'], 'leverage': ['25']}
+==============================
+{'ticker': 'ATOMUSDT', 'mark_price': '7.036', 'entry': 'market', 'targets': ['8.230', '8.300', '8.380', '8.450', '8.550'], 'leverage': ['25']}
+⚡️⚡️#PHB/USDT⚡️⚡️
+
+Signal type: Long
+Leverage: 20x
+
+Entry targets: 1.5570 , 1.5200
+
+Take Profit Target:
+1) 1.5665 
+2) 1.5780 
+3) 1.5920 
+4) 1.6130 
+5) 1.6500 
+6) 1.700 
+7) 1.800
+
+Stoploss: 1.4650
+------------------------------
+{'ticker': 'PHBUSDT', 'mark_price': '1.7026000', 'entry': ['1.5570', '1.5200'], 'targets': ['1.5665', '1.5780', '1.5920', '1.6130', '1.6500', '1.700', '1.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.4650'}
+==============================
+{'ticker': 'PHBUSDT', 'mark_price': '1.7026000', 'entry': ['1.5570', '1.5200'], 'targets': ['1.5665', '1.5780', '1.5920', '1.6130', '1.6500', '1.700', '1.800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.4650'}
+⚡️⚡️#BLUR/USDT⚡️⚡️
+
+Signal Type: Long 
+Leverage: 20x
+
+Buy: 0.4048 - 0.3930
+
+Target: 
+1) 0.4088 
+2) 0.4129 
+3) 0.4170 
+4) 0.4212 
+5) 0.4255 
+6) 0.4300
+
+StopLoss: 0.3696
+------------------------------
+{'ticker': 'BLURUSDT', 'mark_price': '0.3250000', 'entry': ['0.4048', '0.3930'], 'targets': ['0.4088', '0.4129', '0.4170', '0.4212', '0.4255', '0.4300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3696'}
+==============================
+{'ticker': 'BLURUSDT', 'mark_price': '0.3250000', 'entry': ['0.4048', '0.3930'], 'targets': ['0.4088', '0.4129', '0.4170', '0.4212', '0.4255', '0.4300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3696'}
+⚡️⚡️#SAGA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 3.322  3.250
+
+Take-Profit Targets: 
+1) 3.345
+2) 3.370
+3) 3.397
+4) 3.435
+5) 3.485
+6) 3.550
+
+Stop-Loss: 3.177
+------------------------------
+{'ticker': 'SAGAUSDT', 'mark_price': '1.3771000', 'entry': ['3.322', '3.250'], 'targets': ['3.345', '3.370', '3.397', '3.435', '3.485', '3.550'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.177'}
+==============================
+{'ticker': 'SAGAUSDT', 'mark_price': '1.3771000', 'entry': ['3.322', '3.250'], 'targets': ['3.345', '3.370', '3.397', '3.435', '3.485', '3.550'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.177'}
+⚡️⚡️#DYDX/USDT⚡️⚡️
+
+Signal type: Long
+Leverage: 25x
+
+Entry: 2.1190 - 2.0700
+
+Target: 
+1) 2.1400 
+2) 2.1630 
+3) 2.1846 
+4) 2.2063 
+5) 2.2282 
+6) 2.2513
+
+StopLoss: 2.0200
+------------------------------
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['2.1190', '2.0700'], 'targets': ['2.1400', '2.1630', '2.1846', '2.2063', '2.2282', '2.2513'], 'leverage': ['25'], 'side': 'LONG', 'stop': '2.0200'}
+==============================
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['2.1190', '2.0700'], 'targets': ['2.1400', '2.1630', '2.1846', '2.2063', '2.2282', '2.2513'], 'leverage': ['25'], 'side': 'LONG', 'stop': '2.0200'}
+⚡️⚡️#PIXEL/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.4020   0.3850
+
+Take-Profit Targets: 
+1) 0.4050
+2) 0.4080
+3) 0.4110
+4) 0.4170
+5) 0.4250
+6) 0.4350
+
+Stop-Loss: 0.37
+------------------------------
+{'ticker': 'PIXELUSDT', 'mark_price': '0.2778000', 'entry': ['0.4020', '0.3850'], 'targets': ['0.4050', '0.4080', '0.4110', '0.4170', '0.4250', '0.4350'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.37'}
+==============================
+{'ticker': 'PIXELUSDT', 'mark_price': '0.2778000', 'entry': ['0.4020', '0.3850'], 'targets': ['0.4050', '0.4080', '0.4110', '0.4170', '0.4250', '0.4350'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.37'}
+⚡️⚡️#DYDX/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.185  2.10
+
+Take-Profit Targets: 
+1) 2.200
+2) 2.217
+3) 2.231
+4) 2.255
+5) 2.290
+6) 2.330
+
+Stop-Loss: 2.00
+------------------------------
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['2.185', '2.10'], 'targets': ['2.200', '2.217', '2.231', '2.255', '2.290', '2.330'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.00'}
+==============================
+{'ticker': 'DYDXUSDT', 'mark_price': '1.430', 'entry': ['2.185', '2.10'], 'targets': ['2.200', '2.217', '2.231', '2.255', '2.290', '2.330'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.00'}
+⚡️⚡️#1000BONK/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.02840  0.02900
+
+Take-Profit Targets: 
+1) 0.028250
+2) 0.028050
+3) 0.027800
+4) 0.027500
+5) 0.027000
+6) 0.026500
+
+Stop-Loss: 0.02970
+------------------------------
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.02840', '0.02900'], 'targets': ['0.028250', '0.028050', '0.027800', '0.027500', '0.027000', '0.026500'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.02970'}
+==============================
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.02840', '0.02900'], 'targets': ['0.028250', '0.028050', '0.027800', '0.027500', '0.027000', '0.026500'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.02970'}
+⚡️⚡️#AGLD/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 1.0481  1.000
+
+Take-Profit Targets: 
+1) 1.0580
+2) 1.0675
+3) 1.0775
+4) 1.0900
+5) 1.1065
+6) 1.1250
+
+Stop-Loss: 0.98
+------------------------------
+{'ticker': 'AGLDUSDT', 'mark_price': '1.2543000', 'entry': ['1.0481', '1.000'], 'targets': ['1.0580', '1.0675', '1.0775', '1.0900', '1.1065', '1.1250'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.98'}
+==============================
+{'ticker': 'AGLDUSDT', 'mark_price': '1.2543000', 'entry': ['1.0481', '1.000'], 'targets': ['1.0580', '1.0675', '1.0775', '1.0900', '1.1065', '1.1250'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.98'}
+⚡️⚡️#ENJ/USDT⚡️⚡️
+
+Signal type: Long
+Leverage: 20x
+ 
+Entry: 0.3116 - 0.3057
+
+ Target: 
+1) 0.3129 
+2) 0.3139 
+3) 0.3153 
+4) 0.3177 
+5) 0.3214 
+6) 0.3314
+
+StopLoss : 0.2933
+------------------------------
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.3116', '0.3057'], 'targets': ['0.3129', '0.3139', '0.3153', '0.3177', '0.3214', '0.3314'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2933'}
+==============================
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.3116', '0.3057'], 'targets': ['0.3129', '0.3139', '0.3153', '0.3177', '0.3214', '0.3314'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2933'}
+⚡️⚡️#THETA/USDT⚡️⚡️
+
+Signal type: Long
+Leverage: 30x
+
+Entry: 2.3160 - 2.2700
+
+Target: 
+1) 2.3392 
+2) 2.3624 
+3) 2.3860 
+4) 2.4098 
+5) 2.4340 
+6) 2.4586
+
+StopLoss: 2.2438
+------------------------------
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.3160', '2.2700'], 'targets': ['2.3392', '2.3624', '2.3860', '2.4098', '2.4340', '2.4586'], 'leverage': ['30'], 'side': 'LONG', 'stop': '2.2438'}
+==============================
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.3160', '2.2700'], 'targets': ['2.3392', '2.3624', '2.3860', '2.4098', '2.4340', '2.4586'], 'leverage': ['30'], 'side': 'LONG', 'stop': '2.2438'}
+⚡️⚡️#SEI/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.5827  0.5700
+
+Take-Profit Targets: 
+1) 0.5855
+2) 0.5888
+3) 0.5920
+4) 0.5970
+5) 0.6050
+6) 0.6150
+
+Stop-Loss: 0.555
+------------------------------
+{'ticker': 'SEIUSDT', 'mark_price': '0.3500000', 'entry': ['0.5827', '0.5700'], 'targets': ['0.5855', '0.5888', '0.5920', '0.5970', '0.6050', '0.6150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.555'}
+==============================
+{'ticker': 'SEIUSDT', 'mark_price': '0.3500000', 'entry': ['0.5827', '0.5700'], 'targets': ['0.5855', '0.5888', '0.5920', '0.5970', '0.6050', '0.6150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.555'}
+⚡️⚡️#BOME/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.012100
+
+Take-Profit Targets: 
+1) 0.012200
+2) 0.012300
+3) 0.012400
+4) 0.012600
+5) 0.012800
+6) 0.013100
+
+Stop-Loss: 0.011800
+------------------------------
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.012100'], 'targets': ['0.012200', '0.012300', '0.012400', '0.012600', '0.012800', '0.013100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.011800'}
+==============================
+{'ticker': 'BOMEUSDT', 'mark_price': '0.0080000', 'entry': ['0.012100'], 'targets': ['0.012200', '0.012300', '0.012400', '0.012600', '0.012800', '0.013100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.011800'}
+⚡️⚡️#APT/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets:  9.225   9.15
+
+Take-Profit Targets: 
+1) 9.255
+2) 9.295
+3) 9.340
+4) 9.405
+5) 9.515
+6) 9.655
+
+Stop-Loss: 9.05
+------------------------------
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.225', '9.15'], 'targets': ['9.255', '9.295', '9.340', '9.405', '9.515', '9.655'], 'leverage': ['20'], 'side': 'LONG', 'stop': '9.05'}
+==============================
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.225', '9.15'], 'targets': ['9.255', '9.295', '9.340', '9.405', '9.515', '9.655'], 'leverage': ['20'], 'side': 'LONG', 'stop': '9.05'}
+⚡️⚡️GMT/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.2190  0.2100
+
+Take-Profit Targets: 
+1) 0.2205
+2) 0.2220
+3) 0.2240
+4) 0.2270
+5) 0.2310
+6) 0.2350
+
+Stop-Loss: DCA
+
+SPOT  TARGETS   0.25   0.28   0.30
+------------------------------
+{'ticker': 'GMTUSDT', 'mark_price': '0.15500', 'entry': ['0.2190', '0.2100'], 'targets': ['0.2205', '0.2220', '0.2240', '0.2270', '0.2310', '0.2350'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.189'}
+==============================
+{'ticker': 'GMTUSDT', 'mark_price': '0.15500', 'entry': ['0.2190', '0.2100'], 'targets': ['0.2205', '0.2220', '0.2240', '0.2270', '0.2310', '0.2350'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.189'}
+⚡️⚡️#SAGA/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 2.915  2.97
+
+Take-Profit Targets: 
+1) 2.898
+2) 2.880
+3) 2.865
+4) 2.842
+5) 2.812
+6) 2.785
+
+Stop-Loss: 3.03
+------------------------------
+{'ticker': 'SAGAUSDT', 'mark_price': '1.3771000', 'entry': ['2.915', '2.97'], 'targets': ['2.898', '2.880', '2.865', '2.842', '2.812', '2.785'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '3.03'}
+==============================
+{'ticker': 'SAGAUSDT', 'mark_price': '1.3771000', 'entry': ['2.915', '2.97'], 'targets': ['2.898', '2.880', '2.865', '2.842', '2.812', '2.785'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '3.03'}
+⚡️⚡️#TRB/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 139.00
+
+Take-Profit Targets: 
+1) 137.90
+2) 136.70
+3) 135.50
+4) 133.00
+5) 131.00
+6) 129.00
+
+Stop-Loss: 142.5
+------------------------------
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['139.00'], 'targets': ['137.90', '136.70', '135.50', '133.00', '131.00', '129.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '142.5'}
+==============================
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['139.00'], 'targets': ['137.90', '136.70', '135.50', '133.00', '131.00', '129.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '142.5'}
+⚡️⚡️#TRB/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 145
+
+Take-Profit Targets: 
+1) 144.00
+2) 143.70
+3) 142.50
+4) 141.00
+5) 139.00
+6) 137.00
+
+Stop-Loss: 148.5
+------------------------------
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['145'], 'targets': ['144.00', '143.70', '142.50', '141.00', '139.00', '137.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '148.5'}
+==============================
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['145'], 'targets': ['144.00', '143.70', '142.50', '141.00', '139.00', '137.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '148.5'}
+⚡️⚡️#FIL/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage : Cross 20x
+
+Entry Targets: 5.785  5.60
+
+Take-Profit Targets:
+1) 5.815
+2) 5.845
+3) 5.880
+4) 5.945
+5) 6.050
+6) 6.150
+
+Stop-Loss: 5.35
+------------------------------
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['5.785', '5.60'], 'targets': ['5.815', '5.845', '5.880', '5.945', '6.050', '6.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.35'}
+==============================
+{'ticker': 'FILUSDT', 'mark_price': '4.508', 'entry': ['5.785', '5.60'], 'targets': ['5.815', '5.845', '5.880', '5.945', '6.050', '6.150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.35'}
+⚡️⚡️#AR/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 39.62
+
+Take-Profit Targets: 
+1) 39.85
+2) 40.10
+3) 40.35
+4) 40.80
+5) 41.40
+6) 42.00
+
+Stop-Loss: 38
+------------------------------
+{'ticker': 'ARUSDT', 'mark_price': '28.200', 'entry': ['39.62'], 'targets': ['39.85', '40.10', '40.35', '40.80', '41.40', '42.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '38'}
+==============================
+{'ticker': 'ARUSDT', 'mark_price': '28.200', 'entry': ['39.62'], 'targets': ['39.85', '40.10', '40.35', '40.80', '41.40', '42.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '38'}
+⚡️⚡️#BTC/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 50x
+
+Entry Targets: 61050  60500
+
+Take-Profit Targets: 
+1) 61200
+2) 61350
+3) 61550
+4) 61870
+5) 62300
+6) 62700
+
+Stop-Loss: 60000
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['61050', '60500'], 'targets': ['61200', '61350', '61550', '61870', '62300', '62700'], 'leverage': ['50'], 'side': 'LONG', 'stop': '60000'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['61050', '60500'], 'targets': ['61200', '61350', '61550', '61870', '62300', '62700'], 'leverage': ['50'], 'side': 'LONG', 'stop': '60000'}
+⚡️⚡️#FET/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.158   2.100
+
+Take-Profit Targets: 
+1) 2.170
+2) 2.187
+3) 2.205
+4) 2.235
+5) 2.280
+6) 2.335
+
+Stop-Loss: 2.035
+------------------------------
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.158', '2.100'], 'targets': ['2.170', '2.187', '2.205', '2.235', '2.280', '2.335'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.035'}
+==============================
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.158', '2.100'], 'targets': ['2.170', '2.187', '2.205', '2.235', '2.280', '2.335'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.035'}
+⚡️⚡️#GMX/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 32.45
+
+Take-Profit Targets: 
+1) 32.25
+2) 32.00
+3) 31.75
+4) 31.30
+5) 30.90
+6) 30.40
+
+Stop-Loss: 33.20
+------------------------------
+{'ticker': 'GMXUSDT', 'mark_price': '32.965000', 'entry': ['32.45'], 'targets': ['32.25', '32.00', '31.75', '31.30', '30.90', '30.40'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '33.20'}
+==============================
+{'ticker': 'GMXUSDT', 'mark_price': '32.965000', 'entry': ['32.45'], 'targets': ['32.25', '32.00', '31.75', '31.30', '30.90', '30.40'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '33.20'}
+⚡️⚡️#GMX/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 33.70
+
+Take-Profit Targets: 
+1) 33.50
+2) 33.30
+3) 32.90
+4) 32.40
+5) 31.70
+6) 31.00
+
+Stop-Loss: 34.50
+------------------------------
+{'ticker': 'GMXUSDT', 'mark_price': '32.965000', 'entry': ['33.70'], 'targets': ['33.50', '33.30', '32.90', '32.40', '31.70', '31.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '34.50'}
+==============================
+{'ticker': 'GMXUSDT', 'mark_price': '32.965000', 'entry': ['33.70'], 'targets': ['33.50', '33.30', '32.90', '32.40', '31.70', '31.00'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '34.50'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 3.125
+
+Take-Profit Targets: 
+1) 3.140
+2) 3.157
+3) 3.175
+4) 3.205
+5) 3.250
+6) 3.300
+
+Stop-Loss: 3.0
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.125'], 'targets': ['3.140', '3.157', '3.175', '3.205', '3.250', '3.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.0'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.125'], 'targets': ['3.140', '3.157', '3.175', '3.205', '3.250', '3.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '3.0'}
+⚡️⚡️#TNSR/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.8790  0.8500
+
+Take Profit Targets:
+1) 0.8835
+2) 0.8880
+3) 0.8930
+4) 0.9010
+5) 0.9120
+6) 0.9270
+
+Stop-Loss: 0.8300
+------------------------------
+{'ticker': 'TNSRUSDT', 'mark_price': '0.6200000', 'entry': ['0.8790', '0.8500'], 'targets': ['0.8835', '0.8880', '0.8930', '0.9010', '0.9120', '0.9270'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.8300'}
+==============================
+{'ticker': 'TNSRUSDT', 'mark_price': '0.6200000', 'entry': ['0.8790', '0.8500'], 'targets': ['0.8835', '0.8880', '0.8930', '0.9010', '0.9120', '0.9270'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.8300'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 3.03   2.900
+
+Take-Profit Targets: 
+1) 3.050
+2) 3.070
+3) 3.095
+4) 3.140
+5) 3.205
+6) 3.280
+
+Stop-Loss: 2.75
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.03', '2.900'], 'targets': ['3.050', '3.070', '3.095', '3.140', '3.205', '3.280'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.75'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.03', '2.900'], 'targets': ['3.050', '3.070', '3.095', '3.140', '3.205', '3.280'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.75'}
+⚡️⚡️#WLD/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 5.735   5.65
+
+Take-Profit Targets: 
+1) 5.765
+2) 5.800
+3) 5.850
+4) 5.930
+5) 6.050
+6) 6.155
+
+Stop-Loss: 5.5
+------------------------------
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['5.735', '5.65'], 'targets': ['5.765', '5.800', '5.850', '5.930', '6.050', '6.155'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.5'}
+==============================
+{'ticker': 'WLDUSDT', 'mark_price': '2.8889000', 'entry': ['5.735', '5.65'], 'targets': ['5.765', '5.800', '5.850', '5.930', '6.050', '6.155'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.5'}
+⚡️⚡️#RNDR/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 10.881  11.20
+
+Take-Profit Targets: 
+1) 10.830
+2) 10.770
+3) 10.700
+4) 10.550
+5) 10.350
+6) 10.100
+
+Stop-Loss: 11.60
+------------------------------
+{'ticker': 'RNDRUSDT', 'mark_price': '7.000000', 'entry': ['10.881', '11.20'], 'targets': ['10.830', '10.770', '10.700', '10.550', '10.350', '10.100'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '11.60'}
+==============================
+{'ticker': 'RNDRUSDT', 'mark_price': '7.000000', 'entry': ['10.881', '11.20'], 'targets': ['10.830', '10.770', '10.700', '10.550', '10.350', '10.100'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '11.60'}
+⚡️⚡️#UMA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 4.30  4.15
+
+Take-Profit Targets: 
+1) 4.332
+2) 4.370
+3) 4.405
+4) 4.450
+5) 4.525
+6) 4.600
+
+Stop-Loss: 4.03
+------------------------------
+{'ticker': 'UMAUSDT', 'mark_price': '2.614000', 'entry': ['4.30', '4.15'], 'targets': ['4.332', '4.370', '4.405', '4.450', '4.525', '4.600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.03'}
+==============================
+{'ticker': 'UMAUSDT', 'mark_price': '2.614000', 'entry': ['4.30', '4.15'], 'targets': ['4.332', '4.370', '4.405', '4.450', '4.525', '4.600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.03'}
+⚡️⚡️#CHR/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.2915  0.300
+
+Take-Profit Targets:
+1) 0.2900
+2) 0.2885
+3) 0.2865
+4) 0.2840
+5) 0.2800
+6) 0.2760
+
+Stop Loss: 0.309
+------------------------------
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.2915', '0.300'], 'targets': ['0.2900', '0.2885', '0.2865', '0.2840', '0.2800', '0.2760'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.309'}
+==============================
+{'ticker': 'CHRUSDT', 'mark_price': '0.2500', 'entry': ['0.2915', '0.300'], 'targets': ['0.2900', '0.2885', '0.2865', '0.2840', '0.2800', '0.2760'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.309'}
+⚡️⚡️#AVAX/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 32.55  31.00
+Take-Profit Targets: 
+1) 32.800
+2) 33.050
+3) 33.300
+4) 33.800
+5) 34.500
+6) 35.300
+
+Stop-Loss: 30
+
+spot tps   37   38  39
+------------------------------
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['32.55', '31.00'], 'targets': ['32.800', '33.050', '33.300', '33.800', '34.500', '35.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+==============================
+{'ticker': 'AVAXUSDT', 'mark_price': '28.0700', 'entry': ['32.55', '31.00'], 'targets': ['32.800', '33.050', '33.300', '33.800', '34.500', '35.300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '30'}
+⚡️⚡️#RNDR/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 10.175  10.80
+
+Take-Profit Targets: 
+1) 10.120
+2) 10.030
+3) 9.900
+4) 9.500
+5) 9.000
+6) 8.500
+
+Stop-Loss: 11.50
+
+big tps use 1% only
+------------------------------
+{'ticker': 'RNDRUSDT', 'mark_price': '7.000000', 'entry': ['10.175', '10.80'], 'targets': ['10.120', '10.030', '9.900', '9.500', '9.000', '8.500'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '11.50'}
+==============================
+{'ticker': 'RNDRUSDT', 'mark_price': '7.000000', 'entry': ['10.175', '10.80'], 'targets': ['10.120', '10.030', '9.900', '9.500', '9.000', '8.500'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '11.50'}
+⚡️⚡️#WAVES/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.3615   2.325
+
+Take-Profit Targets: 
+1) 2.375
+2) 2.390
+3) 2.405
+4) 2.430
+5) 2.470
+6) 2.510
+
+Stop-Loss: 2.30
+------------------------------
+{'ticker': 'WAVESUSDT', 'mark_price': '1.5000', 'entry': ['2.3615', '2.325'], 'targets': ['2.375', '2.390', '2.405', '2.430', '2.470', '2.510'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.30'}
+==============================
+{'ticker': 'WAVESUSDT', 'mark_price': '1.5000', 'entry': ['2.3615', '2.325'], 'targets': ['2.375', '2.390', '2.405', '2.430', '2.470', '2.510'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.30'}
+⚡️⚡️#PHB/USDT⚡️⚡️
+
+Signal Type: LONG
+Leverage: Cross 20x
+
+Entry Targets: 2.56  2.500
+
+Take-Profit Targets: 
+1) 2.572
+2) 2.583
+3) 2.597
+4) 2.635
+5) 2.675
+6) 2.720
+
+Stop-Loss: 2.45
+------------------------------
+{'ticker': 'PHBUSDT', 'mark_price': '1.7026000', 'entry': ['2.56', '2.500'], 'targets': ['2.572', '2.583', '2.597', '2.635', '2.675', '2.720'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.45'}
+==============================
+{'ticker': 'PHBUSDT', 'mark_price': '1.7026000', 'entry': ['2.56', '2.500'], 'targets': ['2.572', '2.583', '2.597', '2.635', '2.675', '2.720'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.45'}
+⚡️⚡️#OP/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.478  2.40
+
+Take-Profit Targets: 
+1) 2.500
+2) 2.525
+3) 2.550
+4) 2.587
+5) 2.630
+6) 2.700
+
+Stop-Loss: 2.35
+------------------------------
+{'ticker': 'OPUSDT', 'mark_price': '1.7700000', 'entry': ['2.478', '2.40'], 'targets': ['2.500', '2.525', '2.550', '2.587', '2.630', '2.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+==============================
+{'ticker': 'OPUSDT', 'mark_price': '1.7700000', 'entry': ['2.478', '2.40'], 'targets': ['2.500', '2.525', '2.550', '2.587', '2.630', '2.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.35'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.010667   0.010500
+
+Take-Profit Targets: 
+1) 0.010710
+2) 0.010760
+3) 0.010810
+4) 0.010905
+5) 0.011010
+6) 0.011150
+
+Stop-Loss: 0.01000
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.010667', '0.010500'], 'targets': ['0.010710', '0.010760', '0.010810', '0.010905', '0.011010', '0.011150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01000'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.010667', '0.010500'], 'targets': ['0.010710', '0.010760', '0.010810', '0.010905', '0.011010', '0.011150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01000'}
+⚡️⚡️#ONDO/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.847   0.8300
+
+Take-Profit Targets: 
+1) 0.8550
+2) 0.8630
+3) 0.8700
+4) 0.8850
+5) 0.9000
+6) 0.9200
+
+Stop-Loss: 0.800
+------------------------------
+{'ticker': 'ONDOUSDT', 'mark_price': '1.1883000', 'entry': ['0.847', '0.8300'], 'targets': ['0.8550', '0.8630', '0.8700', '0.8850', '0.9000', '0.9200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.800'}
+==============================
+{'ticker': 'ONDOUSDT', 'mark_price': '1.1883000', 'entry': ['0.847', '0.8300'], 'targets': ['0.8550', '0.8630', '0.8700', '0.8850', '0.9000', '0.9200'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.800'}
+⚡️⚡️#BTC/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 50x
+
+Entry Targets: 65500  64500
+
+Take-Profit Targets: 
+1) 65800
+2) 66100
+3) 66400
+4) 66850
+5) 67500
+6) 68500
+
+Stop-Loss: 62300
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['65500', '64500'], 'targets': ['65800', '66100', '66400', '66850', '67500', '68500'], 'leverage': ['50'], 'side': 'LONG', 'stop': '62300'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['65500', '64500'], 'targets': ['65800', '66100', '66400', '66850', '67500', '68500'], 'leverage': ['50'], 'side': 'LONG', 'stop': '62300'}
+⚡️⚡️#CFX/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.2203   0.2170
+
+Take-Profit Targets:
+1) 0.2217
+2) 0.2233
+3) 0.2250
+4) 0.2275
+5) 0.2305
+6) 0.2335
+
+Stop Loss: 0.205
+------------------------------
+{'ticker': 'CFXUSDT', 'mark_price': '0.1754000', 'entry': ['0.2203', '0.2170'], 'targets': ['0.2217', '0.2233', '0.2250', '0.2275', '0.2305', '0.2335'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.205'}
+==============================
+{'ticker': 'CFXUSDT', 'mark_price': '0.1754000', 'entry': ['0.2203', '0.2170'], 'targets': ['0.2217', '0.2233', '0.2250', '0.2275', '0.2305', '0.2335'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.205'}
+⚡️⚡️#FET/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.3615   2.300
+
+Take-Profit Targets: 
+1) 2.377
+2) 2.390
+3) 2.405
+4) 2.427
+5) 2.460
+6) 2.490
+
+Stop-Loss: 2.25
+------------------------------
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.3615', '2.300'], 'targets': ['2.377', '2.390', '2.405', '2.427', '2.460', '2.490'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.25'}
+==============================
+{'ticker': 'FETUSDT', 'mark_price': '1.5111000', 'entry': ['2.3615', '2.300'], 'targets': ['2.377', '2.390', '2.405', '2.427', '2.460', '2.490'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.25'}
+⚡️⚡️#1000BONK/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.02610   0.02550
+
+Take-Profit Targets: 
+1) 0.026250
+2) 0.026400
+3) 0.026570
+4) 0.026850
+5) 0.027255
+6) 0.027700
+
+Stop-Loss: 0.02450
+------------------------------
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.02610', '0.02550'], 'targets': ['0.026250', '0.026400', '0.026570', '0.026850', '0.027255', '0.027700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.02450'}
+==============================
+{'ticker': '1000BONKUSDT', 'mark_price': '0.0225040', 'entry': ['0.02610', '0.02550'], 'targets': ['0.026250', '0.026400', '0.026570', '0.026850', '0.027255', '0.027700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.02450'}
+⚡️⚡️#MANA/USDT⚡️⚡️
+
+Signal type: Short 
+Leverage: 20x
+
+Buy: 0.4396 - 0.4489
+
+Target:
+1) 0.4353 
+2) 0.4310 
+3) 0.4267 
+4) 0.4223 
+5) 0.4174 
+6) 0.4126
+
+StopLoss: 0.4630
+------------------------------
+{'ticker': 'MANAUSDT', 'mark_price': '0.3066', 'entry': ['0.4396', '0.4489'], 'targets': ['0.4353', '0.4310', '0.4267', '0.4223', '0.4174', '0.4126'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.4630'}
+==============================
+{'ticker': 'MANAUSDT', 'mark_price': '0.3066', 'entry': ['0.4396', '0.4489'], 'targets': ['0.4353', '0.4310', '0.4267', '0.4223', '0.4174', '0.4126'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.4630'}
+⚡️⚡️#RUNE/USDT⚡️⚡️
+
+Signal type: Long
+LEVERAGE 35X
+
+ENTRY: 6.940 , 6.780
+
+TARGETS:
+1) 7 
+2) 7.130 
+3) 7.270 
+4) 7.400 
+5) 7.610 
+6) 7.860 
+
+STOPLOSS - 6.560
+------------------------------
+{'ticker': 'RUNEUSDT', 'mark_price': '3.9000', 'entry': ['6.940', '6.780'], 'targets': ['7', '7.130', '7.270', '7.400', '7.610', '7.860'], 'leverage': ['35'], 'side': 'LONG', 'stop': '6.560'}
+==============================
+{'ticker': 'RUNEUSDT', 'mark_price': '3.9000', 'entry': ['6.940', '6.780'], 'targets': ['7', '7.130', '7.270', '7.400', '7.610', '7.860'], 'leverage': ['35'], 'side': 'LONG', 'stop': '6.560'}
+⚡️⚡️#BTC/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 50x
+
+Entry Targets: 66870  67500
+
+Take-Profit Targets: 
+1) 66600
+2) 66350
+3) 66000
+4) 65700
+5) 65300
+6) 65000
+
+Stop-Loss: 68050
+
+use low funds risky trade
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['66870', '67500'], 'targets': ['66600', '66350', '66000', '65700', '65300', '65000'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '68050'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['66870', '67500'], 'targets': ['66600', '66350', '66000', '65700', '65300', '65000'], 'leverage': ['50'], 'side': 'SHORT', 'stop': '68050'}
+⚡️⚡️#PYTH/USDT⚡️⚡️
+
+Signal Type: LONG
+Leverage: Cross 20x
+
+Entry Targets: 0.4352 
+
+Take-Profit Targets: 
+1) 0.4375
+2) 0.4400
+3) 0.4425
+4) 0.4470
+5) 0.4535
+6) 0.4600
+
+Stop-Loss: 0.42
+------------------------------
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.4352'], 'targets': ['0.4375', '0.4400', '0.4425', '0.4470', '0.4535', '0.4600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.42'}
+==============================
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.4352'], 'targets': ['0.4375', '0.4400', '0.4425', '0.4470', '0.4535', '0.4600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.42'}
+⚡️⚡️#1000LUNC/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.10615   0.10400
+
+Take-Profit Targets: 
+1) 0.10677
+2) 0.10755
+3) 0.10850
+4) 0.11000
+5) 0.11300
+6) 0.11700
+
+Stop-Loss: 0.1010
+------------------------------
+{'ticker': '1000LUNCUSDT', 'mark_price': '0.0906600', 'entry': ['0.10615', '0.10400'], 'targets': ['0.10677', '0.10755', '0.10850', '0.11000', '0.11300', '0.11700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1010'}
+==============================
+{'ticker': '1000LUNCUSDT', 'mark_price': '0.0906600', 'entry': ['0.10615', '0.10400'], 'targets': ['0.10677', '0.10755', '0.10850', '0.11000', '0.11300', '0.11700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1010'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.01119   0.011500
+
+Take-Profit Targets: 
+1) 0.011110
+2) 0.011030
+3) 0.010965
+4) 0.010820
+5) 0.010655
+6) 0.010455
+
+Stop-Loss: 0.01200
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.01119', '0.011500'], 'targets': ['0.011110', '0.011030', '0.010965', '0.010820', '0.010655', '0.010455'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.01200'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.01119', '0.011500'], 'targets': ['0.011110', '0.011030', '0.010965', '0.010820', '0.010655', '0.010455'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.01200'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.012500  0.012700
+
+Take-Profit Targets: 
+1) 0.012350
+2) 0.012200
+3) 0.012000
+4) 0.011700
+5) 0.011300
+6) 0.010800
+
+Stop-Loss: 0.013000
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.012500', '0.012700'], 'targets': ['0.012350', '0.012200', '0.012000', '0.011700', '0.011300', '0.010800'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.013000'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.012500', '0.012700'], 'targets': ['0.012350', '0.012200', '0.012000', '0.011700', '0.011300', '0.010800'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.013000'}
+⚡️⚡️#ALPHA/USDT⚡️⚡️
+
+Signal type: Long 
+Leverage: 30x
+
+Buy: 0.1199 - 0.1163
+
+Take profit Target: 
+1) 0.1211 
+2) 0.1223 
+3) 0.1235 
+4) 0.1247 
+5) 0.1260 
+6) 0.1273
+
+StopLoss: 0.1128
+------------------------------
+{'ticker': 'ALPHAUSDT', 'mark_price': '0.11000', 'entry': ['0.1199', '0.1163'], 'targets': ['0.1211', '0.1223', '0.1235', '0.1247', '0.1260', '0.1273'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.1128'}
+==============================
+{'ticker': 'ALPHAUSDT', 'mark_price': '0.11000', 'entry': ['0.1199', '0.1163'], 'targets': ['0.1211', '0.1223', '0.1235', '0.1247', '0.1260', '0.1273'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.1128'}
+⚡️⚡️#UNFI/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 5.565
+
+Take-Profit Targets: 
+1) 5.520
+2) 5.475
+3) 5.430
+4) 5.350
+5) 5.250
+6) 5.150
+
+Stop-Loss: 5.75
+------------------------------
+{'ticker': 'UNFIUSDT', 'mark_price': '4.300', 'entry': ['5.565'], 'targets': ['5.520', '5.475', '5.430', '5.350', '5.250', '5.150'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '5.75'}
+==============================
+{'ticker': 'UNFIUSDT', 'mark_price': '4.300', 'entry': ['5.565'], 'targets': ['5.520', '5.475', '5.430', '5.350', '5.250', '5.150'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '5.75'}
+⚡️⚡️#OGN/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.165
+
+Take-Profit Targets: 
+1) 0.1630
+2) 0.1610
+3) 0.1590
+4) 0.1555
+5) 0.1510
+6) 0.1470
+
+Stop-Loss: 0.17
+------------------------------
+{'ticker': 'OGNUSDT', 'mark_price': '0.0975', 'entry': ['0.165'], 'targets': ['0.1630', '0.1610', '0.1590', '0.1555', '0.1510', '0.1470'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.17'}
+==============================
+{'ticker': 'OGNUSDT', 'mark_price': '0.0975', 'entry': ['0.165'], 'targets': ['0.1630', '0.1610', '0.1590', '0.1555', '0.1510', '0.1470'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.17'}
+⚡️⚡️#OCEAN/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 50x
+
+Entry: 0.9578 - 0.8966
+
+Take Profit Target: 
+1) 0.9645 
+2) 0.9723 
+3) 0.9810 
+4) 0.9905 
+5) 1.018 
+6) 1.08 
+7) 1.178
+
+StopLoss: 0.8887
+------------------------------
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.9578', '0.8966'], 'targets': ['0.9645', '0.9723', '0.9810', '0.9905', '1.018', '1.08', '1.178'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.8887'}
+==============================
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.9578', '0.8966'], 'targets': ['0.9645', '0.9723', '0.9810', '0.9905', '1.018', '1.08', '1.178'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.8887'}
+⚡️⚡️#NOT/USDT⚡️⚡️
+Signal Type: Long
+Leverage: Cross 20x
+Entry Targets: 0.005445
+Take-Profit Targets: 
+1) 0.005460
+2) 0.005475
+3) 0.005495
+4) 0.005520
+5) 0.005570
+6) 0.005630
+
+Stop-Loss: 0.0053
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.005445'], 'targets': ['0.005460', '0.005475', '0.005495', '0.005520', '0.005570', '0.005630'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0053'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.005445'], 'targets': ['0.005460', '0.005475', '0.005495', '0.005520', '0.005570', '0.005630'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0053'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 50x
+
+Entry: 16880 , 16000
+
+TARGETS 
+1) 17000 
+2) 17300 
+3) 17720
+4) 18200 
+5) 18800 
+6) 19500  
+7) 22000
+
+Stoploss: 14750
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['16880', '16000'], 'targets': ['17000', '17300', '17720', '18200', '18800', '19500', '22000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '14750'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.0169', '0.016'], 'targets': ['0.017', '0.0173', '0.0177', '0.0182', '0.0188', '0.0195', '0.022'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.0014750'}
+⚡️⚡️ORDI/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 40 - 39
+Targets: 
+
+41, 
+42, 
+43, 
+44, 
+45
+
+Stop Loss: 38
+------------------------------
+{'ticker': 'ORDIUSDT', 'mark_price': '39.158000', 'entry': ['40', '39'], 'targets': ['41', '42', '43', '44', '45'], 'leverage': ['20'], 'side': 'LONG', 'stop': '38'}
+==============================
+{'ticker': 'ORDIUSDT', 'mark_price': '39.158000', 'entry': ['40', '39'], 'targets': ['41', '42', '43', '44', '45'], 'leverage': ['20'], 'side': 'LONG', 'stop': '38'}
+⚡️⚡️NOT/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.00580 - 0.00555
+Targets: 
+
+0.00605, 
+0.00630, 
+0.00655, 
+0.00680, 
+0.00705
+
+Stop Loss: 0.00530
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.00580', '0.00555'], 'targets': ['0.00605', '0.00630', '0.00655', '0.00680', '0.00705'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.00530'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.00580', '0.00555'], 'targets': ['0.00605', '0.00630', '0.00655', '0.00680', '0.00705'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.00530'}
+⚡️⚡️#DOGE/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.16725
+
+Take-Profit Targets: 
+1) 0.16796
+2) 0.16900
+3) 0.17030
+4) 0.17200
+5) 0.17400
+6) 0.17600
+
+Stop-Loss: 0.1620
+------------------------------
+{'ticker': 'DOGEUSDT', 'mark_price': '0.127000', 'entry': ['0.16725'], 'targets': ['0.16796', '0.16900', '0.17030', '0.17200', '0.17400', '0.17600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1620'}
+==============================
+{'ticker': 'DOGEUSDT', 'mark_price': '0.127000', 'entry': ['0.16725'], 'targets': ['0.16796', '0.16900', '0.17030', '0.17200', '0.17400', '0.17600'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1620'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 3.17   3.05
+
+Take-Profit Targets: 
+1) 3.200
+2) 3.235
+3) 3.270
+4) 3.350
+5) 3.500
+6) 3.700
+
+Stop-Loss: 2.800
+
+GEM COIN
+
+SPOT TPS   4$
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.17', '3.05'], 'targets': ['3.200', '3.235', '3.270', '3.350', '3.500', '3.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.800'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.17', '3.05'], 'targets': ['3.200', '3.235', '3.270', '3.350', '3.500', '3.700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.800'}
+⚡️⚡️#NEAR/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: 20x
+
+Entry: 7.733 - 8.035
+
+Target: 
+1) 7.689 
+2) 7.658 
+3) 7.601 
+4) 7.465 
+5) 7.380 
+6) 7.139
+
+StopLoss : 8.309
+------------------------------
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['7.733', '8.035'], 'targets': ['7.689', '7.658', '7.601', '7.465', '7.380', '7.139'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '8.309'}
+==============================
+{'ticker': 'NEARUSDT', 'mark_price': '4.8010', 'entry': ['7.733', '8.035'], 'targets': ['7.689', '7.658', '7.601', '7.465', '7.380', '7.139'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '8.309'}
+⚡️⚡️#1000FLOKI/USDT⚡️⚡️
+
+Signal Type: Short 
+Leverage: 20x
+
+Buy: 0.2730 - 0.2845
+
+Target: 
+1) 0.2703 
+2) 0.2676 
+3) 0.2650 
+4) 0.2624 
+5) 0.2545 
+6) 0.2501
+
+StopLoss: 0.2904
+------------------------------
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.2730', '0.2845'], 'targets': ['0.2703', '0.2676', '0.2650', '0.2624', '0.2545', '0.2501'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2904'}
+==============================
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.2730', '0.2845'], 'targets': ['0.2703', '0.2676', '0.2650', '0.2624', '0.2545', '0.2501'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2904'}
+⚡️⚡️#VANRY/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.2102
+
+Take-Profit Targets: 
+1) 0.2115
+2) 0.2130
+3) 0.2145
+4) 0.2170
+5) 0.2200
+6) 0.2230
+
+Stop-Loss: 0.2050
+------------------------------
+{'ticker': 'VANRYUSDT', 'mark_price': '0.1290000', 'entry': ['0.2102'], 'targets': ['0.2115', '0.2130', '0.2145', '0.2170', '0.2200', '0.2230'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2050'}
+==============================
+{'ticker': 'VANRYUSDT', 'mark_price': '0.1290000', 'entry': ['0.2102'], 'targets': ['0.2115', '0.2130', '0.2145', '0.2170', '0.2200', '0.2230'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2050'}
+⚡️⚡️#TNSR/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 50x
+
+Entry: 1.1250 , 1.1100
+
+TARGETS 
+1) 1.1315 
+2) 1.1400 
+3) 1.1530 
+4) 1.1700 
+5) 1.200
+
+Stoploss: 1.0860
+------------------------------
+{'ticker': 'TNSRUSDT', 'mark_price': '0.6200000', 'entry': ['1.1250', '1.1100'], 'targets': ['1.1315', '1.1400', '1.1530', '1.1700', '1.200'], 'leverage': ['50'], 'side': 'LONG', 'stop': '1.0860'}
+==============================
+{'ticker': 'TNSRUSDT', 'mark_price': '0.6200000', 'entry': ['1.1250', '1.1100'], 'targets': ['1.1315', '1.1400', '1.1530', '1.1700', '1.200'], 'leverage': ['50'], 'side': 'LONG', 'stop': '1.0860'}
+⚡️⚡️#CHZ/USDT⚡️⚡️
+
+LONG
+Leverage: 50x
+
+Entry: 0.14854 - 0.1332
+
+Target:
+1) 0.14940 
+2) 0.15099 
+3) 0.1523 
+4) 0.1537 
+5) 0.1588 
+6) 0.1689 
+7) 0.1832
+
+StopLoss: 0.1306
+------------------------------
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.14854', '0.1332'], 'targets': ['0.14940', '0.15099', '0.1523', '0.1537', '0.1588', '0.1689', '0.1832'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1306'}
+==============================
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.14854', '0.1332'], 'targets': ['0.14940', '0.15099', '0.1523', '0.1537', '0.1588', '0.1689', '0.1832'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1306'}
+⚡️⚡️#1000RATS/USDT⚡️⚡️
+
+Signal Type: Long 
+Leverage: 50x
+
+Buy: 0.1542 - 0.1480
+
+ Target: 
+1) 0.1557 
+2) 0.1574 
+3) 0.1591 
+4) 0.1668 
+5) 0.1745 
+6) 0.1841
+
+StopLoss: 0.1396
+------------------------------
+{'ticker': '1000RATSUSDT', 'mark_price': '0.1463100', 'entry': ['0.1542', '0.1480'], 'targets': ['0.1557', '0.1574', '0.1591', '0.1668', '0.1745', '0.1841'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1396'}
+==============================
+{'ticker': '1000RATSUSDT', 'mark_price': '0.1463100', 'entry': ['0.1542', '0.1480'], 'targets': ['0.1557', '0.1574', '0.1591', '0.1668', '0.1745', '0.1841'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1396'}
+⚡️⚡️#LQTY/USDT⚡️⚡️
+
+LONG
+
+Leverage: 20x
+
+Entry: 1.1575 - 1.077
+
+Target: 
+1) 1.164 
+2) 1.176 
+3) 1.187 
+4) 1.199
+5) 1.227 
+6) 1.278 
+7) 1.398
+
+StopLoss: 1.054
+------------------------------
+{'ticker': 'LQTYUSDT', 'mark_price': '0.753300', 'entry': ['1.1575', '1.077'], 'targets': ['1.164', '1.176', '1.187', '1.199', '1.227', '1.278', '1.398'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.054'}
+==============================
+{'ticker': 'LQTYUSDT', 'mark_price': '0.753300', 'entry': ['1.1575', '1.077'], 'targets': ['1.164', '1.176', '1.187', '1.199', '1.227', '1.278', '1.398'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.054'}
+⚡️⚡️#FLOW/USDT⚡️⚡️
+
+LONG
+
+Leverage: 50x
+
+Entry: 0.9176 - 0.854
+
+Target: 
+1) 0.9231 
+2) 0.9316 
+3) 0.9389 
+4) 0.948 
+5) 0.9743 
+6) 1.02 
+7) 1.10
+
+StopLoss: 0.8421
+------------------------------
+{'ticker': 'FLOWUSDT', 'mark_price': '1.000', 'entry': ['0.9176', '0.854'], 'targets': ['0.9231', '0.9316', '0.9389', '0.948', '0.9743', '1.02', '1.10'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.8421'}
+==============================
+{'ticker': 'FLOWUSDT', 'mark_price': '1.000', 'entry': ['0.9176', '0.854'], 'targets': ['0.9231', '0.9316', '0.9389', '0.948', '0.9743', '1.02', '1.10'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.8421'}
+⚡️⚡️#ARPA/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.07490
+
+Take-Profit Targets:
+1) 0.07525
+2) 0.07560
+3) 0.07595
+4) 0.07660
+5) 0.07730
+6) 0.07800
+
+Stop Loss: 0.0729
+------------------------------
+{'ticker': 'ARPAUSDT', 'mark_price': '0.04538', 'entry': ['0.07490'], 'targets': ['0.07525', '0.07560', '0.07595', '0.07660', '0.07730', '0.07800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0729'}
+==============================
+{'ticker': 'ARPAUSDT', 'mark_price': '0.04538', 'entry': ['0.07490'], 'targets': ['0.07525', '0.07560', '0.07595', '0.07660', '0.07730', '0.07800'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0729'}
+⚡️⚡️#ETHFI/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 4.425
+
+Take-Profit Targets: 
+1) 4.470
+2) 4.530
+3) 4.600
+4) 4.700
+5) 4.850
+6) 5.000
+
+Stop-Loss: 4.3
+------------------------------
+{'ticker': 'ETHFIUSDT', 'mark_price': '3.4110000', 'entry': ['4.425'], 'targets': ['4.470', '4.530', '4.600', '4.700', '4.850', '5.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.3'}
+==============================
+{'ticker': 'ETHFIUSDT', 'mark_price': '3.4110000', 'entry': ['4.425'], 'targets': ['4.470', '4.530', '4.600', '4.700', '4.850', '5.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.3'}
+⚡️⚡️#MAV/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.4312
+
+Take-Profit Targets: 
+1) 0.4330
+2) 0.4350
+3) 0.4370
+4) 0.4405
+5) 0.4450
+6) 0.4500
+
+Stop-Loss: 0.42
+------------------------------
+{'ticker': 'MAVUSDT', 'mark_price': '0.3013000', 'entry': ['0.4312'], 'targets': ['0.4330', '0.4350', '0.4370', '0.4405', '0.4450', '0.4500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.42'}
+==============================
+{'ticker': 'MAVUSDT', 'mark_price': '0.3013000', 'entry': ['0.4312'], 'targets': ['0.4330', '0.4350', '0.4370', '0.4405', '0.4450', '0.4500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.42'}
+⚡️⚡️#STG/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.7420   0.7550
+
+Take-Profit Targets: 
+1) 0.7350
+2) 0.7280
+3) 0.7200
+4) 0.7050
+5) 0.6900
+6) 0.6750
+
+Stop-Loss: 0.7700
+------------------------------
+{'ticker': 'STGUSDT', 'mark_price': '0.4300000', 'entry': ['0.7420', '0.7550'], 'targets': ['0.7350', '0.7280', '0.7200', '0.7050', '0.6900', '0.6750'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7700'}
+==============================
+{'ticker': 'STGUSDT', 'mark_price': '0.4300000', 'entry': ['0.7420', '0.7550'], 'targets': ['0.7350', '0.7280', '0.7200', '0.7050', '0.6900', '0.6750'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7700'}
+⚡️⚡️#RDNT/USDT⚡️⚡️
+
+LONG
+LEVERAGE - 50x
+
+ENTRY - 21240 , 20600
+
+TARGETS
+1) 21350 
+2) 21500 
+3) 21800 
+4) 22230 
+5) 23000 
+6) 25000
+
+STOPLOSS - 19620
+------------------------------
+{'ticker': 'RDNTUSDT', 'mark_price': '0.1575000', 'entry': ['21240', '20600'], 'targets': ['21350', '21500', '21800', '22230', '23000', '25000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '19620'}
+==============================
+{'ticker': 'RDNTUSDT', 'mark_price': '0.1575000', 'entry': ['0.2124', '0.206'], 'targets': ['0.2135', '0.215', '0.218', '0.2223', '0.23', '0.25'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.019620'}
+⚡️⚡️STG/USDT⚡️⚡️
+
+Position: SHORT 
+Leverage:  Cross20X
+
+Entries: 0.6850 - 0.7100
+Targets: 
+
+0.6600
+0.6350
+0.6100
+0.5850
+0.5600
+
+Stop Loss: 0.7350
+------------------------------
+{'ticker': 'STGUSDT', 'mark_price': '0.4300000', 'entry': ['0.6850', '0.7100'], 'targets': ['0.6600', '0.6350', '0.6100', '0.5850', '0.5600'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7350'}
+==============================
+{'ticker': 'STGUSDT', 'mark_price': '0.4300000', 'entry': ['0.6850', '0.7100'], 'targets': ['0.6600', '0.6350', '0.6100', '0.5850', '0.5600'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7350'}
+⚡️⚡️APE/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 
+
+1) 1.261
+2) 1.3114
+
+Take-Profit Targets:
+
+1) 1.2547 
+2) 1.2484 
+3) 1.2421 
+4) 1.2232 
+5) 1.1853 
+6) 1.0719 
+
+Stoploss : 1.3367
+------------------------------
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.261', '1.3114'], 'targets': ['1.2547', '1.2484', '1.2421', '1.2232', '1.1853', '1.0719'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.3367'}
+==============================
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.261', '1.3114'], 'targets': ['1.2547', '1.2484', '1.2421', '1.2232', '1.1853', '1.0719'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.3367'}
+⚡️⚡️#BB/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.6435  0.6200
+
+Take-Profit Targets: 
+1) 0.6480
+2) 0.6535
+3) 0.6600
+4) 0.6680
+5) 0.6800
+6) 0.6950
+
+Stop-Loss: 0.5900
+------------------------------
+{'ticker': 'BBUSDT', 'mark_price': '0.3811000', 'entry': ['0.6435', '0.6200'], 'targets': ['0.6480', '0.6535', '0.6600', '0.6680', '0.6800', '0.6950'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.5900'}
+==============================
+{'ticker': 'BBUSDT', 'mark_price': '0.3811000', 'entry': ['0.6435', '0.6200'], 'targets': ['0.6480', '0.6535', '0.6600', '0.6680', '0.6800', '0.6950'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.5900'}
+⚡️⚡️#TURBO/USDT⚡️⚡️
+
+Signal Type: Short
+Leverage: Cross 20x
+
+Entry Targets: 0.00812
+
+Take-Profit Targets: 
+1) 0.00808
+2) 0.00804
+3) 0.00800
+4) 0.00793
+5) 0.00785
+6) 0.00775
+
+Stop-Loss: 0.0084
+------------------------------
+{'ticker': 'TURBOUSDT', 'mark_price': '0.0045790', 'entry': ['0.00812'], 'targets': ['0.00808', '0.00804', '0.00800', '0.00793', '0.00785', '0.00775'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.0084'}
+==============================
+{'ticker': 'TURBOUSDT', 'mark_price': '0.0045790', 'entry': ['0.00812'], 'targets': ['0.00808', '0.00804', '0.00800', '0.00793', '0.00785', '0.00775'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.0084'}
+⚡️⚡️#NOT/USDT ⚡️⚡️
+
+Signal Type: LONG 
+Leverage:  Cross30X
+
+Entries: 0.01150 - 0.01130
+
+Targets: 
+1) 0.01170
+2) 0.01190
+3) 0.01210
+4) 0.01230
+5) 0.01250
+
+Stop Loss: 0.01110
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01150', '0.01130'], 'targets': ['0.01170', '0.01190', '0.01210', '0.01230', '0.01250'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.01110'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01150', '0.01130'], 'targets': ['0.01170', '0.01190', '0.01210', '0.01230', '0.01250'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.01110'}
+⚡️⚡️#NOT/USDT ⚡️⚡️
+
+Signal Type: LONG 
+Leverage:  Cross30X
+
+Entries: 0.01150 - 0.01130
+
+Targets: 
+1) 0.01170
+2) 0.01190
+3) 0.01210
+4) 0.01230
+5) 0.01250
+
+Stop Loss: 0.01110
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01150', '0.01130'], 'targets': ['0.01170', '0.01190', '0.01210', '0.01230', '0.01250'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.01110'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01150', '0.01130'], 'targets': ['0.01170', '0.01190', '0.01210', '0.01230', '0.01250'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.01110'}
+⚡️⚡️THETA/USDT⚡️⚡️
+
+Short 
+Buy: 2.1040 - 2.1500
+
+Leverage: 20x
+Target: 
+
+2.0840 
+2.0600 
+2.0400 
+2.0200 
+2.0000 
+1.9750
+
+StopLoss: 2.1870
+------------------------------
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.1040', '2.1500'], 'targets': ['2.0840', '2.0600', '2.0400', '2.0200', '2.0000', '1.9750'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '2.1870'}
+==============================
+{'ticker': 'THETAUSDT', 'mark_price': '1.5130', 'entry': ['2.1040', '2.1500'], 'targets': ['2.0840', '2.0600', '2.0400', '2.0200', '2.0000', '1.9750'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '2.1870'}
+⚡️⚡️APT/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 9.08 - 9.4432
+
+Take-Profit Targets:
+
+1) 9.0346 
+2) 8.9892 
+3) 8.9438 
+4) 8.8076 
+5) 8.5352 
+6) 7.718 
+
+Stoploss : 9.7156
+------------------------------
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.08', '9.4432'], 'targets': ['9.0346', '8.9892', '8.9438', '8.8076', '8.5352', '7.718'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9.7156'}
+==============================
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.08', '9.4432'], 'targets': ['9.0346', '8.9892', '8.9438', '8.8076', '8.5352', '7.718'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9.7156'}
+⚡️⚡️ADA/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 
+
+1) 0.4486
+2) 0.4262
+
+Take-Profit Targets:
+
+1) 0.4517 
+2) 0.4544 
+3) 0.4598 
+4) 0.4665 
+5) 0.4845 
+6) 0.5204 
+
+Stoploss : 0.4127
+------------------------------
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.4486', '0.4262'], 'targets': ['0.4517', '0.4544', '0.4598', '0.4665', '0.4845', '0.5204'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4127'}
+==============================
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.4486', '0.4262'], 'targets': ['0.4517', '0.4544', '0.4598', '0.4665', '0.4845', '0.5204'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4127'}
+⚡️⚡️CHZ/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.14519 - 0.1394
+
+Take-Profit Targets:
+
+1) 0.1459 
+2) 0.1466 
+3) 0.1474 
+4) 0.1495 
+5) 0.1539 
+6) 0.167 
+
+Stoploss : 0.135
+------------------------------
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.14519', '0.1394'], 'targets': ['0.1459', '0.1466', '0.1474', '0.1495', '0.1539', '0.167'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.135'}
+==============================
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.14519', '0.1394'], 'targets': ['0.1459', '0.1466', '0.1474', '0.1495', '0.1539', '0.167'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.135'}
+⚡️⚡️SAND/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets :  0.4339 - 0.4165
+
+Take-Profit Targets:
+
+1) 0.4361 
+2) 0.4382 
+3) 0.4404 
+4) 0.4469 
+5) 0.4599 
+6) 0.499 
+
+Stoploss : 0.4079
+------------------------------
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.4339', '0.4165'], 'targets': ['0.4361', '0.4382', '0.4404', '0.4469', '0.4599', '0.499'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4079'}
+==============================
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.4339', '0.4165'], 'targets': ['0.4361', '0.4382', '0.4404', '0.4469', '0.4599', '0.499'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4079'}
+⚡️⚡️#ZEN/USDT⚡️⚡️
+
+Short
+Leverage: 20x
+
+Entry: 9.611 - 9.714
+
+ Target: 
+1) 9.583 
+2) 9.538 
+3) 9.500 
+4) 9.456 
+5) 9.341 
+6) 9.126
+
+StopLoss : 10.057
+------------------------------
+{'ticker': 'ZENUSDT', 'mark_price': '6.500', 'entry': ['9.611', '9.714'], 'targets': ['9.583', '9.538', '9.500', '9.456', '9.341', '9.126'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '10.057'}
+==============================
+{'ticker': 'ZENUSDT', 'mark_price': '6.500', 'entry': ['9.611', '9.714'], 'targets': ['9.583', '9.538', '9.500', '9.456', '9.341', '9.126'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '10.057'}
+⚡️⚡️#1INCH/USDT⚡️⚡️
+
+SHORT
+Leverage: 20x
+
+Entry: 0.4983 - 0.5069
+
+ Target: 
+1) 0.4964 
+2) 0.4940 
+3) 0.4925 
+4) 0.4883 
+5) 0.4828 
+6) 0.4691
+
+StopLoss : 0.5243
+------------------------------
+{'ticker': '1INCHUSDT', 'mark_price': '0.3894', 'entry': ['0.4983', '0.5069'], 'targets': ['0.4964', '0.4940', '0.4925', '0.4883', '0.4828', '0.4691'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.5243'}
+==============================
+{'ticker': '1INCHUSDT', 'mark_price': '0.3894', 'entry': ['0.4983', '0.5069'], 'targets': ['0.4964', '0.4940', '0.4925', '0.4883', '0.4828', '0.4691'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.5243'}
+⚡️⚡️#FLM/USDT⚡️⚡️
+
+SHORT
+Leverage: 20x
+
+Entry: 0.0977 - 0.0987
+
+Target: 
+1) 0.0974 
+2) 0.0969 
+3) 0.0962 
+4) 0.0957 
+5) 0.0950 
+6) 0.0929
+
+StopLoss : 0.1019
+------------------------------
+{'ticker': 'FLMUSDT', 'mark_price': '0.0600', 'entry': ['0.0977', '0.0987'], 'targets': ['0.0974', '0.0969', '0.0962', '0.0957', '0.0950', '0.0929'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.1019'}
+==============================
+{'ticker': 'FLMUSDT', 'mark_price': '0.0600', 'entry': ['0.0977', '0.0987'], 'targets': ['0.0974', '0.0969', '0.0962', '0.0957', '0.0950', '0.0929'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.1019'}
+⚡️⚡️#PENDLE/USDT ⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 6.06 - 5.91
+
+Targets: 
+1) 6.21
+2) 6.36
+3) 6.51
+4) 6.66
+5) 6.81
+
+Stop Loss: 5.76
+------------------------------
+{'ticker': 'PENDLEUSDT', 'mark_price': '4.9500000', 'entry': ['6.06', '5.91'], 'targets': ['6.21', '6.36', '6.51', '6.66', '6.81'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.76'}
+==============================
+{'ticker': 'PENDLEUSDT', 'mark_price': '4.9500000', 'entry': ['6.06', '5.91'], 'targets': ['6.21', '6.36', '6.51', '6.66', '6.81'], 'leverage': ['20'], 'side': 'LONG', 'stop': '5.76'}
+⚡️⚡️#OMNI/USDT⚡️⚡️
+
+Long 
+Leverage: 20x
+
+Buy: 21.7980 - 20.6700
+
+Target: 
+1) 22.0200 
+2) 22.2450 
+3) 22.9900 
+4) 23.8800 
+5) 24.7800 
+6) 25.8700
+
+StopLoss: 19.9900
+------------------------------
+{'ticker': 'OMNIUSDT', 'mark_price': '15.2560', 'entry': ['21.7980', '20.6700'], 'targets': ['22.0200', '22.2450', '22.9900', '23.8800', '24.7800', '25.8700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '19.9900'}
+==============================
+{'ticker': 'OMNIUSDT', 'mark_price': '15.2560', 'entry': ['21.7980', '20.6700'], 'targets': ['22.0200', '22.2450', '22.9900', '23.8800', '24.7800', '25.8700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '19.9900'}
+⚡️⚡️#MYRO/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.2700 - 0.2630
+
+Targets: 
+1) 0.2770
+2) 0.2840
+3) 0.2910
+4) 0.2980
+5) 0.3050
+
+Stop Loss: 0.2560
+------------------------------
+{'ticker': 'MYROUSDT', 'mark_price': '0.1527900', 'entry': ['0.2700', '0.2630'], 'targets': ['0.2770', '0.2840', '0.2910', '0.2980', '0.3050'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2560'}
+==============================
+{'ticker': 'MYROUSDT', 'mark_price': '0.1527900', 'entry': ['0.2700', '0.2630'], 'targets': ['0.2770', '0.2840', '0.2910', '0.2980', '0.3050'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2560'}
+⚡️⚡️APT/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 9.03 - 9.3912
+
+Take-Profit Targets:
+
+1) 8.9849 
+2) 8.9397 
+3) 8.8946 
+4) 8.7591 
+5) 8.4882 
+6) 7.6754999999999995 
+
+
+Stoploss : 9.6621
+------------------------------
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.03', '9.3912'], 'targets': ['8.9849', '8.9397', '8.8946', '8.7591', '8.4882', '7.6754999999999995'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9.6621'}
+==============================
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.03', '9.3912'], 'targets': ['8.9849', '8.9397', '8.8946', '8.7591', '8.4882', '7.6754999999999995'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '9.6621'}
+⚡️⚡️APE/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 1.298 - 
+ 1.3498999999999999
+
+Take-Profit Targets:
+
+1) 1.2915 
+2) 1.285 
+3) 1.2785 
+4) 1.2591 
+5) 1.2201 
+6) 1.1033 
+
+Stoploss : 1.3759000000000001
+------------------------------
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.298'], 'targets': ['1.2915', '1.285', '1.2785', '1.2591', '1.2201', '1.1033'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.3759000000000001'}
+==============================
+{'ticker': 'APEUSDT', 'mark_price': '0.9180', 'entry': ['1.298'], 'targets': ['1.2915', '1.285', '1.2785', '1.2591', '1.2201', '1.1033'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '1.3759000000000001'}
+⚡️⚡️#1000FLOKI/USDT ⚡️⚡️
+
+Position: SHORT 
+Leverage:  Cross20X
+
+Entries: 0.2840 - 0.2890
+
+Targets: 
+1) 0.2790
+2) 0.2740
+3) 0.2690
+4) 0.2640
+5) 0.2590
+
+Stop Loss: 0.2940
+------------------------------
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.2840', '0.2890'], 'targets': ['0.2790', '0.2740', '0.2690', '0.2640', '0.2590'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2940'}
+==============================
+{'ticker': '1000FLOKIUSDT', 'mark_price': None, 'entry': ['0.2840', '0.2890'], 'targets': ['0.2790', '0.2740', '0.2690', '0.2640', '0.2590'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2940'}
+⚡️⚡️#NFP/USDT⚡️⚡️
+
+Signal Type: Long 
+Leverage: Cross (25X)
+
+Amount: 5%
+
+Entry Targets: 0.5870
+
+Take-Profit Targets:
+
+1) 0.6200 (75%) 
+2) 0.7000 (25%) 
+
+Stop Target:
+
+1) 0.5639
+------------------------------
+{'ticker': 'NFPUSDT', 'mark_price': '0.3636000', 'entry': ['0.5870'], 'targets': ['0.6200', '0.7000'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.5639'}
+==============================
+{'ticker': 'NFPUSDT', 'mark_price': '0.3636000', 'entry': ['0.5870'], 'targets': ['0.6200', '0.7000'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.5639'}
+⚡️⚡️MATIC/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.7029 - 0.731
+
+Take-Profit Targets:
+
+1) 0.6994 
+2) 0.6959 
+3) 0.6888 
+4) 0.6818 
+5) 0.6607 
+6) 0.6186 
+
+Stoploss : 0.7451
+------------------------------
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.7029', '0.731'], 'targets': ['0.6994', '0.6959', '0.6888', '0.6818', '0.6607', '0.6186'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7451'}
+==============================
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.7029', '0.731'], 'targets': ['0.6994', '0.6959', '0.6888', '0.6818', '0.6607', '0.6186'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.7451'}
+⚡️⚡️SFP/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.8188 - 0.8597
+
+Take-Profit Targets:
+
+1) 0.8131 
+2) 0.8082 
+3) 0.7983 
+4) 0.786 
+5) 0.7533 
+6) 0.6878 
+
+Stoploss : 0.8843
+------------------------------
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['0.8188', '0.8597'], 'targets': ['0.8131', '0.8082', '0.7983', '0.786', '0.7533', '0.6878'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.8843'}
+==============================
+{'ticker': 'SFPUSDT', 'mark_price': '0.4324', 'entry': ['0.8188', '0.8597'], 'targets': ['0.8131', '0.8082', '0.7983', '0.786', '0.7533', '0.6878'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.8843'}
+⚡️⚡️GALA/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.04628 -  0.0481
+
+Take-Profit Targets:
+
+1) 0.046 
+2) 0.0458 
+3) 0.0456 
+4) 0.0449 
+5) 0.0435 
+6) 0.0393 
+
+Stoploss : 0.0495
+------------------------------
+{'ticker': 'GALAUSDT', 'mark_price': '0.02840', 'entry': ['0.04628', '0.0481'], 'targets': ['0.046', '0.0458', '0.0456', '0.0449', '0.0435', '0.0393'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.0495'}
+==============================
+{'ticker': 'GALAUSDT', 'mark_price': '0.02840', 'entry': ['0.04628', '0.0481'], 'targets': ['0.046', '0.0458', '0.0456', '0.0449', '0.0435', '0.0393'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.0495'}
+⚡️⚡️MATIC/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 
+
+1) 0.7063
+2) 0.678
+
+Take-Profit Targets:
+
+1) 0.7098 
+2) 0.7134 
+3) 0.7204 
+4) 0.7275 
+5) 0.7487 
+6) 0.7911 
+
+Stoploss : 0.6639
+------------------------------
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.7063', '0.678'], 'targets': ['0.7098', '0.7134', '0.7204', '0.7275', '0.7487', '0.7911'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6639'}
+==============================
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.7063', '0.678'], 'targets': ['0.7098', '0.7134', '0.7204', '0.7275', '0.7487', '0.7911'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6639'}
+⚡️⚡️KAVA/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.6574 - 0.6837
+
+Take-Profit Targets:
+
+1) 0.6541 
+2) 0.6489 
+3) 0.641 
+4) 0.6311 
+5) 0.6048 
+6) 0.5522 
+
+Stoploss : 0.6968
+------------------------------
+{'ticker': 'KAVAUSDT', 'mark_price': '0.4160', 'entry': ['0.6574', '0.6837'], 'targets': ['0.6541', '0.6489', '0.641', '0.6311', '0.6048', '0.5522'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.6968'}
+==============================
+{'ticker': 'KAVAUSDT', 'mark_price': '0.4160', 'entry': ['0.6574', '0.6837'], 'targets': ['0.6541', '0.6489', '0.641', '0.6311', '0.6048', '0.5522'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.6968'}
+⚡️⚡️#ALICE/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 2.18 - 2.13
+
+Targets: 
+1) 2.23
+2) 2.28
+3) 2.33
+4) 2.38
+5) 2.43
+
+Stop Loss: 2.08
+------------------------------
+{'ticker': 'ALICEUSDT', 'mark_price': '1.125', 'entry': ['2.18', '2.13'], 'targets': ['2.23', '2.28', '2.33', '2.38', '2.43'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.08'}
+==============================
+{'ticker': 'ALICEUSDT', 'mark_price': '1.125', 'entry': ['2.18', '2.13'], 'targets': ['2.23', '2.28', '2.33', '2.38', '2.43'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.08'}
+⚡️⚡️APT/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 9.13 - 8.7648
+
+Take-Profit Targets:
+
+1) 9.1757 
+2) 9.2213 
+3) 9.267 
+4) 9.4039 
+5) 9.6778 
+6) 10.4995 
+
+Stoploss : 8.4909
+------------------------------
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.13', '8.7648'], 'targets': ['9.1757', '9.2213', '9.267', '9.4039', '9.6778', '10.4995'], 'leverage': ['20'], 'side': 'LONG', 'stop': '8.4909'}
+==============================
+{'ticker': 'APTUSDT', 'mark_price': '6.61400', 'entry': ['9.13', '8.7648'], 'targets': ['9.1757', '9.2213', '9.267', '9.4039', '9.6778', '10.4995'], 'leverage': ['20'], 'side': 'LONG', 'stop': '8.4909'}
+⚡️⚡️#ENJ/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 20x
+
+Entry: 0.2993 - 0.2929
+
+ Target: 
+1) 0.3003 
+2) 0.3030 
+3) 0.3048 
+4) 0.3072 
+5) 0.3093 
+6) 0.3167
+
+StopLoss : 0.2841
+------------------------------
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.2993', '0.2929'], 'targets': ['0.3003', '0.3030', '0.3048', '0.3072', '0.3093', '0.3167'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2841'}
+==============================
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.2993', '0.2929'], 'targets': ['0.3003', '0.3030', '0.3048', '0.3072', '0.3093', '0.3167'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2841'}
+⚡️⚡️#REN/USDT⚡️⚡️
+
+Signal Type: Long 
+Leverage: 20x
+
+Entry: 0.07419 - 0.07260
+
+ Target: 
+1) 0.07444 
+2) 0.07479 
+3) 0.07500 
+4) 0.07543 
+5) 0.07589 
+6) 0.07888
+
+StopLoss : 0.07009
+------------------------------
+{'ticker': 'RENUSDT', 'mark_price': '0.05259', 'entry': ['0.07419', '0.07260'], 'targets': ['0.07444', '0.07479', '0.07500', '0.07543', '0.07589', '0.07888'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.07009'}
+==============================
+{'ticker': 'RENUSDT', 'mark_price': '0.05259', 'entry': ['0.07419', '0.07260'], 'targets': ['0.07444', '0.07479', '0.07500', '0.07543', '0.07589', '0.07888'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.07009'}
+⚡️⚡️#OCEAN/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: 20x
+
+Entry: 0.9199 - 0.9057
+
+ Target: 
+1) 0.9237
+2) 0.9267 
+3) 0.9340 
+4) 0.9389 
+5) 0.9466 
+6) 0.9694
+
+StopLoss : 0.8801
+------------------------------
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.9199', '0.9057'], 'targets': ['0.9237', '0.9267', '0.9340', '0.9389', '0.9466', '0.9694'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.8801'}
+==============================
+{'ticker': 'OCEANUSDT', 'mark_price': '0.64000', 'entry': ['0.9199', '0.9057'], 'targets': ['0.9237', '0.9267', '0.9340', '0.9389', '0.9466', '0.9694'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.8801'}
+⚡️⚡️W/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage:  25X
+
+Entries: 0.6400 - 0.6250
+
+Targets: 
+
+1) 0.6550
+2) 0.6700
+3) 0.6850
+
+Stop Loss: 0.6100
+------------------------------
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.6400', '0.6250'], 'targets': ['0.6550', '0.6700', '0.6850'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.6100'}
+==============================
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.6400', '0.6250'], 'targets': ['0.6550', '0.6700', '0.6850'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.6100'}
+⚡️⚡️GRT/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.3027 - 0.2906
+
+Take-Profit Targets:
+
+1) 0.3042 
+2) 0.3057 
+3) 0.3072 
+4) 0.3118 
+5) 0.3209 
+6) 0.3481 
+
+Stoploss : 0.2815
+------------------------------
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.3027', '0.2906'], 'targets': ['0.3042', '0.3057', '0.3072', '0.3118', '0.3209', '0.3481'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2815'}
+==============================
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.3027', '0.2906'], 'targets': ['0.3042', '0.3057', '0.3072', '0.3118', '0.3209', '0.3481'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2815'}
+⚡️⚡️UNFI/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 4.54 - 4.44
+Targets: 
+
+4.64
+4.74
+4.84
+4.94
+5.04
+
+Stop Loss: 4.34
+------------------------------
+{'ticker': 'UNFIUSDT', 'mark_price': '4.300', 'entry': ['4.54', '4.44'], 'targets': ['4.64', '4.74', '4.84', '4.94', '5.04'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.34'}
+==============================
+{'ticker': 'UNFIUSDT', 'mark_price': '4.300', 'entry': ['4.54', '4.44'], 'targets': ['4.64', '4.74', '4.84', '4.94', '5.04'], 'leverage': ['20'], 'side': 'LONG', 'stop': '4.34'}
+⚡️⚡️DUSK/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.4520 - 0.4420
+Targets: 
+
+0.4620
+0.4720
+0.4820
+0.4920
+0.5020
+
+Stop Loss: 0.4320
+------------------------------
+{'ticker': 'DUSKUSDT', 'mark_price': '0.30480', 'entry': ['0.4520', '0.4420'], 'targets': ['0.4620', '0.4720', '0.4820', '0.4920', '0.5020'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4320'}
+==============================
+{'ticker': 'DUSKUSDT', 'mark_price': '0.30480', 'entry': ['0.4520', '0.4420'], 'targets': ['0.4620', '0.4720', '0.4820', '0.4920', '0.5020'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4320'}
+⚡️⚡️DUSK/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.4520 - 0.4420
+Targets: 
+
+0.4620
+0.4720
+0.4820
+0.4920
+0.5020
+
+Stop Loss: 0.4320
+------------------------------
+{'ticker': 'DUSKUSDT', 'mark_price': '0.30480', 'entry': ['0.4520', '0.4420'], 'targets': ['0.4620', '0.4720', '0.4820', '0.4920', '0.5020'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4320'}
+==============================
+{'ticker': 'DUSKUSDT', 'mark_price': '0.30480', 'entry': ['0.4520', '0.4420'], 'targets': ['0.4620', '0.4720', '0.4820', '0.4920', '0.5020'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4320'}
+⚡️⚡️KAVA/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.688 - 0.6605
+
+Take-Profit Targets:
+
+1) 0.6914 
+2) 0.6969 
+3) 0.7052 
+4) 0.7155 
+5) 0.743 
+6) 0.7981 
+
+Stoploss : 0.6467
+------------------------------
+{'ticker': 'KAVAUSDT', 'mark_price': '0.4160', 'entry': ['0.688', '0.6605'], 'targets': ['0.6914', '0.6969', '0.7052', '0.7155', '0.743', '0.7981'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6467'}
+==============================
+{'ticker': 'KAVAUSDT', 'mark_price': '0.4160', 'entry': ['0.688', '0.6605'], 'targets': ['0.6914', '0.6969', '0.7052', '0.7155', '0.743', '0.7981'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6467'}
+⚡️⚡️ADA/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.46 - 0.483
+
+Take-Profit Targets:
+
+1) 0.4568 
+2) 0.454 
+3) 0.4485 
+4) 0.4416 
+5) 0.4232 
+6) 0.3864 
+
+Stoploss : 0.4968
+------------------------------
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.46', '0.483'], 'targets': ['0.4568', '0.454', '0.4485', '0.4416', '0.4232', '0.3864'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.4968'}
+==============================
+{'ticker': 'ADAUSDT', 'mark_price': '0.41700', 'entry': ['0.46', '0.483'], 'targets': ['0.4568', '0.454', '0.4485', '0.4416', '0.4232', '0.3864'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.4968'}
+⚡️⚡️ #NKN/USDT ⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.1245 - 0.1215
+
+Targets: 
+1) 0.1275
+2) 0.1305
+3) 0.1335
+4) 0.1365
+6) 0.1395
+
+Stop Loss: 0.1185
+------------------------------
+{'ticker': 'NKNUSDT', 'mark_price': None, 'entry': ['0.1245', '0.1215'], 'targets': ['0.1275', '0.1305', '0.1335', '0.1365', '0.1395'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1185'}
+==============================
+{'ticker': 'NKNUSDT', 'mark_price': None, 'entry': ['0.1245', '0.1215'], 'targets': ['0.1275', '0.1305', '0.1335', '0.1365', '0.1395'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1185'}
+⚡️⚡️GAL/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 3.752 - 3.9021
+
+Take-Profit Targets:
+
+1) 3.7332 
+2) 3.7145 
+3) 3.6957 
+4) 3.6394 
+5) 3.5269 
+6) 3.1892 
+
+Stoploss : 4.0146
+------------------------------
+{'ticker': 'GALUSDT', 'mark_price': '2.35000', 'entry': ['3.752', '3.9021'], 'targets': ['3.7332', '3.7145', '3.6957', '3.6394', '3.5269', '3.1892'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '4.0146'}
+==============================
+{'ticker': 'GALUSDT', 'mark_price': '2.35000', 'entry': ['3.752', '3.9021'], 'targets': ['3.7332', '3.7145', '3.6957', '3.6394', '3.5269', '3.1892'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '4.0146'}
+⚡️⚡️SAND/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.467 - 0.4857
+
+Take-Profit Targets:
+
+1) 0.4647 
+2) 0.4623 
+3) 0.46 
+4) 0.453 
+5) 0.439 
+6) 0.397 
+
+Stoploss : 0.495
+------------------------------
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.467', '0.4857'], 'targets': ['0.4647', '0.4623', '0.46', '0.453', '0.439', '0.397'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.495'}
+==============================
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.467', '0.4857'], 'targets': ['0.4647', '0.4623', '0.46', '0.453', '0.439', '0.397'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.495'}
+⚡️⚡️#PYTH/USDT⚡️⚡️
+
+Long 
+Leverage: 20x
+Buy: 0.4970 - 0.4670
+
+Target: 
+1) 0.5029 
+2) 0.5080 
+3) 0.5130 
+4) 0.5182 
+5) 0.5234 
+6) 0.5286
+
+StopLoss: 0.4550
+------------------------------
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.4970', '0.4670'], 'targets': ['0.5029', '0.5080', '0.5130', '0.5182', '0.5234', '0.5286'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4550'}
+==============================
+{'ticker': 'PYTHUSDT', 'mark_price': '0.2958000', 'entry': ['0.4970', '0.4670'], 'targets': ['0.5029', '0.5080', '0.5130', '0.5182', '0.5234', '0.5286'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.4550'}
+⚡️⚡️#PEPE/USDT⚡️⚡️
+
+LONG
+LEVERAGE - 50x
+
+Entry: 15000 - 14600
+
+Targets:
+1) 15200 
+2) 15460 
+3) 15740 
+4) 16160 
+5) 16800
+6) 17900 
+7) 20000
+
+STOPLOSS - 13852
+------------------------------
+{'ticker': 'PEPEUSDT', 'mark_price': None, 'entry': ['15000', '14600'], 'targets': ['15200', '15460', '15740', '16160', '16800', '17900', '20000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '13852'}
+==============================
+{'ticker': 'PEPEUSDT', 'mark_price': None, 'entry': ['15000', '14600'], 'targets': ['15200', '15460', '15740', '16160', '16800', '17900', '20000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '13852'}
+⚡️⚡️#FLM/USDT⚡️⚡️
+
+SHORT
+Leverage: 30x
+
+Entry: 0.1014 - 0.1026 
+
+ Target: 
+1) 0.1010 
+2) 0.1004 
+3) 0.1001 
+4) 0.0996 
+5) 0.0987 
+6) 0.0969
+
+StopLoss : 0.1049
+------------------------------
+{'ticker': 'FLMUSDT', 'mark_price': '0.0600', 'entry': ['0.1014', '0.1026'], 'targets': ['0.1010', '0.1004', '0.1001', '0.0996', '0.0987', '0.0969'], 'leverage': ['30'], 'side': 'SHORT', 'stop': '0.1049'}
+==============================
+{'ticker': 'FLMUSDT', 'mark_price': '0.0600', 'entry': ['0.1014', '0.1026'], 'targets': ['0.1010', '0.1004', '0.1001', '0.0996', '0.0987', '0.0969'], 'leverage': ['30'], 'side': 'SHORT', 'stop': '0.1049'}
+⚡️⚡️#REN/USDT⚡️⚡️
+
+SHORT
+Leverage: 20x
+
+Entry: 0.08051 - 0.08125
+
+ Target: 
+1) 0.08020 
+2) 0.07987 
+3) 0.07959 
+4) 0.07909 
+5) 0.07825 
+6) 0.07635
+
+StopLoss : 0.08320
+------------------------------
+{'ticker': 'RENUSDT', 'mark_price': '0.05259', 'entry': ['0.08051', '0.08125'], 'targets': ['0.08020', '0.07987', '0.07959', '0.07909', '0.07825', '0.07635'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.08320'}
+==============================
+{'ticker': 'RENUSDT', 'mark_price': '0.05259', 'entry': ['0.08051', '0.08125'], 'targets': ['0.08020', '0.07987', '0.07959', '0.07909', '0.07825', '0.07635'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.08320'}
+⚡️⚡️#LIT/USDT⚡️⚡️
+
+ SHORT
+ Leverage: 30x
+
+Entry: 1.217 - 1.234
+
+ Target: 
+1) 1.213 
+2) 1.205 
+3) 1.199 
+4) 1.192 
+5) 1.175 
+6) 1.160
+
+StopLoss : 1.271
+------------------------------
+{'ticker': 'LITUSDT', 'mark_price': '0.817', 'entry': ['1.217', '1.234'], 'targets': ['1.213', '1.205', '1.199', '1.192', '1.175', '1.160'], 'leverage': ['30'], 'side': 'SHORT', 'stop': '1.271'}
+==============================
+{'ticker': 'LITUSDT', 'mark_price': '0.817', 'entry': ['1.217', '1.234'], 'targets': ['1.213', '1.205', '1.199', '1.192', '1.175', '1.160'], 'leverage': ['30'], 'side': 'SHORT', 'stop': '1.271'}
+⚡️⚡️WIF/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross25X
+
+Entries: 3.34 - 3.26
+
+Targets: 
+1) 3.42
+2) 3.50
+3) 3.58
+4) 3.66
+5) 3.74
+
+Stop Loss: 3.18
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.34', '3.26'], 'targets': ['3.42', '3.50', '3.58', '3.66', '3.74'], 'leverage': ['25'], 'side': 'LONG', 'stop': '3.18'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['3.34', '3.26'], 'targets': ['3.42', '3.50', '3.58', '3.66', '3.74'], 'leverage': ['25'], 'side': 'LONG', 'stop': '3.18'}
+⚡️⚡️#ENS/USDT⚡️⚡️
+
+SHORT
+Leverage: 25x
+
+Entry: 24.702 - 25.007
+
+Target: 
+1) 24.595 
+2) 24.489 
+3) 24.407 
+4) 24.210 
+5) 24.020 
+6) 23.457
+
+StopLoss : 25.922
+------------------------------
+{'ticker': 'ENSUSDT', 'mark_price': '26.556', 'entry': ['24.702', '25.007'], 'targets': ['24.595', '24.489', '24.407', '24.210', '24.020', '23.457'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '25.922'}
+==============================
+{'ticker': 'ENSUSDT', 'mark_price': '26.556', 'entry': ['24.702', '25.007'], 'targets': ['24.595', '24.489', '24.407', '24.210', '24.020', '23.457'], 'leverage': ['25'], 'side': 'SHORT', 'stop': '25.922'}
+⚡️⚡️GRT/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.2986 - 0.3105
+
+Take-Profit Targets:
+
+1) 0.2971 
+2) 0.2956 
+3) 0.2941 
+4) 0.2896 
+5) 0.2807 
+6) 0.2538 
+
+Stoploss : 0.3195
+------------------------------
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2986', '0.3105'], 'targets': ['0.2971', '0.2956', '0.2941', '0.2896', '0.2807', '0.2538'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.3195'}
+==============================
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2986', '0.3105'], 'targets': ['0.2971', '0.2956', '0.2941', '0.2896', '0.2807', '0.2538'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.3195'}
+⚡️⚡️ROSE/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20.0X
+
+Entry Targets: 0.1188 
+Take-Profit Targets:
+
+1) 0.11950
+2) 0.12030
+3) 0.12100
+4) 0.12220
+5) 0.12350
+6) 0.12500
+
+Stop-Loss: 0.1160
+------------------------------
+{'ticker': 'ROSEUSDT', 'mark_price': '0.09202', 'entry': ['0.1188'], 'targets': ['0.11950', '0.12030', '0.12100', '0.12220', '0.12350', '0.12500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1160'}
+==============================
+{'ticker': 'ROSEUSDT', 'mark_price': '0.09202', 'entry': ['0.1188'], 'targets': ['0.11950', '0.12030', '0.12100', '0.12220', '0.12350', '0.12500'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1160'}
+⚡️⚡️#DASH/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 30.10 - 29.10
+
+Targets: 
+1) 31.10
+2) 32.10
+3) 33.10
+4) 34.10
+5) 35.10
+
+Stop Loss: 28.10
+------------------------------
+{'ticker': 'DASHUSDT', 'mark_price': '17.02', 'entry': ['30.10', '29.10'], 'targets': ['31.10', '32.10', '33.10', '34.10', '35.10'], 'leverage': ['20'], 'side': 'LONG', 'stop': '28.10'}
+==============================
+{'ticker': 'DASHUSDT', 'mark_price': '17.02', 'entry': ['30.10', '29.10'], 'targets': ['31.10', '32.10', '33.10', '34.10', '35.10'], 'leverage': ['20'], 'side': 'LONG', 'stop': '28.10'}
+⚡️⚡️#YFI/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 7060 - 6810
+
+Targets: 
+1) 7300
+2) 7550
+3) 7800
+4) 8050
+5) 8300
+
+Stop Loss: 6560
+------------------------------
+{'ticker': 'YFIUSDT', 'mark_price': '6017.9', 'entry': ['7060', '6810'], 'targets': ['7300', '7550', '7800', '8050', '8300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6560'}
+==============================
+{'ticker': 'YFIUSDT', 'mark_price': '6017.9', 'entry': ['7060', '6810'], 'targets': ['7300', '7550', '7800', '8050', '8300'], 'leverage': ['20'], 'side': 'LONG', 'stop': '6560'}
+⚡️⚡️SOL/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 172.7 - 169.1
+Targets: 
+
+1) 176
+2) 180
+3) 184
+4) 188
+5) 192
+
+Stop Loss: 165.2
+------------------------------
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['172.7', '169.1'], 'targets': ['176', '180', '184', '188', '192'], 'leverage': ['20'], 'side': 'LONG', 'stop': '165.2'}
+==============================
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['172.7', '169.1'], 'targets': ['176', '180', '184', '188', '192'], 'leverage': ['20'], 'side': 'LONG', 'stop': '165.2'}
+⚡️⚡️TRB/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross25X
+
+Entries: 104.5 - 102
+Targets: 
+
+1) 107
+2) 110
+3) 113
+4) 116
+5) 119
+
+Stop Loss: 98.5
+------------------------------
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['104.5', '102'], 'targets': ['107', '110', '113', '116', '119'], 'leverage': ['25'], 'side': 'LONG', 'stop': '98.5'}
+==============================
+{'ticker': 'TRBUSDT', 'mark_price': '29.330', 'entry': ['104.5', '102'], 'targets': ['107', '110', '113', '116', '119'], 'leverage': ['25'], 'side': 'LONG', 'stop': '98.5'}
+⚡️⚡️PIXEL/USDT⚡️⚡️
+
+ LONG
+Leverage:  30X
+
+Entries: 0.4970 - 0.4885
+
+Targets: 
+
+1) 0.5060
+2) 0.5150
+3) 0.5240
+
+Stop Loss: 0.4800
+------------------------------
+{'ticker': 'PIXELUSDT', 'mark_price': '0.2778000', 'entry': ['0.4970', '0.4885'], 'targets': ['0.5060', '0.5150', '0.5240'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.4800'}
+==============================
+{'ticker': 'PIXELUSDT', 'mark_price': '0.2778000', 'entry': ['0.4970', '0.4885'], 'targets': ['0.5060', '0.5150', '0.5240'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.4800'}
+⚡️⚡️#INJ/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 27.615 
+
+Take-Profit Targets: 
+1) 27.75
+2) 27.90
+3) 28.05
+4) 28.30
+5) 28.65
+6) 29.00
+
+Stop-Loss: 27
+------------------------------
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['27.615'], 'targets': ['27.75', '27.90', '28.05', '28.30', '28.65', '29.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '27'}
+==============================
+{'ticker': 'INJUSDT', 'mark_price': '23.8410000', 'entry': ['27.615'], 'targets': ['27.75', '27.90', '28.05', '28.30', '28.65', '29.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '27'}
+⚡️⚡️SXP/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.35
+Take-Profit Targets: 
+
+1) 0.3520
+2) 0.3540
+3) 0.3565
+4) 0.3610
+5) 0.3650
+6) 0.3700
+
+Stop-Loss: 0.342
+------------------------------
+{'ticker': 'SXPUSDT', 'mark_price': '0.3131', 'entry': ['0.35'], 'targets': ['0.3520', '0.3540', '0.3565', '0.3610', '0.3650', '0.3700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.342'}
+==============================
+{'ticker': 'SXPUSDT', 'mark_price': '0.3131', 'entry': ['0.35'], 'targets': ['0.3520', '0.3540', '0.3565', '0.3610', '0.3650', '0.3700'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.342'}
+⚡️⚡️#MAV/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.4825
+
+Take-Profit Targets: 
+1) 0.4850
+2) 0.4880
+3) 0.4910
+4) 0.4970
+5) 0.5040
+6) 0.5100
+
+Stop-Loss: 0.475
+------------------------------
+{'ticker': 'MAVUSDT', 'mark_price': '0.3013000', 'entry': ['0.4825'], 'targets': ['0.4850', '0.4880', '0.4910', '0.4970', '0.5040', '0.5100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.475'}
+==============================
+{'ticker': 'MAVUSDT', 'mark_price': '0.3013000', 'entry': ['0.4825'], 'targets': ['0.4850', '0.4880', '0.4910', '0.4970', '0.5040', '0.5100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.475'}
+⚡️⚡️#NOT/USDT ⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross30X
+
+Entries: 0.0220 - 0.0215
+
+Targets: 
+1) 0.0225
+2) 0.0230
+3) 0.0235
+4) 0.0240
+5) 0.0245
+
+Stop Loss: 0.0210
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.0220', '0.0215'], 'targets': ['0.0225', '0.0230', '0.0235', '0.0240', '0.0245'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.0210'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.0220', '0.0215'], 'targets': ['0.0225', '0.0230', '0.0235', '0.0240', '0.0245'], 'leverage': ['30'], 'side': 'LONG', 'stop': '0.0210'}
+⚡️⚡️#MOVR/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross30X
+
+Entries: 16.70 - 16.45
+
+Targets: 
+1) 16.95
+2) 17.20
+3) 17.45
+4) 17.70
+5) 17.95
+
+Stop Loss: 16.20
+------------------------------
+{'ticker': 'MOVRUSDT', 'mark_price': '10.000000', 'entry': ['16.70', '16.45'], 'targets': ['16.95', '17.20', '17.45', '17.70', '17.95'], 'leverage': ['30'], 'side': 'LONG', 'stop': '16.20'}
+==============================
+{'ticker': 'MOVRUSDT', 'mark_price': '10.000000', 'entry': ['16.70', '16.45'], 'targets': ['16.95', '17.20', '17.45', '17.70', '17.95'], 'leverage': ['30'], 'side': 'LONG', 'stop': '16.20'}
+⚡️⚡️#BNX/USDT⚡️⚡️
+
+LONG
+LEVERAGE - 20x
+
+ENTRY: 1.2150 , 1.1800
+
+TARGETS 
+1) 1.2230 
+2) 1.2350 
+3) 1.2510 
+4) 1.2700 
+5) 1.3100 
+6) 1.4 
+7) 1.510
+
+
+STOPLOSS - 1.1240
+------------------------------
+{'ticker': 'BNXUSDT', 'mark_price': '1.061000', 'entry': ['1.2150', '1.1800'], 'targets': ['1.2230', '1.2350', '1.2510', '1.2700', '1.3100', '1.4', '1.510'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.1240'}
+==============================
+{'ticker': 'BNXUSDT', 'mark_price': '1.061000', 'entry': ['1.2150', '1.1800'], 'targets': ['1.2230', '1.2350', '1.2510', '1.2700', '1.3100', '1.4', '1.510'], 'leverage': ['20'], 'side': 'LONG', 'stop': '1.1240'}
+⚡️⚡️SAND/USDT⚡️⚡️
+
+Signal Type: LONG
+Leverage : 20X
+
+Entry Targets : 0.4167 - 0.4
+
+Take-Profit Targets:
+
+1) 0.4188 
+2) 0.4209 
+3) 0.423 
+4) 0.4292 
+5) 0.4417 
+6) 0.4792 
+
+Stoploss : 0.3917
+------------------------------
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.4167', '0.4'], 'targets': ['0.4188', '0.4209', '0.423', '0.4292', '0.4417', '0.4792'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3917'}
+==============================
+{'ticker': 'SANDUSDT', 'mark_price': '0.33000', 'entry': ['0.4167', '0.4'], 'targets': ['0.4188', '0.4209', '0.423', '0.4292', '0.4417', '0.4792'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.3917'}
+⚡️⚡️SOL/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 159.44 - 153.0624
+
+Take-Profit Targets:
+
+1) 160.5561 
+2) 161.5127 
+3) 163.426 
+4) 165.8176 
+5) 172.1952 
+6) 184.9504 
+
+Stoploss : 149.8736
+------------------------------
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['159.44', '153.0624'], 'targets': ['160.5561', '161.5127', '163.426', '165.8176', '172.1952', '184.9504'], 'leverage': ['20'], 'side': 'LONG', 'stop': '149.8736'}
+==============================
+{'ticker': 'SOLUSDT', 'mark_price': '140.0000', 'entry': ['159.44', '153.0624'], 'targets': ['160.5561', '161.5127', '163.426', '165.8176', '172.1952', '184.9504'], 'leverage': ['20'], 'side': 'LONG', 'stop': '149.8736'}
+⚡️⚡️ENJ/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.2565 - 0.2462
+
+Take-Profit Targets:
+
+1) 0.2578 
+2) 0.2591 
+3) 0.2603 
+4) 0.2642 
+5) 0.2719 
+6) 0.295 
+
+Stoploss : 0.2411
+------------------------------
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.2565', '0.2462'], 'targets': ['0.2578', '0.2591', '0.2603', '0.2642', '0.2719', '0.295'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2411'}
+==============================
+{'ticker': 'ENJUSDT', 'mark_price': '0.22000', 'entry': ['0.2565', '0.2462'], 'targets': ['0.2578', '0.2591', '0.2603', '0.2642', '0.2719', '0.295'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2411'}
+⚡️⚡️GRT/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.2665 - 0.2558
+
+Take-Profit Targets:
+
+1) 0.2678 
+2) 0.2692 
+3) 0.2705 
+4) 0.2745 
+5) 0.2825 
+6) 0.3065 
+
+Stoploss : 0.2478
+------------------------------
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2665', '0.2558'], 'targets': ['0.2678', '0.2692', '0.2705', '0.2745', '0.2825', '0.3065'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2478'}
+==============================
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2665', '0.2558'], 'targets': ['0.2678', '0.2692', '0.2705', '0.2745', '0.2825', '0.3065'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.2478'}
+⚡️⚡️MATIC/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.6542 - 0.628
+
+Take-Profit Targets:
+
+1) 0.6575 
+2) 0.6607 
+3) 0.6673 
+4) 0.6738 
+5) 0.6935 
+6) 0.7327 
+
+Stoploss : 0.6149
+------------------------------
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.6542', '0.628'], 'targets': ['0.6575', '0.6607', '0.6673', '0.6738', '0.6935', '0.7327'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6149'}
+==============================
+{'ticker': 'MATICUSDT', 'mark_price': '0.56560', 'entry': ['0.6542', '0.628'], 'targets': ['0.6575', '0.6607', '0.6673', '0.6738', '0.6935', '0.7327'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6149'}
+⚡️⚡️AXL/USDT⚡️⚡️
+
+ LONG
+LEVERAGE : Cross 25X
+
+Entry targets: 0.8660 - 0.8460
+
+Take-profit targets:
+
+1) 0.8830
+2) 0.9000
+3) 0.9250
+4) 0.9800
+
+Stop Target: 0.8220
+
+Put 5% dep only
+------------------------------
+{'ticker': 'AXLUSDT', 'mark_price': '2.1792000', 'entry': ['0.8660', '0.8460'], 'targets': ['0.8830', '0.9000', '0.9250', '0.9800'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.8220'}
+==============================
+{'ticker': 'AXLUSDT', 'mark_price': '2.1792000', 'entry': ['0.8660', '0.8460'], 'targets': ['0.8830', '0.9000', '0.9250', '0.9800'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.8220'}
+⚡️⚡️#NOT/USDT⚡️⚡️
+
+Long 
+Leverage: 20x
+
+Buy: 0.01815 - 0.01770
+
+Target: 
+1) 0.01833 
+2) 0.01854 
+3) 0.01873 
+4) 0.01890 
+5) 0.01910 
+6) 0.01930
+
+StopLoss: 0.01706
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01815', '0.01770'], 'targets': ['0.01833', '0.01854', '0.01873', '0.01890', '0.01910', '0.01930'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01706'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01815', '0.01770'], 'targets': ['0.01833', '0.01854', '0.01873', '0.01890', '0.01910', '0.01930'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01706'}
+⚡️⚡️CHZ/USDT⚡️⚡️
+
+Signal Type - LONG
+Leverage : 20X
+
+Entry Targets : 0.12139 - 0.1165
+
+Take-Profit Targets:
+
+1) 0.122 
+2) 0.1226 
+3) 0.1232 
+4) 0.125 
+5) 0.1287 
+6) 0.1396 
+
+Stoploss : 0.1129
+------------------------------
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.12139', '0.1165'], 'targets': ['0.122', '0.1226', '0.1232', '0.125', '0.1287', '0.1396'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1129'}
+==============================
+{'ticker': 'CHZUSDT', 'mark_price': '0.07550', 'entry': ['0.12139', '0.1165'], 'targets': ['0.122', '0.1226', '0.1232', '0.125', '0.1287', '0.1396'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.1129'}
+⚡️⚡️#NOT/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.01865
+
+Take-Profit Targets: 
+1) 0.01875
+2) 0.01885
+3) 0.01895
+4) 0.01912
+5) 0.01935
+6) 0.01960
+
+Stop-Loss: 0.01825
+------------------------------
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01865'], 'targets': ['0.01875', '0.01885', '0.01895', '0.01912', '0.01935', '0.01960'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01825'}
+==============================
+{'ticker': 'NOTUSDT', 'mark_price': '0.0137900', 'entry': ['0.01865'], 'targets': ['0.01875', '0.01885', '0.01895', '0.01912', '0.01935', '0.01960'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01825'}
+⚡️⚡️#CKB/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.01730
+
+Take-Profit Targets: 
+1) 0.01740
+2) 0.01750
+3) 0.01760
+4) 0.01778
+5) 0.01800
+6) 0.01825
+
+Stop-Loss: 0.01690
+------------------------------
+{'ticker': 'CKBUSDT', 'mark_price': '0.0105790', 'entry': ['0.01730'], 'targets': ['0.01740', '0.01750', '0.01760', '0.01778', '0.01800', '0.01825'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01690'}
+==============================
+{'ticker': 'CKBUSDT', 'mark_price': '0.0105790', 'entry': ['0.01730'], 'targets': ['0.01740', '0.01750', '0.01760', '0.01778', '0.01800', '0.01825'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01690'}
+⚡️⚡️#TOKEN/USDT⚡️⚡️
+
+LONG 
+Leverage: 50x
+
+Entry: 0.13159 - 0.12121
+
+Target: 
+1) 0.13240 
+2) 0.13378 
+3) 0.13521 
+4) 0.13710 
+5) 0.1423 
+6) 0.1499 
+7) 0.15999
+
+StopLoss: 0.1201
+------------------------------
+{'ticker': 'TOKENUSDT', 'mark_price': '0.0908300', 'entry': ['0.13159', '0.12121'], 'targets': ['0.13240', '0.13378', '0.13521', '0.13710', '0.1423', '0.1499', '0.15999'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1201'}
+==============================
+{'ticker': 'TOKENUSDT', 'mark_price': '0.0908300', 'entry': ['0.13159', '0.12121'], 'targets': ['0.13240', '0.13378', '0.13521', '0.13710', '0.1423', '0.1499', '0.15999'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.1201'}
+⚡️⚡️GRT/USDT⚡️⚡️
+
+Signal Type - SHORT
+Leverage : 20X
+
+Entry Targets : 0.2627 - 0.2732
+
+Take-Profit Targets:
+
+1) 0.2614 
+2) 0.2601 
+3) 0.2588 
+4) 0.2548 
+5) 0.2469 
+6) 0.2233 
+
+Stoploss : 0.2811
+------------------------------
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2627', '0.2732'], 'targets': ['0.2614', '0.2601', '0.2588', '0.2548', '0.2469', '0.2233'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2811'}
+==============================
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.2627', '0.2732'], 'targets': ['0.2614', '0.2601', '0.2588', '0.2548', '0.2469', '0.2233'], 'leverage': ['20'], 'side': 'SHORT', 'stop': '0.2811'}
+⚡️⚡️#W/USDT⚡️⚡️
+
+Position: LONG 
+Leverage:  Cross20X
+
+Entries: 0.6400 - 0.6250
+
+Targets: 
+1) 0.6550
+2) 0.6700
+3) 0.6850
+4) 0.7000
+5) 0.7150
+
+Stop Loss: 0.6100
+------------------------------
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.6400', '0.6250'], 'targets': ['0.6550', '0.6700', '0.6850', '0.7000', '0.7150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6100'}
+==============================
+{'ticker': 'WUSDT', 'mark_price': '0.3628000', 'entry': ['0.6400', '0.6250'], 'targets': ['0.6550', '0.6700', '0.6850', '0.7000', '0.7150'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.6100'}
+POLYX/USDT LONG
+
+LEVERAGE : Cross 25X
+
+
+entry Target:
+1) 0.5080
+2) 0.4950
+take-profit targets:
+
+1) 0.5265
+2) 0.5400
+3) 0.5555
+4) 0.6000
+stop Target:
+
+1) 0.4850
+
+Put 5% dep only
+------------------------------
+{'ticker': 'POLYXLONGUSDT', 'mark_price': None, 'entry': ['0.5080', '0.4950'], 'targets': ['0.5265', '0.5400', '0.5555', '0.6000'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.4850'}
+==============================
+{'ticker': 'POLYXLONGUSDT', 'mark_price': None, 'entry': ['0.5080', '0.4950'], 'targets': ['0.5265', '0.5400', '0.5555', '0.6000'], 'leverage': ['25'], 'side': 'LONG', 'stop': '0.4850'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.604
+
+Take-Profit Targets: 
+1) 2.620
+2) 2.637
+3) 2.655
+4) 2.687
+5) 2.720
+6) 2.755
+
+Stop-Loss: 2.5
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.604'], 'targets': ['2.620', '2.637', '2.655', '2.687', '2.720', '2.755'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.5'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.604'], 'targets': ['2.620', '2.637', '2.655', '2.687', '2.720', '2.755'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.5'}
+⚡️⚡️#BTC/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 50x
+
+Entry Targets: 66800
+
+Take-Profit Targets: 
+1) 66950
+2) 67100
+3) 67300
+4) 67570
+5) 67800
+6) 68000
+
+Stop-Loss: 66000
+------------------------------
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['66800'], 'targets': ['66950', '67100', '67300', '67570', '67800', '68000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '66000'}
+==============================
+{'ticker': 'BTCUSDT', 'mark_price': '61654.40', 'entry': ['66800'], 'targets': ['66950', '67100', '67300', '67570', '67800', '68000'], 'leverage': ['50'], 'side': 'LONG', 'stop': '66000'}
+⚡️⚡️#BCH/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 442
+
+Take-Profit Targets: 
+1) 443.50
+2) 446.00
+3) 449.50
+4) 455.00
+5) 462.00
+6) 470.00
+
+Stop-Loss: 436
+------------------------------
+{'ticker': 'BCHUSDT', 'mark_price': '395.00', 'entry': ['442'], 'targets': ['443.50', '446.00', '449.50', '455.00', '462.00', '470.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '436'}
+==============================
+{'ticker': 'BCHUSDT', 'mark_price': '395.00', 'entry': ['442'], 'targets': ['443.50', '446.00', '449.50', '455.00', '462.00', '470.00'], 'leverage': ['20'], 'side': 'LONG', 'stop': '436'}
+⚡️⚡️#RSR/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 0.006760
+
+Take-Profit Targets: 
+1) 0.006785
+2) 0.006815
+3) 0.006850
+4) 0.006910
+5) 0.006990
+6) 0.007100
+
+Stop-Loss: 0.0063
+------------------------------
+{'ticker': 'RSRUSDT', 'mark_price': '0.003653', 'entry': ['0.006760'], 'targets': ['0.006785', '0.006815', '0.006850', '0.006910', '0.006990', '0.007100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0063'}
+==============================
+{'ticker': 'RSRUSDT', 'mark_price': '0.003653', 'entry': ['0.006760'], 'targets': ['0.006785', '0.006815', '0.006850', '0.006910', '0.006990', '0.007100'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.0063'}
+⚡️⚡️#HIGH/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.805
+
+Take-Profit Targets: 
+1) 2.820
+2) 2.840
+3) 2.865
+4) 2.900
+5) 2.950
+6) 3.000
+
+Stop-Loss: 2.715
+------------------------------
+{'ticker': 'HIGHUSDT', 'mark_price': '2.155000', 'entry': ['2.805'], 'targets': ['2.820', '2.840', '2.865', '2.900', '2.950', '3.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.715'}
+==============================
+{'ticker': 'HIGHUSDT', 'mark_price': '2.155000', 'entry': ['2.805'], 'targets': ['2.820', '2.840', '2.865', '2.900', '2.950', '3.000'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.715'}
+⚡️⚡️#WIF/USDT⚡️⚡️
+
+Signal Type: Long
+Leverage: Cross 20x
+
+Entry Targets: 2.582
+
+Take-Profit Targets: 
+1) 2.600
+2) 2.620
+3) 2.645
+4) 2.685
+5) 2.730
+6) 2.770
+
+Stop-Loss: 2.5
+------------------------------
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.582'], 'targets': ['2.600', '2.620', '2.645', '2.685', '2.730', '2.770'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.5'}
+==============================
+{'ticker': 'WIFUSDT', 'mark_price': '2.0957000', 'entry': ['2.582'], 'targets': ['2.600', '2.620', '2.645', '2.685', '2.730', '2.770'], 'leverage': ['20'], 'side': 'LONG', 'stop': '2.5'}
+⚡️⚡️#1000PEPE/USDT⚡️⚡️
+
+Long 
+Leverage: 20x
+
+Buy: 0.01290 - 0.01213
+
+Target: 
+1) 0.01303 
+2) 0.01318 
+3) 0.01331 
+4) 0.01345 
+5) 0.01358
+0.01378
+
+StopLoss: 0.01198
+------------------------------
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.01290', '0.01213'], 'targets': ['0.01303', '0.01318', '0.01331', '0.01345', '0.01358', '0.01378'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01198'}
+==============================
+{'ticker': '1000PEPEUSDT', 'mark_price': '0.0123305', 'entry': ['0.01290', '0.01213'], 'targets': ['0.01303', '0.01318', '0.01331', '0.01345', '0.01358', '0.01378'], 'leverage': ['20'], 'side': 'LONG', 'stop': '0.01198'}
+⚡️⚡️#GRT/USDT⚡️⚡️
+
+LONG
+Leverage: 50x
+
+Entry: 0.24387 - 0.2298
+
+Target: 
+1) 0.24521 
+2) 0.24721 
+3) 0.24951
+4) 0.2521 
+5) 0.2645 
+6) 0.2789 
+7) 0.2981
+
+StopLoss: 0.2265
+------------------------------
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.24387', '0.2298'], 'targets': ['0.24521', '0.24721', '0.24951', '0.2521', '0.2645', '0.2789', '0.2981'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.2265'}
+==============================
+{'ticker': 'GRTUSDT', 'mark_price': '0.19490', 'entry': ['0.24387', '0.2298'], 'targets': ['0.24521', '0.24721', '0.24951', '0.2521', '0.2645', '0.2789', '0.2981'], 'leverage': ['50'], 'side': 'LONG', 'stop': '0.2265'}
