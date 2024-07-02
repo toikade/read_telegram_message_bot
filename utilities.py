@@ -1,6 +1,6 @@
 from decouple import config
 from binance.client import Client
-import re, unicodedata, ftfy, json
+import re, unicodedata, ftfy, json, time
 from unidecode import unidecode
 
 # Initialize Binance client
@@ -31,7 +31,7 @@ def get_binance_futures_symbol_current_market_prices_to_file():
 def logger(text):
     sep1 = '-'*30
     with open('errorlog.log', 'a',  encoding='utf-8') as file:
-        file.write(f'{text}\n')
+        file.write(f'{time.ctime()}  {text}\n')
         file.write(f'{sep1}\n')
 
 
@@ -43,12 +43,15 @@ def get_binance_futures_current_market_price_from_file(symbol):
             data = json.load(file)
 
         # Iterate through the data to find the matching symbol
-        for item in data:
-            if item["symbol"] == symbol:
-                return item["price"]
-
+        price = [item['price'] for item in data if item["symbol"] == symbol]    
+        print(price)
+        # for item in data:
+        #     if item["symbol"] == symbol:
+        #         return item["price"]
+        if not price:
         # If symbol not found, return None
-        raise ValueError(f"Symbol '{symbol}' not found in data.")
+            raise ValueError(f"Symbol '{symbol}' not found in data.")
+        return price[0]
 
     except FileNotFoundError:
         print(f"Error: File not found.")
@@ -59,11 +62,11 @@ def get_binance_futures_current_market_price_from_file(symbol):
     except ValueError as ve:
         print(f"ValueError: {ve}")
         #log it to the error log
-        logger(f"ValueError: {ve}")
+        logger(f"ValueError: {ve} (get_binance_futures_current_market_price_from_file)")
         ##alert the administrator through telegram channel
 
 
-#print(get_binance_futures_current_market_price_from_file('BTCUSDT'))
+print(get_binance_futures_current_market_price_from_file('NKNUSDT'))
 
 # def get_symbol_market_value_and_divide_by_two(symbol):
 #     # Get the market value of the asset
@@ -600,22 +603,16 @@ def modify_extracted_data_body(data):
                                 data[item][idx] = str(round(transformed_elm/10, 4))
             print('SHORT2',data)
     except ValueError as ve:
-        print(ve)
+        #print(ve)
+        pass
     except KeyError as ke:
         print(ke)
     except TypeError as te:
         print(te)
-        logger(f"{te}")
+        logger(f"{te} (modify_extracted_data_body)")
         pass
     return data
     
-            
-
-
-
-
-
-
 #divided_value = get_symbol_market_value_and_divide_by_two('1INCHUSDT')
 #print(f"Market value of {symbol}: {float(market_value)}")
 #print('divided_value',divided_value)
@@ -634,6 +631,7 @@ data_body_3 = {'ticker': 'GRTUSDT', 'price': '0.49490', 'entry': ['0.24387', '0.
 def validate_data(data):
     try:
         ticker = data['ticker']
+        #live price below can either be hardcoded in the data or taken live once in production
         price = float(data['mark_price'])
         entry = list(map(float, data['entry']))
         targets = list(map(float, data['targets']))
@@ -676,7 +674,7 @@ def validate_data(data):
     except ValueError as e:
         print(f"Validation error: {e}")
         #log error to errorlog file
-        logger(f"Validation error: {e}")
+        logger(f"Validation error: {e} (validate_data)")
         ##alert the administrator through telegram group
 
 #print(validate_data(data_body_3))

@@ -2,7 +2,11 @@ import telethon
 from telethon.sync import TelegramClient, events
 import datetime
 import re
-from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block, extract_target_values_from_harrisons_data_block, extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block, extract_ticker_from_harrisons_data_block, get_binance_futures_current_market_price_from_file, logger
+from utilities import get_number_from_str, get_next_line_items, check_lines_with_numbers, extract_target_values_from_harrisons_data_block  
+from utilities import modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block
+from utilities import extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block
+from utilities import extract_ticker_from_harrisons_data_block, get_binance_futures_current_market_price_from_file, logger, modify_extracted_data_body, validate_data
+from utilities import filter_text_with_numbers
 #from test import process_lines
 
 
@@ -98,7 +102,22 @@ def  extract_signal_data_from_ai_crypto(text):
 #             print(price_precised_data)
 #             return sanitized_data
     
-def extract_signal_data_from_harrisons(text):
+def extract_signal_data_from_harrisons(block):
+    #a variable to hold text after confirmed to contain wanted numbers
+    text = ''
+    # Remove leading and trailing whitespace characters
+    cleaned_block = block.strip()
+    # Skip empty blocks
+    if cleaned_block:
+        #print(cleaned_block)
+        data_block = filter_text_with_numbers(cleaned_block)
+        #print(data_block)
+        if not data_block:
+            return
+        #if the block is clean and contains the wanted numbers keep it in text
+        text = data_block
+    
+    #a dict to store the data extracted and to be returned
     tradeData = {}
     # Extract TICKER
     
@@ -106,11 +125,12 @@ def extract_signal_data_from_harrisons(text):
     ticker = extract_ticker_from_harrisons_data_block(text)
     #========================================================== 
     # Extract mark_price or live market price 
-    try:
-        tradeData['mark_price'] = get_binance_futures_current_market_price_from_file(ticker)
-    except ValueError as ve:
-        logger(text)
-        print(ve)
+    tradeData['mark_price'] = get_binance_futures_current_market_price_from_file(ticker)
+    # try:
+        
+    # except ValueError as ve:
+        #logger(text)
+        # print(ve)
     #========================================================== 
     # Extract ENTRY prices 
     tradeData['entry'] = extract_entry_values_from_harrisons_data_block(text)
@@ -163,7 +183,11 @@ def extract_signal_data_from_harrisons(text):
         print(ke)
     #print('STOP', tradeData['stop'])
     #========================================================== 
-   
+    #SANITIZE Data to make sure the decimals are respected
+    tradeData = modify_extracted_data_body(tradeData)
+    #==========================================================
+    #VALIDATE Data to make sure it meets the criteria of the different values
+    tradeData = validate_data(tradeData)
     return tradeData
 
 # with TelegramClient('test', api_id, api_hash) as client:
@@ -199,4 +223,4 @@ Take Profit Targets:
 
 Stop Targets: 16.00"""      
 
-extract_signal_data_from_harrisons(text)
+# extract_signal_data_from_harrisons(text)

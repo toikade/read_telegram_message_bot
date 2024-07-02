@@ -1,10 +1,11 @@
 import telethon
 from telethon.sync import TelegramClient, events
 import datetime
+from decouple import config
 
-api_id = '21243794'
-api_hash = '2a1ef85eff1fe10eb27560df055b1746'
-bot_token = '6379620803:AAEaLOHQM6Zeo3niZFDDDjS4NnkH1S2NqqM'  # 'your_bot_token'
+api_id = config('TELEGRAM_API_ID')
+api_hash = config('TELEGRAM_API_HASH')
+bot_token = config('TELEGRAM_BOT_TOKEN')
 
 with TelegramClient('test', api_id, api_hash) as client:
 

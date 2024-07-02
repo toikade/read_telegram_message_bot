@@ -2,7 +2,7 @@ from utilities import filter_text_with_numbers
 from data_extract_functions import extract_signal_data_from_harrisons
 from utilities import modify_extracted_data_body
 
-def extract_blocks(file_path):
+def extract_blocks_from_harrison_raw_data_from_file(file_path):
     # Initialize an empty list to store the blocks of text
     blocks = []
     sep = '='*30
@@ -32,7 +32,7 @@ def extract_blocks(file_path):
 
 # Example usage
 file_path = 'harrisonfutures.txt'  # Replace 'example.txt' with your file path
-blocks = extract_blocks(file_path)
+blocks = extract_blocks_from_harrison_raw_data_from_file(file_path)
 for block in blocks:
     print(block)
     print('='*30)
@@ -42,9 +42,10 @@ sep2 = '='*30
 count = 0
 # Print each extracted block
 for idx, block in enumerate(blocks): #start at 1st block(blocks, start=1) #get the last 100 (blocks[-100:])
-    #call sentinel_data_get_from_file in order to create a json object from block (of text)
+    #call extract_signal_data_from_harrisons in order to create a json object from block (of text)
     print(block)
     json_block = extract_signal_data_from_harrisons(block)
+    #clone the block above so its not modified so that both are displayed before and after modification
     json_block_copy = extract_signal_data_from_harrisons(block)
     #if block length is not 6(there are supposed to be 6 items in the dict)
     # if len(json_block) != 6:
