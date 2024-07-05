@@ -20,6 +20,6 @@ async def get_channel_id(channel_username):
         await client.disconnect()
 
 # Example usage
-channel_username = 'https://t.me/HarrisonFutures1'
+channel_username = 'https://t.me/oracle_easy'
 
 asyncio.run(get_channel_id(channel_username))

@@ -675,6 +675,8 @@ def validate_data(data):
         print(f"Validation error: {e}")
         #log error to errorlog file
         logger(f"Validation error: {e} (validate_data)")
+    except TypeError as te:
+        logger(f"Validation Error: {te}")
         ##alert the administrator through telegram group
 
 #print(validate_data(data_body_3))

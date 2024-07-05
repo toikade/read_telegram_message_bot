@@ -7,8 +7,7 @@ api_hash = '2a1ef85eff1fe10eb27560df055b1746'
 bot_token = '6379620803:AAEaLOHQM6Zeo3niZFDDDjS4NnkH1S2NqqM'  # 'your_bot_token'
 
 # List of channel URLs to monitor
-channel_urls = ['https://t.me/RynHumbleTrader0',
-                'https://t.me/RynHumbleTrader',
+channel_urls = ['https://t.me/RynHumbleTrader',
                 'https://t.me/Smc_indepth',
                 'https://t.me/professorgold',
                 'https://t.me/NetProfitFX',
@@ -24,13 +23,23 @@ channel_urls = ['https://t.me/RynHumbleTrader0',
                 'https://t.me/tradegold_pk',
                 'https://t.me/Myc_forexsignals',
                 'https://t.me/bengoldtrader',
-                'https://t.me/OfficiaIJoshuaPipster0',
+                'https://t.me/Xaussdgoldmaster786',
                 'https://t.me/OfficialJoshuaPipster',
                 'https://t.me/crystalforex1',
                 'https://t.me/ForexArtiumEA',
                 'https://t.me/SuccessForexSignals',
-                'https://t.me/goldmastermikeofficia',
-                'https://t.me/hugoswaytrade']
+                'https://t.me/Starnet_AIBang',
+                'https://t.me/hugoswaytrade',
+                'https://t.me/GoldzillaOfficial',
+                'https://t.me/HarrisonFutures1']
+                
+removed_channels = [
+                
+                'https://t.me/RynHumbleTrader0',
+                'https://t.me/OfficiaIJoshuaPipster0',
+                 'https://t.me/goldmastermikeofficia',
+                
+                ]
 
 with TelegramClient('test', api_id, api_hash) as client:
     # Get the input entity for each channel
@@ -44,6 +53,7 @@ with TelegramClient('test', api_id, api_hash) as client:
             raw_message = event.message.text
             channel_id = event.message.peer_id.channel_id
             print(channel_id)
+            print(raw_message)
             #print(event)
             #print(f'New message from {event.message.date}: {raw_message}')
             tradeData = {}

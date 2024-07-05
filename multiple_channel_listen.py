@@ -9,7 +9,7 @@ api_id = config('TELEGRAM_API_ID')
 api_hash = config('TELEGRAM_API_HASH')
 bot_token = config('TELEGRAM_BOT_TOKEN')
 # List of channel URLs to monitor
-channel_urls = ['https://t.me/crypto_headlines','https://t.me/AiCryptoSignalsApp','https://t.me/oracle_easy','t.me/SentinelCrypto','https://t.me/Gilanns' ]
+channel_urls = ['https://t.me/crypto_headlines', 'https://t.me/HarrisonFutures1','https://t.me/AiCryptoSignalsApp','https://t.me/oracle_easy','t.me/SentinelCrypto','https://t.me/Gilanns' ]
 
 with TelegramClient('test', api_id, api_hash) as client:
     # Get the input entity for each channel
