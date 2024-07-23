@@ -24,7 +24,7 @@ with TelegramClient('test', api_id, api_hash) as client:
         print('='*30)
         sep = '='*30
         try:
-            with open('harrisonfutures.txt', 'a',  encoding='utf-8') as file:  # Open file in append mode
+            with open('harrisonfutures1.txt', 'a',  encoding='utf-8') as file:  # Open file in append mode
                 for line in message.text.splitlines():
                     file.write(f'{line}\n')
                 file.write(f'{sep}\n')

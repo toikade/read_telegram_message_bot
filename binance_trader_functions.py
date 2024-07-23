@@ -1,123 +1,211 @@
-from binance.client import Client
+import requests
+import time
+import hmac
+import hashlib
 from decouple import config
 
-def place_orders(data, take_profit_index=None):
-    # Load your API key and secret from environment variables or a .env file
-    api_key = config('BINANCE_FUTURES_DEMO_API_KEY',cast = str)
-    api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast = str)
+# Binance API credentials
+API_KEY = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+API_SECRET = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
 
-    print(f"API Key: {api_key}")
-    print(f"API Secret: {api_secret}")
+# Base URL for Binance Futures API
+BASE_URL = 'https://testnet.binancefuture.com'
 
-    # Initialize the Binance client
-    client = Client(api_key, api_secret)
+# Function to generate the signature
+def create_signature(params, secret):
+    query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
+    return hmac.new(secret.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
 
-    # Extract data
-    ticker = data['ticker']
-    entry_prices = data['entry']
-    targets = data['targets']
-    leverage = int(data['leverage'][0])
-    side = data['side']
-    quantity_usdt = 10  # Amount to be used per trade in USDT
+# Function to get the current price of a symbol
+def get_current_price(symbol):
+    endpoint = '/fapi/v1/ticker/price'
+    url = BASE_URL + endpoint
+    response = requests.get(url, params={'symbol': symbol})
+    data = response.json()
+    return float(data['price'])
 
-    # Determine order side
-    order_side = Client.SIDE_BUY if side == 'LONG' else Client.SIDE_SELL
+# Function to get symbol precision and filters
+def get_symbol_info(symbol):
+    endpoint = '/fapi/v1/exchangeInfo'
+    url = BASE_URL + endpoint
+    response = requests.get(url)
+    data = response.json()
+    for s in data['symbols']:
+        if s['symbol'] == symbol:
+            return s
+    return None
 
-    # Set leverage
-    client.futures_change_leverage(symbol=ticker, leverage=leverage)
+# Function to set leverage for a symbol
+def set_leverage(symbol, leverage):
+    endpoint = '/fapi/v1/leverage'
+    url = BASE_URL + endpoint
 
-    # Place limit orders for each entry price
-    for entry_price in entry_prices:
-        entry_price = float(entry_price)
-        quantity = quantity_usdt / entry_price
+    params = {
+        'symbol': symbol,
+        'leverage': leverage,
+        'timestamp': int(time.time() * 1000)
+    }
 
-        # Ensure the quantity is formatted correctly
-        quantity = round(quantity, 3)  # Adjust precision as needed
+    # Create signature
+    params['signature'] = create_signature(params, API_SECRET)
 
-        order = client.futures_create_order(
-            symbol=ticker,
-            side=order_side,
-            type=Client.ORDER_TYPE_LIMIT,
-            timeInForce=Client.TIME_IN_FORCE_GTC,
-            quantity=quantity,
-            price=f'{entry_price:.6f}'
-        )
-        print(f"Entry order placed: {order}")
+    headers = {
+        'X-MBX-APIKEY': API_KEY
+    }
 
-    # Place stop order
-    stop_price = float(data['stop'])
-    stop_side = Client.SIDE_SELL if side == 'LONG' else Client.SIDE_BUY
+    response = requests.post(url, headers=headers, params=params)
+    try:
+        return response.json()
+    except ValueError:
+        print(f"Error parsing JSON response: {response.text}")
+        return None
 
-    stop_order = client.futures_create_order(
-        symbol=ticker,
-        side=stop_side,
-        type=Client.ORDER_TYPE_STOP_MARKET,
-        quantity=quantity,
-        stopPrice=f'{stop_price:.6f}'
-    )
-    print(f"Stop order placed: {stop_order}")
+# Function to calculate the quantity to be traded based on the USDT amount and price
+def calculate_quantity(usdt_amount, price, step_size):
+    quantity = usdt_amount / price
+    # Adjust quantity to the correct precision
+    precision = len(str(step_size).split('.')[1])
+    quantity = round(quantity // step_size * step_size, precision)
+    return quantity
 
-    # Place take profit orders
-    place_take_profit_orders(client, ticker, targets, quantity, side, take_profit_index)
+# Function to place a limit order
+def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_price=None):
+    endpoint = '/fapi/v1/order'
+    url = BASE_URL + endpoint
 
-def place_take_profit_orders(client, ticker, targets, total_quantity, side, index=None):
-    # Determine order side for take profit
-    take_profit_side = Client.SIDE_SELL if side == 'LONG' else Client.SIDE_BUY
+    # Get the current price if not provided
+    if price is None:
+        price = get_current_price(symbol)
 
-    if index is not None:
-        # Ensure the index is within range
-        if index < 0 or index >= len(targets):
-            raise ValueError("The provided index is out of range for the targets list.")
+    # Get symbol info for precision and minimum notional
+    symbol_info = get_symbol_info(symbol)
+    if not symbol_info:
+        print(f"Symbol info not found for {symbol}")
+        return None
 
-        # Calculate the quantity for the specific target
-        target_price = float(targets[index])
-        
-        # Ensure the quantity is formatted correctly
-        quantity = round(total_quantity, 3)  # Adjust precision as needed
+    step_size = float(symbol_info['filters'][2]['stepSize'])
+    min_notional_filter = next((f for f in symbol_info['filters'] if f['filterType'] == 'MIN_NOTIONAL'), None)
 
-        order = client.futures_create_order(
-            symbol=ticker,
-            side=take_profit_side,
-            type=Client.ORDER_TYPE_LIMIT,
-            timeInForce=Client.TIME_IN_FORCE_GTC,
-            quantity=quantity,
-            price=f'{target_price:.6f}'
-        )
-        print(f"Take profit order placed: {order}")
+    if not min_notional_filter:
+        print(f"Min notional filter not found for {symbol}")
+        return None
+
+    min_notional = float(min_notional_filter['notional'])
+
+    # Calculate the quantity based on the USDT amount
+    quantity = calculate_quantity(usdt_amount, price, step_size)
+
+    # Ensure the trade value meets the minimum notional requirement
+    trade_value = quantity * price
+    if trade_value < min_notional:
+        required_quantity = min_notional / price
+        quantity = calculate_quantity(required_quantity * price, price, step_size)
+        print(f"Adjusted quantity to meet minimum notional: {quantity}")
+
+    # Print the calculated quantity
+    print(f"Calculated quantity: {quantity}")
+
+    # Ensure quantity is greater than zero
+    if quantity <= 0:
+        print(f"Calculated quantity is less than or equal to zero. Adjust the USDT amount or check the step size.")
+        return None
+
+    # Order parameters
+    params = {
+        'symbol': symbol,
+        'side': side,
+        'type': 'LIMIT',
+        'timeInForce': 'GTC',  # Good Till Cancel
+        'quantity': quantity,  # Adjusted to correct precision
+        'price': round(price, 2),  # Assuming 2 decimal places for price
+        'reduceOnly': 'false',  # Set the reduce-only parameter
+        'timestamp': int(time.time() * 1000)
+    }
+
+    # Create signature
+    params['signature'] = create_signature(params, API_SECRET)
+
+    headers = {
+        'X-MBX-APIKEY': API_KEY
+    }
+
+    response = requests.post(url, headers=headers, params=params)
+    try:
+        order_response = response.json()
+        if order_response and 'orderId' in order_response:
+            order_id = order_response['orderId']
+            # Place TP and SL orders if specified
+            if tp_price:
+                tp_params = {
+                    'symbol': symbol,
+                    'side': 'SELL' if side == 'BUY' else 'BUY',
+                    'type': 'TAKE_PROFIT_MARKET',
+                    'quantity': quantity,
+                    'stopPrice': tp_price,
+                    'reduceOnly': 'false',
+                    'timestamp': int(time.time() * 1000)
+                }
+                tp_params['signature'] = create_signature(tp_params, API_SECRET)
+                requests.post(url, headers=headers, params=tp_params)
+
+            if sl_price:
+                sl_params = {
+                    'symbol': symbol,
+                    'side': 'SELL' if side == 'BUY' else 'BUY',
+                    'type': 'STOP_MARKET',
+                    'quantity': quantity,
+                    'stopPrice': sl_price,
+                    'reduceOnly': 'false',
+                    'timestamp': int(time.time() * 1000)
+                }
+                sl_params['signature'] = create_signature(sl_params, API_SECRET)
+                requests.post(url, headers=headers, params=sl_params)
+
+        return order_response
+    except ValueError:
+        print(f"Error parsing JSON response: {response.text}")
+        return None
+
+# Main function
+def main():
+    symbol = 'BTCUSDT'
+    side = 'BUY'  # 'BUY' to open a long position, 'SELL' to open a short position
+    usdt_amount = 145.0  # Amount in USDT to use for the trade
+    leverage = 57  # Leverage to be used for the trade
+
+    # Set leverage for the symbol
+    leverage_response = set_leverage(symbol, leverage)
+    if 'leverage' not in leverage_response:
+        print(f"Failed to set leverage: {leverage_response}")
+        return
+
+    # Get the current price of the symbol
+    current_price = get_current_price(symbol)
+
+    # Calculate TP and SL prices
+    tp_price = current_price * 1.05  # Example: 5% above current price for TP
+    sl_price = current_price * 0.95  # Example: 5% below current price for SL
+
+    # Place the limit order with TP and SL
+    order_response = place_limit_order(symbol, side, usdt_amount, price=current_price, tp_price=tp_price, sl_price=sl_price)
+
+    if order_response:
+        # Check for specific error codes and handle them
+        if order_response.get('code') == -4164:
+            symbol_info = get_symbol_info(symbol)
+            min_notional_filter = next((f for f in symbol_info['filters'] if f['filterType'] == 'MIN_NOTIONAL'), None)
+            min_notional = float(min_notional_filter['notional'])
+            min_required_amount = min_notional
+            print(f"Order's notional value is too low. Minimum required notional value is {min_notional} USDT.")
+            print(f"Please use at least {min_required_amount:.6f} {symbol[:-4]} to meet the minimum notional value.")
+        elif order_response.get('code') == -1111:
+            print(f"Precision is over the maximum defined for this asset.")
+        elif order_response.get('code') == -4003:
+            print(f"Quantity less than or equal to zero. Adjust the USDT amount or check the step size.")
+        else:
+            print(order_response)
     else:
-        # Calculate the quantity per target
-        num_targets = len(targets)
-        quantity_per_target = total_quantity / num_targets
+        print("No response from the server or an error occurred.")
 
-        # Place limit orders for each target price
-        for target_price in targets:
-            target_price = float(target_price)
-            
-            # Ensure the quantity is formatted correctly
-            quantity = round(quantity_per_target, 3)  # Adjust precision as needed
-
-            order = client.futures_create_order(
-                symbol=ticker,
-                side=take_profit_side,
-                type=Client.ORDER_TYPE_LIMIT,
-                timeInForce=Client.TIME_IN_FORCE_GTC,
-                quantity=quantity,
-                price=f'{target_price:.6f}'
-            )
-            print(f"Take profit order placed: {order}")
-
-# Example usage
-data = {
-    'ticker': 'JASMYUSDT',
-    'mark_price': '0.029950',
-    'entry': ['0.02815', '0.02800'],
-    'targets': ['0.02955', '0.02965', '0.02975', '0.03'],
-    'leverage': ['20'],
-    'side': 'LONG',
-    'stop': '0.0255'
-}
-
-# Specify the index of the target to be considered for the take profit order, or None for all targets
-take_profit_index = 2  # Set to None to consider all targets
-
-place_orders(data, take_profit_index)
+if __name__ == '__main__':
+    main()

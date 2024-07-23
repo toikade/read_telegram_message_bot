@@ -7850,3 +7850,47 @@ Wed Jul  3 00:36:35 2024  'NoneType' object is not subscriptable (modify_extract
 ------------------------------
 Wed Jul  3 01:02:22 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
 ------------------------------
+Thu Jul 11 18:50:20 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 18:50:20 2024  Validation error: For LONG side, stop 4.84 should be less than price 4.801. (validate_data)
+------------------------------
+Thu Jul 11 19:01:00 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 19:03:12 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 19:04:13 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 19:57:45 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 19:58:54 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:03:19 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:06:27 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:13:15 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:18:48 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:21:36 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:30:39 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Thu Jul 11 20:33:47 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 10:43:40 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 10:52:37 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 11:01:26 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 11:02:27 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 11:04:32 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Mon Jul 22 23:51:49 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Tue Jul 23 00:06:09 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------
+Tue Jul 23 00:07:16 2024  ValueError: Symbol 'NKNUSDT' not found in data. (get_binance_futures_current_market_price_from_file)
+------------------------------

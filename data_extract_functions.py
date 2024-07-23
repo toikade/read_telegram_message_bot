@@ -6,7 +6,8 @@ from utilities import get_number_from_str, get_next_line_items, check_lines_with
 from utilities import modify_extracted_data_body, get_binance_futures_asset_list_from_file, extract_entry_values_from_harrisons_data_block
 from utilities import extract_stop_value_from_harrisons_data_block, get_value_change_amount_from_percentage, extract_leverage_value_from_harrisons_data_block
 from utilities import extract_ticker_from_harrisons_data_block, get_binance_futures_current_market_price_from_file, logger, modify_extracted_data_body, validate_data
-from utilities import filter_text_with_numbers
+from utilities import filter_text_with_numbers, get_symbol_market_value
+from binance_utilities import get_current_price
 #from test import process_lines
 
 
@@ -125,7 +126,7 @@ def extract_signal_data_from_harrisons(block):
     ticker = extract_ticker_from_harrisons_data_block(text)
     #========================================================== 
     # Extract mark_price or live market price 
-    tradeData['mark_price'] = get_binance_futures_current_market_price_from_file(ticker)
+    tradeData['mark_price'] = get_current_price(ticker)  # TEST OFFLINE with -- get_binance_futures_current_market_price_from_file(ticker)
     # try:
         
     # except ValueError as ve:
@@ -204,23 +205,28 @@ def extract_signal_data_from_harrisons(block):
         
 
 
-text = """#LINK/USDT 
+text = """⚡️⚡️#SOL/USDT⚡️⚡️
 
-Exchanges: Binance Futures, ByBit USD
+LONG
 
-Signal Type: LONG
-Leverage: Cross 20X
-
-Amount: 5.0%
-
-Entry Targets: 16.60
-
-Take Profit Targets:
-
-1) 17.30 (75%) 
-2) 19.00 (25%) 
+LEVERAGE : Cross 50x
 
 
-Stop Targets: 16.00"""      
+Entry target's :
 
-# extract_signal_data_from_harrisons(text)
+1) 178.30
+2) 176.00
+
+
+Take-profit targets:
+
+1) 182
+2) 186
+3) 192
+4) 200
+
+Stop Target: 174
+
+Put 1% dep only"""      
+
+#print(extract_signal_data_from_harrisons(text))

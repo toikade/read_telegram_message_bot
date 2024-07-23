@@ -2,11 +2,12 @@ from decouple import config
 from binance.client import Client
 import re, unicodedata, ftfy, json, time
 from unidecode import unidecode
+from binance_utilities import get_current_price
 
 # Initialize Binance client
-# api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
-# api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
-# client = Client(api_key, api_secret, testnet=True)
+api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
+client = Client(api_key, api_secret, testnet=True)
 
 def count_decimal_places(number):
     return len(str(number).split('.')[1])
@@ -509,7 +510,7 @@ def modify_extracted_data_body(data):
     try:
         #if ticker live market value is less than 1
         #ticker_market_value = get_symbol_market_value(data_body['ticker'])
-        ticker_market_value = get_binance_futures_current_market_price_from_file(data['ticker'])    # placeholder test value
+        ticker_market_value = get_current_price(data['ticker'])#get_binance_futures_current_market_price_from_file(data['ticker'])    # placeholder test value
         print('ticker_value',ticker_market_value)
         ticker_market_value_on_2 = float(ticker_market_value)/2
         #count the number of leading zeros(function) in value

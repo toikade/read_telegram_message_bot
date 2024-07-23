@@ -1,10 +1,13 @@
 from telethon.sync import TelegramClient, events
+from decouple import config
+import pytz
+from datetime import datetime
 
 
 # Initialize Telegram client
-api_id = '21243794'
-api_hash = '2a1ef85eff1fe10eb27560df055b1746'
-bot_token = '6379620803:AAEaLOHQM6Zeo3niZFDDDjS4NnkH1S2NqqM'  # 'your_bot_token'
+api_id = config('TELEGRAM_API_ID')
+api_hash = config('TELEGRAM_API_HASH')
+bot_token = config('TELEGRAM_BOT_TOKEN')  # 'your_bot_token'
 
 # List of channel URLs to monitor
 channel_urls = ['https://t.me/RynHumbleTrader',
@@ -31,7 +34,14 @@ channel_urls = ['https://t.me/RynHumbleTrader',
                 'https://t.me/Starnet_AIBang',
                 'https://t.me/hugoswaytrade',
                 'https://t.me/GoldzillaOfficial',
-                'https://t.me/HarrisonFutures1']
+                'https://t.me/Harrison_Futures1',
+                'https://t.me/HarrisonFutures',
+                'https://t.me/Gilanns',
+                'https://t.me/realcorrectscore_fixedmatches',
+                'https://t.me/KingFuryPronos',
+                'https://t.me/oracle_easy'
+                
+                ]
                 
 removed_channels = [
                 
@@ -41,6 +51,7 @@ removed_channels = [
                 
                 ]
 
+local_tz = pytz.timezone('Africa/Lagos')
 with TelegramClient('test', api_id, api_hash) as client:
     # Get the input entity for each channel
     chat_entities = [client.get_input_entity(url) for url in channel_urls]
@@ -52,8 +63,15 @@ with TelegramClient('test', api_id, api_hash) as client:
         async def handle_new_message(event):
             raw_message = event.message.text
             channel_id = event.message.peer_id.channel_id
-            print(channel_id)
+            chat = await event.get_chat()
+            chat_title = chat.title
+            chat_username = chat.username
+            sender = await client.get_entity(channel_id)
+            message_time_utc = event.message.date
+            message_time_local = message_time_utc.astimezone(local_tz)
+            print(f"{channel_id}|{chat_title}|{chat_username}|{message_time_local}\n")
             print(raw_message)
+            #print(event)
             #print(event)
             #print(f'New message from {event.message.date}: {raw_message}')
             tradeData = {}
