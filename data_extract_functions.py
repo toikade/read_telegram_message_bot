@@ -111,7 +111,7 @@ def extract_signal_data_from_harrisons(block):
     # Skip empty blocks
     if cleaned_block:
         #print(cleaned_block)
-        data_block = filter_text_with_numbers(cleaned_block)
+        data_block = filter_text_with_numbers(cleaned_block, 6)
         #print(data_block)
         if not data_block:
             return
@@ -124,11 +124,12 @@ def extract_signal_data_from_harrisons(block):
     
     tradeData['ticker'] = extract_ticker_from_harrisons_data_block(text)
     ticker = extract_ticker_from_harrisons_data_block(text)
+    
     #========================================================== 
     # Extract mark_price or live market price 
     tradeData['mark_price'] = get_current_price(ticker)  # TEST OFFLINE with -- get_binance_futures_current_market_price_from_file(ticker)
     # try:
-        
+      
     # except ValueError as ve:
         #logger(text)
         # print(ve)
@@ -136,6 +137,7 @@ def extract_signal_data_from_harrisons(block):
     # Extract ENTRY prices 
     tradeData['entry'] = extract_entry_values_from_harrisons_data_block(text)
     print('ENTRY', tradeData['entry'])
+    
     #========================================================== 
     # Extract TARGET prices
     tradeData['targets'] = extract_target_values_from_harrisons_data_block(text)
@@ -205,28 +207,18 @@ def extract_signal_data_from_harrisons(block):
         
 
 
-text = """⚡️⚡️#SOL/USDT⚡️⚡️
+text = """💥 Futures (New Signal)
 
-LONG
+✅ Long
 
-LEVERAGE : Cross 50x
+#BAL/USDT
 
+Entry zone : 2.761_2.818
 
-Entry target's :
+Targets : 2.837_2.893_2.950_3.006_3.062_3.118_3.174_3.230
 
-1) 178.30
-2) 176.00
+Stop loss :2.620
 
-
-Take-profit targets:
-
-1) 182
-2) 186
-3) 192
-4) 200
-
-Stop Target: 174
-
-Put 1% dep only"""      
+Leverage: 5x_10x"""      
 
 #print(extract_signal_data_from_harrisons(text))

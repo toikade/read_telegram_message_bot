@@ -34,7 +34,7 @@ def get_current_price(symbol):
 
 
 symbol = ['JASMYUSDT', '1INCHUSDT', 'BTCUSDT', 'YFIUSDT', 'SOLUSDT', 'ETHUSDT']
-for symbol in symbol:
-    print(get_symbol_info(symbol))
-    print(get_current_price(symbol))
-    print('='*30)
+# for symbol in symbol:
+#     print(get_symbol_info(symbol))
+#     print(get_current_price(symbol))
+#     print('='*30)

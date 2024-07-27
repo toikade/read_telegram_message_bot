@@ -209,7 +209,8 @@ def check_lines_with_numbers(text):
             return 0
         
 
-def filter_text_with_numbers(text):
+def filter_text_with_numbers(text, number_of_lines_wanted):
+    number_of_lines_wanted = number_of_lines_wanted
     lines_with_numbers = 0
     for line in text.split('\n'):
         # Check if the line contains numbers (or decimals)
@@ -222,7 +223,7 @@ def filter_text_with_numbers(text):
             return False
         if any(char.isdigit() or char == '.' for char in line):
             lines_with_numbers += 1
-            if lines_with_numbers >= 6:
+            if lines_with_numbers >= number_of_lines_wanted:
                 return text  # Filter out the text if there are numbers on at least six lines
     return False
         

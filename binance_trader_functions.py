@@ -134,6 +134,8 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
         order_response = response.json()
         if order_response and 'orderId' in order_response:
             order_id = order_response['orderId']
+            client_order_id = order_response['clientOrderId']
+            
             # Place TP and SL orders if specified
             if tp_price:
                 tp_params = {
@@ -141,8 +143,9 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
                     'side': 'SELL' if side == 'BUY' else 'BUY',
                     'type': 'TAKE_PROFIT_MARKET',
                     'quantity': quantity,
-                    'stopPrice': tp_price,
-                    'reduceOnly': 'false',
+                    'stopPrice': round(tp_price, 2),
+                    'reduceOnly': 'true',
+                    'newClientOrderId': client_order_id + '_TP',
                     'timestamp': int(time.time() * 1000)
                 }
                 tp_params['signature'] = create_signature(tp_params, API_SECRET)
@@ -154,8 +157,9 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
                     'side': 'SELL' if side == 'BUY' else 'BUY',
                     'type': 'STOP_MARKET',
                     'quantity': quantity,
-                    'stopPrice': sl_price,
-                    'reduceOnly': 'false',
+                    'stopPrice': round(sl_price, 2),
+                    'reduceOnly': 'true',
+                    'newClientOrderId': client_order_id + '_SL',
                     'timestamp': int(time.time() * 1000)
                 }
                 sl_params['signature'] = create_signature(sl_params, API_SECRET)
@@ -171,7 +175,7 @@ def main():
     symbol = 'BTCUSDT'
     side = 'BUY'  # 'BUY' to open a long position, 'SELL' to open a short position
     usdt_amount = 145.0  # Amount in USDT to use for the trade
-    leverage = 57  # Leverage to be used for the trade
+    leverage = 67  # Leverage to be used for the trade
 
     # Set leverage for the symbol
     leverage_response = set_leverage(symbol, leverage)
@@ -183,8 +187,8 @@ def main():
     current_price = get_current_price(symbol)
 
     # Calculate TP and SL prices
-    tp_price = current_price * 1.05  # Example: 5% above current price for TP
-    sl_price = current_price * 0.95  # Example: 5% below current price for SL
+    tp_price = current_price * 1.005  # Example: 5% above current price for TP
+    sl_price = current_price * 0.98  # Example: 5% below current price for SL
 
     # Place the limit order with TP and SL
     order_response = place_limit_order(symbol, side, usdt_amount, price=current_price, tp_price=tp_price, sl_price=sl_price)
