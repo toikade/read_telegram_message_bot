@@ -68,6 +68,77 @@ def calculate_quantity(usdt_amount, price, step_size):
     quantity = round(quantity // step_size * step_size, precision)
     return quantity
 
+# A function to check the status of an order
+def check_order_status(symbol, order_id):
+    """Checks the status of an order on Binance.
+
+    Args:
+        symbol: The trading symbol (e.g., BTCUSDT).
+        order_id: The order ID to check.
+
+    Returns:
+        A dictionary containing the order status and other details.
+    """
+
+    endpoint = '/fapi/v1/order'
+    url = BASE_URL + endpoint
+
+    params = {
+        'symbol': symbol,
+        'orderId': order_id,
+        'timestamp': int(time.time() * 1000)
+    }
+
+    # Create signature
+    params['signature'] = create_signature(params, API_SECRET)
+
+    headers = {
+        'X-MBX-APIKEY': API_KEY
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    try:
+        return response.json()
+    except ValueError:
+        print(f"Error parsing JSON response: {response.text}")
+        return None
+    
+# A function to cancel an order    
+def cancel_order(symbol, order_id):
+    """Cancels an order on Binance.
+
+    Args:
+        symbol: The trading symbol (e.g., BTCUSDT).
+        order_id: The order ID to cancel.
+
+    Returns:
+        A dictionary containing the cancellation response.
+    """
+
+    endpoint = '/fapi/v1/order/cancel'
+    url = BASE_URL + endpoint
+
+    params = {
+        'symbol': symbol,
+        'orderId': order_id,
+        'timestamp': int(time.time() * 1000)
+    }
+
+    # Create signature
+    params['signature'] = create_signature(params, API_SECRET)
+
+    headers = {
+        'X-MBX-APIKEY': API_KEY
+    }
+
+    response = requests.delete(url, headers=headers, params=params)
+    try:
+        return response.json()
+    except ValueError:
+        print(f"Error parsing JSON response: {response.text}")
+        return None
+    
+
 # Function to place a limit order
 def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_price=None):
     endpoint = '/fapi/v1/order'
@@ -131,39 +202,59 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
 
     response = requests.post(url, headers=headers, params=params)
     try:
+        primary_order_id = None
+        tp_order_id = None
+        sl_order_id = None
         order_response = response.json()
         if order_response and 'orderId' in order_response:
-            order_id = order_response['orderId']
+            primary_order_id = order_response['orderId']
             client_order_id = order_response['clientOrderId']
             
             # Place TP and SL orders if specified
             if tp_price:
-                tp_params = {
-                    'symbol': symbol,
-                    'side': 'SELL' if side == 'BUY' else 'BUY',
-                    'type': 'TAKE_PROFIT_MARKET',
-                    'quantity': quantity,
-                    'stopPrice': round(tp_price, 2),
-                    'reduceOnly': 'true',
-                    'newClientOrderId': client_order_id + '_TP',
-                    'timestamp': int(time.time() * 1000)
-                }
+                # Check if primary order is still open before placing TP
+                is_primary_open = check_order_status(symbol, primary_order_id)
+                if is_primary_open:
+                    tp_params = {
+                        'symbol': symbol,
+                        'side': 'SELL' if side == 'BUY' else 'BUY',
+                        'type': 'TAKE_PROFIT_MARKET',
+                        'quantity': quantity,
+                        'stopPrice': round(tp_price, 2),
+                        'reduceOnly': 'true',
+                        'newClientOrderId': client_order_id + '_TP',
+                        'closePosition': True,  # Ensure TP order closes the position
+                        'timestamp': int(time.time() * 1000)
+                    }
                 tp_params['signature'] = create_signature(tp_params, API_SECRET)
-                requests.post(url, headers=headers, params=tp_params)
+                tp_response = requests.post(url, headers=headers, params=tp_params)
+                if tp_response.json().get('code') == 0:
+                    tp_order_id = tp_response.json()['orderId']
+                else:
+                    print(f"Failed to place TP order: {tp_response.text}")
+
 
             if sl_price:
-                sl_params = {
-                    'symbol': symbol,
-                    'side': 'SELL' if side == 'BUY' else 'BUY',
-                    'type': 'STOP_MARKET',
-                    'quantity': quantity,
-                    'stopPrice': round(sl_price, 2),
-                    'reduceOnly': 'true',
-                    'newClientOrderId': client_order_id + '_SL',
-                    'timestamp': int(time.time() * 1000)
-                }
+                # Check if primary order is still open before placing SL
+                is_primary_open = check_order_status(symbol, primary_order_id)
+                if is_primary_open:
+                    sl_params = {
+                        'symbol': symbol,
+                        'side': 'SELL' if side == 'BUY' else 'BUY',
+                        'type': 'STOP_MARKET',
+                        'quantity': quantity,
+                        'stopPrice': round(sl_price, 2),
+                        'reduceOnly': 'true',
+                        'newClientOrderId': client_order_id + '_SL',
+                        'closePosition': True,  # Ensure SL order closes the position
+                        'timestamp': int(time.time() * 1000)
+                    }
                 sl_params['signature'] = create_signature(sl_params, API_SECRET)
-                requests.post(url, headers=headers, params=sl_params)
+                sl_response = requests.post(url, headers=headers, params=sl_params)
+                if sl_response.json().get('code') == 0:
+                    sl_order_id = sl_response.json()['orderId']
+                else:
+                    print(f"Failed to place SL order: {sl_response.text}")
 
         return order_response
     except ValueError:

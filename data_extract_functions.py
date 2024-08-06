@@ -127,7 +127,7 @@ def extract_signal_data_from_harrisons(block):
     
     #========================================================== 
     # Extract mark_price or live market price 
-    tradeData['mark_price'] = get_current_price(ticker)  # TEST OFFLINE with -- get_binance_futures_current_market_price_from_file(ticker)
+    tradeData['mark_price'] = get_current_price(ticker) #TEST OFFLINE with --get_binance_futures_current_market_price_from_file(ticker) 
     # try:
       
     # except ValueError as ve:
@@ -187,9 +187,11 @@ def extract_signal_data_from_harrisons(block):
     #print('STOP', tradeData['stop'])
     #========================================================== 
     #SANITIZE Data to make sure the decimals are respected
+    
     tradeData = modify_extracted_data_body(tradeData)
     #==========================================================
     #VALIDATE Data to make sure it meets the criteria of the different values
+    
     tradeData = validate_data(tradeData)
     return tradeData
 
@@ -207,18 +209,21 @@ def extract_signal_data_from_harrisons(block):
         
 
 
-text = """💥 Futures (New Signal)
+text = """⚡️#API3/USDT⚡️⚡️
 
-✅ Long
+Signal Type: Long
+Leverage: Cross 20x
 
-#BAL/USDT
+Entry Targets: 2.0855
 
-Entry zone : 2.761_2.818
+Take-Profit Targets:
+1) 2.095
+2) 2.105
+3) 2.115
+4) 2.132
+5) 2.155
+6) 2.180
 
-Targets : 2.837_2.893_2.950_3.006_3.062_3.118_3.174_3.230
+Stop-Loss: 2.02"""      
 
-Stop loss :2.620
-
-Leverage: 5x_10x"""      
-
-#print(extract_signal_data_from_harrisons(text))
+print(extract_signal_data_from_harrisons(text))

@@ -27,7 +27,7 @@ def get_binance_futures_symbol_current_market_prices_to_file():
     with open('binance_futures_symbol_price_list.json', 'a',  encoding='utf-8') as file:
         json.dump(symbol_data, file, indent=4)
     return symbol_data
-# print(get_binance_futures_symbol_current_market_prices_to_file())
+#print(get_binance_futures_symbol_current_market_prices_to_file())
 
 def logger(text):
     sep1 = '-'*30
@@ -551,13 +551,13 @@ def modify_extracted_data_body(data):
                             transformed_elm = float(transform_number(int(elm), leading_zero_count))
                             print('trElm',transformed_elm)
                             #if elm is gt stop loss then it is correct since this is LONG
-                            if transformed_elm >= float(comparative_stop_loss) and transformed_elm >=float(ticker_market_value):
+                            if transformed_elm >= float(comparative_stop_loss):
                             #convert transformed element to string and replace elm
                                 data[item][idx] = str(transformed_elm)
                             else:
                             #multiply by 10 to shift 1dp to right and replace with str of elm
                                 data[item][idx] = str(round(transformed_elm*10, 4))
-            print('LONG',data)
+            #print('LONG',data)
             return data
 
         #in case side is SHORT
