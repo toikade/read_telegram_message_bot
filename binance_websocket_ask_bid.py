@@ -3,7 +3,7 @@ import websockets
 import json
 
 async def main():
-    uri = "wss://stream.binance.com:9443/ws/bomeusdt@depth"
+    uri = "wss://stream.binance.com:9443/ws/btcusdt@depth"
 
     async with websockets.connect(uri) as websocket:
         while True:

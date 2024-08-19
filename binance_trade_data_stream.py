@@ -1,10 +1,10 @@
+import time
+import json
+import requests
 import hmac
 import hashlib
-import json
-import time
-import requests
-import websocket
-from threading import Thread
+import multiprocessing
+import os
 from decouple import config
 
 # Binance API credentials
@@ -19,17 +19,7 @@ def create_signature(params, secret):
     query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
     return hmac.new(secret.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
 
-# Function to get a listen key for user data stream
-def get_listen_key():
-    url = f'{BASE_URL}/fapi/v1/listenKey'
-    headers = {
-        'X-MBX-APIKEY': API_KEY
-    }
-    response = requests.post(url, headers=headers)
-    data = response.json()
-    return data['listenKey']
-
-# Function to place a limit order (for testing purposes)
+# Function to place a limit order
 def place_limit_order(symbol, side, quantity, price):
     endpoint = '/fapi/v1/order'
     url = BASE_URL + endpoint
@@ -55,76 +45,107 @@ def place_limit_order(symbol, side, quantity, price):
     print("Order response:", response.json())
     return response.json()
 
-# Function to monitor order status
-def monitor_order_status(listen_key):
-    ws_url = f'wss://fstream.binance.com/ws/{listen_key}'
+def listener_process(queue):
+    import asyncio
+    import websockets
+    from decouple import config
 
-    def on_message(ws, message):
-        data = json.loads(message)
-        print(f"WebSocket message received: {data}")
-        if data.get('e') == 'ORDER_TRADE_UPDATE':
-            order_id = data['o']['i']
-            order_status = data['o']['X']
-            print(f"Order ID: {order_id} - Status: {order_status}")
-            if order_status == 'FILLED':
-                print(f"Order {order_id} filled.")
+    # Re-importing credentials inside the process
+    API_KEY = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
+    API_SECRET = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
+    BASE_URL = 'https://testnet.binancefuture.com'
 
-    def on_open(ws):
-        print("WebSocket connection opened")
+    # Function to get a listen key for user data stream
+    def get_listen_key():
+        endpoint = '/fapi/v1/listenKey'
+        url = BASE_URL + endpoint
 
-    def on_error(ws, error):
-        print(f"WebSocket error: {error}")
+        headers = {
+            'X-MBX-APIKEY': API_KEY
+        }
 
-    def on_close(ws, close_status_code, close_msg):
-        print(f"WebSocket connection closed with status: {close_status_code}, message: {close_msg}")
+        response = requests.post(url, headers=headers)
+        data = response.json()
+        print("Listen key received:", data)
+        return data['listenKey']
 
-    ws = websocket.WebSocketApp(
-        ws_url,
-        on_message=on_message,
-        on_open=on_open,
-        on_error=on_error,
-        on_close=on_close
-    )
+    # Function to renew listen key
+    def renew_listen_key(listen_key):
+        endpoint = '/fapi/v1/listenKey'
+        url = BASE_URL + endpoint
 
-    # Adding a heartbeat to keep the connection alive
-    def send_heartbeat(ws):
-        while True:
-            time.sleep(30)
+        headers = {
+            'X-MBX-APIKEY': API_KEY
+        }
+
+        params = {'listenKey': listen_key}
+
+        response = requests.put(url, headers=headers, params=params)
+        data = response.json()
+        print("Listen key renewed:", data)
+        return data['listenKey']
+
+    async def run_websocket(listen_key):
+        uri = f"wss://stream.binancefuture.com/ws/{listen_key}"
+
+        async with websockets.connect(uri) as websocket:
+            print("WebSocket connection established")
             try:
-                ws.send(json.dumps({'event': 'ping'}))
+                while True:
+                    data = await websocket.recv()
+                    print(f"WebSocket message received: {data}")
+                    queue.put(data)
             except Exception as e:
-                print(f"Heartbeat error: {e}")
-                break
+                print(f"Error: {e}")
+            finally:
+                print("WebSocket connection closed")
 
-    Thread(target=send_heartbeat, args=(ws,)).start()
-    ws.run_forever()
+    async def listen_and_renew():
+        listen_key = get_listen_key()
+        listen_key_expiration = time.time() + 24 * 60 * 60  # Listen key expires in 24 hours
 
-# Function to run WebSocket listener in a separate thread
-def start_monitoring(listen_key):
-    thread = Thread(target=monitor_order_status, args=(listen_key,))
-    thread.daemon = True
-    thread.start()
+        while True:
+            try:
+                await run_websocket(listen_key)
+            except Exception as e:
+                print(f"WebSocket error: {e}")
+                await asyncio.sleep(5)  # Retry after 5 seconds
 
-# Main function
+            time_remaining = listen_key_expiration - time.time()
+            if time_remaining < 60 * 60:  # Renew listen key if less than 1 hour remaining
+                listen_key = renew_listen_key(listen_key)
+                listen_key_expiration = time.time() + 24 * 60 * 60
+
+    asyncio.run(listen_and_renew())
+
 def main():
-    symbol = 'BTCUSDT'
-    side = 'BUY'
-    quantity = 0.002  # Example quantity
-    price = 61326.0  # Example price (adjust as necessary for testnet)
+    # Create a queue for communication
+    queue = multiprocessing.Queue()
 
-    # Get listen key
-    listen_key = get_listen_key()
-    print(f"Listen key: {listen_key}")
+    # Start the listener process
+    listener = multiprocessing.Process(target=listener_process, args=(queue,))
+    listener.start()
 
-    # Start monitoring order updates
-    start_monitoring(listen_key)
+    # Place test limit orders for multiple symbols
+    orders = [
+        {"symbol": "BTCUSDT", "side": "BUY", "quantity": 0.002, "price": 58400.0},
+        {"symbol": "ETHUSDT", "side": "SELL", "quantity": 0.05, "price": 2580.0}
+    ]
 
-    # Place a test limit order (adjust parameters as necessary)
-    place_limit_order(symbol, side, quantity, price)
+    for order in orders:
+        place_limit_order(order["symbol"], order["side"], order["quantity"], order["price"])
 
-    # Keep the main function running to allow continuous monitoring
+    # Listen for updates from the listener process
     while True:
-        time.sleep(1)
+        try:
+            data = queue.get()
+            message = json.loads(data)
+            if message['e'] == 'ORDER_TRADE_UPDATE':
+                print(f"Order update: {message}")
+            elif message['e'] == 'ACCOUNT_UPDATE':
+                print(f"Account update: {message}")
+        except Exception as e:
+            print(f"Error processing data: {e}")
 
 if __name__ == '__main__':
     main()

@@ -189,8 +189,8 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
         'timeInForce': 'GTC',  # Good Till Cancel
         'quantity': quantity,  # Adjusted to correct precision
         'price': round(price, 2),  # Assuming 2 decimal places for price
-        'reduceOnly': 'false',  # Set the reduce-only parameter
-        'timestamp': int(time.time() * 1000)
+        'timestamp': int(time.time() * 1000),
+        'recvWindow': 5000
     }
 
     # Create signature
@@ -221,10 +221,11 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
                         'type': 'TAKE_PROFIT_MARKET',
                         'quantity': quantity,
                         'stopPrice': round(tp_price, 2),
-                        'reduceOnly': 'true',
+                        
                         'newClientOrderId': client_order_id + '_TP',
                         'closePosition': True,  # Ensure TP order closes the position
-                        'timestamp': int(time.time() * 1000)
+                        'timestamp': int(time.time() * 1000),
+                        'recvWindow': 5000
                     }
                 tp_params['signature'] = create_signature(tp_params, API_SECRET)
                 tp_response = requests.post(url, headers=headers, params=tp_params)
@@ -244,10 +245,11 @@ def place_limit_order(symbol, side, usdt_amount, price=None, tp_price=None, sl_p
                         'type': 'STOP_MARKET',
                         'quantity': quantity,
                         'stopPrice': round(sl_price, 2),
-                        'reduceOnly': 'true',
+                        
                         'newClientOrderId': client_order_id + '_SL',
                         'closePosition': True,  # Ensure SL order closes the position
-                        'timestamp': int(time.time() * 1000)
+                        'timestamp': int(time.time() * 1000),
+                        'recvWindow': 5000
                     }
                 sl_params['signature'] = create_signature(sl_params, API_SECRET)
                 sl_response = requests.post(url, headers=headers, params=sl_params)
