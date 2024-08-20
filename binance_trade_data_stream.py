@@ -128,8 +128,8 @@ def main():
 
     # Place test limit orders for multiple symbols
     orders = [
-        {"symbol": "BTCUSDT", "side": "BUY", "quantity": 0.002, "price": 58400.0},
-        {"symbol": "ETHUSDT", "side": "SELL", "quantity": 0.05, "price": 2580.0}
+        {"symbol": "BTCUSDT", "side": "BUY", "quantity": 0.002, "price": 59000.0},
+        {"symbol": "ETHUSDT", "side": "SELL", "quantity": 0.05, "price": 2500.0}
     ]
 
     for order in orders:
