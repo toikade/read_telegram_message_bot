@@ -1,66 +1,27 @@
-import requests
-import json
-import hmac
-import hashlib
-import time
+from binance.client import Client
 from decouple import config
 
-# Binance API credentials
+# Replace with your actual API keys
+# Re-importing credentials inside the process
 api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
 api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
 
-# Base URL for Binance Futures testnet API
-BASE_URL = 'https://testnet.binancefuture.com'
+# Initialize the Binance client (testnet=True for demo account)
+client = Client(api_key, api_secret, testnet=True)
 
-# Function to generate the signature
-def create_signature(params, secret):
-    query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
-    return hmac.new(secret.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
+# Fetch all open futures positions
+positions = client.futures_position_information()
 
-
-def get_positions(api_key, api_secret):
-    params = {
-        'timestamp': int(time.time() * 1000),
-        'recvWindow': 5000
-    }
-    params['signature'] = create_signature(params, api_secret)
-    headers = {'X-MBX-APIKEY': api_key}
-    response = requests.get(f"{BASE_URL}/fapi/v2/positionRisk", headers=headers, params=params)
-    return json.loads(response.text)
-
-def get_account_info(api_key, api_secret):
-    params = {
-        'timestamp': int(time.time() * 1000),
-        'recvWindow': 5000
-    }
-    params['signature'] = create_signature(params, api_secret)
-    headers = {'X-MBX-APIKEY': api_key}
-    response = requests.get(f"{BASE_URL}/fapi/v3/account", headers=headers, params=params)
-
-    return json.loads(response.text)
-
-def calculate_leverage(position, account_info):
-    symbol = position['symbol']
-    position_amt = float(position['positionAmt'])
-    mark_price = float(position['markPrice'])
-    position_value = position_amt * mark_price
-
-    # Assuming margin balance is in the account_info response
-    margin_balance = float(account_info['totalMarginBalance'])  # Replace with actual field
-
-    leverage = position_value / margin_balance
-    return leverage
-
-# Example usage:
-positions = get_positions(api_key, api_secret)
-account_info = get_account_info(api_key, api_secret)
-
-print('POSITIONS',positions)
-print('++'*30)
-print(account_info)
-
+# Print all open positions
 for position in positions:
-    print(position)
-    leverage = calculate_leverage(position, account_info)
-    print(f"Symbol: {position['symbol']}, Leverage: {leverage}")
-    print('+'*30)
+    if float(position['positionAmt']) != 0:
+        #print(position)
+        print(f"Symbol: {position['symbol']}, Position: {position['positionAmt']} {position['positionSide']}, Entry Price: {position['entryPrice']}, Leverage: {position['leverage']}")
+
+# Fetch account information (example for futures)
+account_info = client.futures_account()
+
+# Print margin balance and more
+print("Futures Account Info:")
+print(f"Margin Balance: {account_info['totalMarginBalance']}")
+print(f"Total Unr. Profit: {account_info['totalUnrealizedProfit']}")
