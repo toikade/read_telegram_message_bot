@@ -9,6 +9,9 @@ from decouple import config
 api_key = config('BINANCE_FUTURES_DEMO_API_KEY', cast=str)
 api_secret = config('BINANCE_FUTURES_DEMO_SECRET', cast=str)
 
+# Base URL for Binance Futures testnet API
+BASE_URL = 'https://testnet.binancefuture.com'
+
 # Function to generate the signature
 def create_signature(params, secret):
     query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
@@ -22,7 +25,7 @@ def get_positions(api_key, api_secret):
     }
     params['signature'] = create_signature(params, api_secret)
     headers = {'X-MBX-APIKEY': api_key}
-    response = requests.get('https://fapi.binance.com/fapi/v1/position', headers=headers, params=params)
+    response = requests.get(f"{BASE_URL}/fapi/v2/positionRisk", headers=headers, params=params)
     return json.loads(response.text)
 
 def get_account_info(api_key, api_secret):
@@ -32,7 +35,7 @@ def get_account_info(api_key, api_secret):
     }
     params['signature'] = create_signature(params, api_secret)
     headers = {'X-MBX-APIKEY': api_key}
-    response = requests.get('https://api.binance.com/api/v3/account', headers=headers, params=params)
+    response = requests.get(f"{BASE_URL}/fapi/v3/account", headers=headers, params=params)
 
     return json.loads(response.text)
 
@@ -52,9 +55,12 @@ def calculate_leverage(position, account_info):
 positions = get_positions(api_key, api_secret)
 account_info = get_account_info(api_key, api_secret)
 
-print(positions)
+print('POSITIONS',positions)
+print('++'*30)
 print(account_info)
 
 for position in positions:
+    print(position)
     leverage = calculate_leverage(position, account_info)
     print(f"Symbol: {position['symbol']}, Leverage: {leverage}")
+    print('+'*30)
