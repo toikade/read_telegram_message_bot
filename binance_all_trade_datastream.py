@@ -19,18 +19,44 @@ def create_signature(params, secret):
     query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
     return hmac.new(secret.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
 
-# Function to place a limit order
-def place_limit_order(symbol, side, quantity, price):
+# Function to place an order
+def place_order(symbol, side, order_type, quantity, price=None, stop_price=None):
     endpoint = '/fapi/v1/order'
     url = BASE_URL + endpoint
 
     params = {
         'symbol': symbol,
         'side': side,
-        'type': 'LIMIT',
+        'type': order_type,
         'timeInForce': 'GTC',
         'quantity': quantity,
-        'price': price,
+        'timestamp': int(time.time() * 1000),
+        'recvWindow': 5000
+    }
+
+    if price:
+        params['price'] = price
+    if stop_price:
+        params['stopPrice'] = stop_price
+
+    params['signature'] = create_signature(params, API_SECRET)
+
+    headers = {
+        'X-MBX-APIKEY': API_KEY
+    }
+
+    response = requests.post(url, headers=headers, params=params)
+    print(f"Order response for {symbol}: {response.json()}")
+    return response.json()
+
+# Function to cancel an order
+def cancel_order(symbol, order_id):
+    endpoint = '/fapi/v1/order'
+    url = BASE_URL + endpoint
+
+    params = {
+        'symbol': symbol,
+        'orderId': order_id,
         'timestamp': int(time.time() * 1000),
         'recvWindow': 5000
     }
@@ -41,8 +67,8 @@ def place_limit_order(symbol, side, quantity, price):
         'X-MBX-APIKEY': API_KEY
     }
 
-    response = requests.post(url, headers=headers, params=params)
-    print("Order response:", response.json())
+    response = requests.delete(url, headers=headers, params=params)
+    print(f"Cancel order response for {symbol}: {response.json()}")
     return response.json()
 
 def listener_process(queue):
@@ -122,6 +148,9 @@ def main():
     # Create a queue for communication
     queue = multiprocessing.Queue()
 
+    # Dictionary to track open orders
+    open_orders = {}
+
     # Start the listener process
     listener = multiprocessing.Process(target=listener_process, args=(queue,))
     listener.start()
@@ -133,17 +162,77 @@ def main():
     ]
 
     for order in orders:
-        place_limit_order(order["symbol"], order["side"], order["quantity"], order["price"])
+        response = place_order(order["symbol"], order["side"], 'LIMIT', order["quantity"], order["price"])
+        if response['status'] == 'NEW':
+            open_orders[response['clientOrderId']] = {
+                'symbol': order['symbol'],
+                'side': order['side'],
+                'quantity': order['quantity'],
+                'price': order['price'],
+                'take_profit_order_id': None,
+                'stop_order_id': None
+            }
+            print(f"Open orders updated: {json.dumps(open_orders, indent=4)}")  # Debugging print
 
     # Listen for updates from the listener process
     while True:
         try:
             data = queue.get()
             message = json.loads(data)
+
+            # Handle order updates
             if message['e'] == 'ORDER_TRADE_UPDATE':
-                print(f"Order update: {message}")
-            elif message['e'] == 'ACCOUNT_UPDATE':
-                print(f"Account update: {message}")
+                order_info = message['o']
+                client_order_id = order_info['c']
+                symbol = order_info['s']
+                side = order_info['S']
+                exec_price = float(order_info['L'])
+                exec_qty = float(order_info['q'])
+
+                if order_info['X'] == 'FILLED' and client_order_id in open_orders:
+                    # Place take profit and stop loss orders
+                    take_profit_price = round(exec_price * 1.04, 2) if side == 'BUY' else round(exec_price * 0.96, 2)
+                    stop_price = round(exec_price * 0.96, 2) if side == 'BUY' else round(exec_price * 1.04, 2)
+
+                    take_profit_order = place_order(
+                        symbol,
+                        'SELL' if side == 'BUY' else 'BUY',
+                        'TAKE_PROFIT_MARKET',
+                        exec_qty,
+                        stop_price=take_profit_price
+                    )
+
+                    stop_order = place_order(
+                        symbol,
+                        'SELL' if side == 'BUY' else 'BUY',
+                        'STOP_MARKET',
+                        exec_qty,
+                        stop_price=stop_price
+                    )
+
+                    # Update open_orders with new order IDs
+                    open_orders[client_order_id]['take_profit_order_id'] = take_profit_order['clientOrderId']
+                    open_orders[client_order_id]['stop_order_id'] = stop_order['clientOrderId']
+                    print(f"Open orders updated: {json.dumps(open_orders, indent=4)}")  # Debugging print
+
+            # Handle cancellation if one of the orders gets filled
+            if message['e'] == 'ORDER_TRADE_UPDATE':
+                order_info = message['o']
+                client_order_id = order_info['c']
+                status = order_info['X']
+
+                for parent_order_id, orders in open_orders.items():
+                    if orders['take_profit_order_id'] == client_order_id or orders['stop_order_id'] == client_order_id:
+                        if status == 'FILLED':
+                            # Cancel the other order
+                            other_order_id = orders['stop_order_id'] if orders['take_profit_order_id'] == client_order_id else orders['take_profit_order_id']
+                            cancel_order(symbol, other_order_id)
+
+                            # Remove parent order from open orders as it is fully managed now
+                            del open_orders[parent_order_id]
+                            print(f"Open orders updated: {json.dumps(open_orders, indent=4)}")  # Debugging print
+                        break
+
         except Exception as e:
             print(f"Error processing data: {e}")
 
